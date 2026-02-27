@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>EDGE Predict</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap');
+:root {
+  --bg:#0b0f18; --surface:#111827; --surface2:#1a2235; --border:#2a3550;
+  --primary:#3b82f6; --success:#22c55e; --warning:#f59e0b; --error:#ef4444;
+  --muted:#6b7280; --fg:#e2e8f0; --fg2:#94a3b8;
+  --mono:'JetBrains Mono',monospace; --head:'Barlow Condensed',sans-serif; --body:'Barlow',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px}
+body{font-family:var(--body);background:var(--bg);color:var(--fg);min-height:100vh;padding-bottom:40px}
+
+.app-header{background:var(--surface);border-bottom:1px solid var(--border);padding:11px 16px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.app-title{font-family:var(--head);font-size:1.6rem;font-weight:800;letter-spacing:1px}
+.app-title span{color:var(--primary)}
+.header-stats{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.hstat{text-align:center}
+.hstat-val{font-family:var(--head);font-size:1.25rem;font-weight:700;line-height:1}
+.hstat-val.good{color:var(--success)} .hstat-val.warn{color:var(--warning)} .hstat-val.neutral{color:var(--fg)}
+.hstat-label{font-size:.68rem;color:var(--fg2);text-transform:uppercase;letter-spacing:.5px}
+.last-upd{font-size:.72rem;color:var(--muted)}
+
+.app-body{max-width:980px;margin:0 auto;padding:12px 11px}
+
+.status-banner{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:13px 14px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.status-label{font-family:var(--head);font-weight:700;font-size:1rem}
+.st-trained{color:var(--success)} .st-training{color:var(--warning)} .st-untrained,.st-error{color:var(--error)}
+
+.tab-bar{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:0}
+.tab-btn{font-family:var(--head);font-size:.82rem;font-weight:600;letter-spacing:.2px;padding:7px 12px;background:var(--surface);border:1px solid var(--border);border-bottom:none;border-radius:6px 6px 0 0;cursor:pointer;color:var(--fg2);transition:all .15s;white-space:nowrap}
+.tab-btn:hover{color:var(--fg);background:var(--surface2)}
+.tab-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.tab-panel{border:1px solid var(--border);border-radius:0 6px 6px 6px;background:var(--surface);padding:15px;min-height:200px}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+.section-h{font-family:var(--head);font-size:1.1rem;font-weight:700;margin:13px 0 7px}
+.section-sub{font-size:.8rem;color:var(--muted);margin-bottom:11px}
+.divider{border:none;border-top:1px solid var(--border);margin:13px 0}
+.empty-state{text-align:center;padding:28px;color:var(--muted);font-size:.86rem;line-height:1.6}
+
+.alert{padding:11px 13px;border-radius:6px;margin:8px 0;font-size:.86rem;border-left:4px solid;display:none}
+.alert.show{display:block}
+.alert-success{background:rgba(34,197,94,.08);border-color:var(--success);color:var(--success)}
+.alert-error{background:rgba(239,68,68,.08);border-color:var(--error);color:var(--error)}
+.alert-info{background:rgba(59,130,246,.08);border-color:var(--primary);color:var(--primary)}
+.alert-warning{background:rgba(245,158,11,.08);border-color:var(--warning);color:var(--warning)}
+
+.game-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:13px;margin:7px 0;border-left:5px solid}
+.gc-lock{border-left-color:var(--success)} .gc-strong{border-left-color:var(--primary)}
+.gc-medium{border-left-color:var(--warning)} .gc-tossup{border-left-color:#f97316} .gc-coinflip{border-left-color:var(--muted)}
+.gc-meta{font-size:.71rem;color:var(--muted);margin-bottom:5px}
+.gc-teams{font-family:var(--head);font-size:1rem;font-weight:700;margin:4px 0}
+.gc-pick{font-family:var(--head);font-size:1.2rem;font-weight:800;color:var(--success);margin:7px 0 3px}
+.gc-conf{font-size:.8rem;color:var(--fg2);margin-bottom:3px}
+.gc-signals{font-size:.75rem;color:var(--muted);line-height:1.5}
+.gc-warn{font-size:.73rem;color:var(--warning);margin-top:5px}
+.gc-result{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}
+.btn-w{background:rgba(34,197,94,.12);border:1px solid var(--success);color:var(--success);padding:5px 11px;border-radius:5px;font-size:.76rem;font-weight:700;cursor:pointer}
+.btn-l{background:rgba(239,68,68,.12);border:1px solid var(--error);color:var(--error);padding:5px 11px;border-radius:5px;font-size:.76rem;font-weight:700;cursor:pointer}
+.badge-w{background:rgba(34,197,94,.15);color:var(--success);padding:3px 9px;border-radius:4px;font-size:.76rem;font-weight:700}
+.badge-l{background:rgba(239,68,68,.15);color:var(--error);padding:3px 9px;border-radius:4px;font-size:.76rem;font-weight:700}
+.badge-a{background:rgba(59,130,246,.15);color:var(--primary);padding:3px 9px;border-radius:4px;font-size:.76rem;font-weight:700}
+
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:7px;margin:9px 0}
+.stat-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:11px;text-align:center}
+.stat-val{font-family:var(--head);font-size:1.4rem;font-weight:800;color:var(--primary)}
+.stat-val.good{color:var(--success)} .stat-val.warn{color:var(--warning)} .stat-val.bad{color:var(--error)}
+.stat-sub{font-size:.8rem;color:var(--fg2);margin:2px 0}
+.stat-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+
+.record-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.record-table th{font-family:var(--head);font-weight:700;text-align:left;padding:7px;border-bottom:1px solid var(--border);color:var(--fg2);text-transform:uppercase;font-size:.7rem;letter-spacing:.5px}
+.record-table td{padding:6px 7px;border-bottom:1px solid rgba(42,53,80,.4)}
+.record-table tr:last-child td{border-bottom:none}
+.pct-good{color:var(--success);font-weight:700} .pct-ok{color:var(--warning);font-weight:700} .pct-bad{color:var(--error);font-weight:700}
+
+.cbs-header{background:var(--surface2);border-radius:6px;padding:12px;margin-bottom:11px}
+.cbs-row{display:grid;grid-template-columns:46px 1fr auto auto auto;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--border)}
+.cbs-pt{font-family:var(--head);font-size:1.05rem;font-weight:800;color:var(--warning)}
+.cbs-teams{font-weight:600;min-width:110px;font-size:.86rem}
+.cbs-pick{color:var(--success);font-weight:700;font-size:.86rem;white-space:nowrap}
+.cbs-pct{font-family:var(--mono);font-size:.8rem;color:var(--fg2);white-space:nowrap}
+.risk-lo{font-size:.7rem;color:var(--success);white-space:nowrap}
+.risk-md{font-size:.7rem;color:var(--warning);white-space:nowrap}
+.risk-hi{font-size:.7rem;color:var(--error);white-space:nowrap}
+.cbs-guess{font-size:.69rem;color:var(--warning);grid-column:1/-1;padding-bottom:2px}
+
+.bracket-alert{background:rgba(245,158,11,.08);border:1px solid var(--warning);border-radius:6px;padding:9px 12px;margin-bottom:9px;font-size:.82rem}
+.bracket-game{display:flex;align-items:center;gap:7px;padding:7px 0;border-bottom:1px solid rgba(42,53,80,.4);font-size:.82rem;flex-wrap:wrap}
+.b-pick{background:rgba(34,197,94,.15);color:var(--success);padding:2px 7px;border-radius:4px;font-weight:700;font-size:.73rem;white-space:nowrap}
+.b-upset{background:rgba(245,158,11,.15);color:var(--warning);padding:2px 7px;border-radius:4px;font-weight:700;font-size:.73rem;white-space:nowrap}
+.b-sim{font-family:var(--mono);font-size:.73rem;color:var(--muted);white-space:nowrap}
+.b-seeds{font-size:.73rem;color:var(--muted)}
+
+.bet-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:13px;margin:9px 0}
+.bet-title{font-family:var(--head);font-size:1rem;font-weight:700;margin-bottom:9px}
+.bet-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(42,53,80,.4);font-size:.83rem;gap:8px}
+.bet-row span:last-child{color:var(--fg2);text-align:right}
+.bet-note{font-size:.76rem;color:var(--muted);margin-top:7px}
+
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:6px;margin:8px 0}
+.cal-card{background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px;text-align:center}
+.cal-pred{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.cal-actual{font-family:var(--head);font-size:1.15rem;font-weight:800;color:var(--success)}
+.cal-actual.warn{color:var(--warning)} .cal-actual.bad{color:var(--error)}
+.cal-n{font-size:.68rem;color:var(--muted)}
+
+.top-row{display:flex;align-items:center;gap:9px;padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;flex-wrap:wrap;margin-bottom:5px}
+.tr-sport{font-size:.68rem;font-weight:700;color:var(--muted);min-width:52px}
+.tr-teams{font-size:.83rem;font-weight:600;flex:1;min-width:110px}
+.tr-pick{color:var(--success);font-weight:700;font-size:.86rem}
+.tr-pct{font-family:var(--mono);font-size:.8rem;color:var(--fg2)}
+
+.train-log{background:#070b14;border:1px solid var(--border);border-radius:6px;font-family:var(--mono);font-size:.75rem;max-height:300px;overflow-y:auto;padding:10px;margin-top:9px;line-height:1.5}
+.log-info{color:var(--fg2)} .log-warning{color:var(--warning)} .log-error{color:var(--error)}
+
+.info-box{background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:13px;margin:8px 0;font-size:.84rem;line-height:1.65;color:var(--fg2)}
+.info-box strong{color:var(--fg)}
+
+@media(max-width:600px){
+  .app-title{font-size:1.3rem}
+  .tab-btn{font-size:.76rem;padding:6px 9px}
+  .cbs-row{grid-template-columns:40px 1fr auto}
+  .cbs-pct,.risk-lo,.risk-md,.risk-hi{display:none}
+  .stat-val{font-size:1.15rem}
+  .header-stats{gap:9px}
+}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-title">⚡ EDGE <span>Predict</span></div>
+  <div class="header-stats">
+    <div class="hstat">
+      <div class="hstat-val neutral" id="h-wl">—</div>
+      <div class="hstat-label">W–L</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-val neutral" id="h-pct">—</div>
+      <div class="hstat-label">Win %</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-val neutral" id="h-status">—</div>
+      <div class="hstat-label">Model</div>
+    </div>
+  </div>
+  <div class="last-upd" id="lastUpd"></div>
+</header>
+
+<div class="app-body">
+  <div id="gAlert" class="alert"></div>
+
+  <div class="status-banner">
+    <div>
+      <span class="status-label" id="stText">Loading…</span>
+      <div style="font-size:.77rem;color:var(--muted);margin-top:3px" id="stDetail"></div>
+    </div>
+  </div>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('home',this)">🏠 Home</button>
+    <button class="tab-btn" onclick="switchTab('nfl',this)">🏈 NFL</button>
+    <button class="tab-btn" onclick="switchTab('nba',this)">🏀 NBA</button>
+    <button class="tab-btn" onclick="switchTab('mlb',this)">⚾ MLB</button>
+    <button class="tab-btn" onclick="switchTab('nhl',this)">🏒 NHL</button>
+    <button class="tab-btn" onclick="switchTab('ncaaf',this)">🎓 NCAAF</button>
+    <button class="tab-btn" onclick="switchTab('ncaabm',this)">🏀 NCAAB-M</button>
+    <button class="tab-btn" onclick="switchTab('ncaabw',this)">🏀 NCAAB-W</button>
+    <button class="tab-btn" onclick="switchTab('cbs',this)">📊 CBS</button>
+    <button class="tab-btn" onclick="switchTab('march',this)">🏆 March</button>
+    <button class="tab-btn" onclick="switchTab('betting',this)">💰 Betting</button>
+    <button class="tab-btn" onclick="switchTab('record',this)">📈 Record</button>
+    <button class="tab-btn" onclick="switchTab('log',this)">📋 Log</button>
+    <button class="tab-btn" onclick="switchTab('settings',this)">⚙️ About</button>
+  </div>
+
+  <div class="tab-panel">
+    <div id="tab-home"    class="tab-content active"><div id="homeContent"><div class="empty-state">Loading…</div></div></div>
+    <div id="tab-nfl"     class="tab-content"><h2 class="section-h">🏈 NFL Predictions</h2><div id="pred-nfl"></div></div>
+    <div id="tab-nba"     class="tab-content"><h2 class="section-h">🏀 NBA Predictions</h2><div id="pred-nba"></div></div>
+    <div id="tab-mlb"     class="tab-content"><h2 class="section-h">⚾ MLB Predictions</h2><div id="pred-mlb"></div></div>
+    <div id="tab-nhl"     class="tab-content"><h2 class="section-h">🏒 NHL Predictions</h2><div id="pred-nhl"></div></div>
+    <div id="tab-ncaaf"   class="tab-content"><h2 class="section-h">🎓 NCAAF Predictions</h2><div id="pred-ncaaf"></div></div>
+    <div id="tab-ncaabm"  class="tab-content"><h2 class="section-h">🏀 NCAAB-M Predictions</h2><div id="pred-ncaabm"></div></div>
+    <div id="tab-ncaabw"  class="tab-content"><h2 class="section-h">🏀 NCAAB-W Predictions</h2><div id="pred-ncaabw"></div></div>
+
+    <div id="tab-cbs" class="tab-content">
+      <h2 class="section-h">📊 CBS Confidence Pool Picks</h2>
+      <div class="section-sub">Points assigned by expected value math, not just confidence rank.</div>
+      <div id="cbsContent"><div class="empty-state">No CBS picks yet.<br>GitHub → Actions → "CBS Picks" → Run workflow.</div></div>
+    </div>
+
+    <div id="tab-march" class="tab-content">
+      <h2 class="section-h">🏆 March Madness Bracket</h2>
+      <div class="section-sub">10,000 Monte Carlo simulations. Optimized for pool performance, not just favorites.</div>
+      <div style="display:flex;gap:6px;margin-bottom:11px">
+        <button class="tab-btn active" id="mTabM" onclick="showMarch('mens',this)">Men's</button>
+        <button class="tab-btn" id="mTabW" onclick="showMarch('womens',this)">Women's</button>
+      </div>
+      <div id="marchM"><div class="empty-state">No bracket yet.<br>GitHub → Actions → "March Madness" → Run workflow.</div></div>
+      <div id="marchW" style="display:none"><div class="empty-state">No bracket yet.</div></div>
+    </div>
+
+    <div id="tab-betting" class="tab-content">
+      <h2 class="section-h">💰 Betting Picks — 3 Strategies</h2>
+      <div id="bettingContent"><div class="empty-state">No betting picks yet.</div></div>
+    </div>
+
+    <div id="tab-record" class="tab-content">
+      <h2 class="section-h">📈 Running Record</h2>
+      <div id="recordContent"></div>
+    </div>
+
+    <div id="tab-log" class="tab-content">
+      <h2 class="section-h">📋 Training Log</h2>
+      <div class="section-sub">Output from the last run of brain.py on GitHub's servers.</div>
+      <div class="train-log" id="logContent">No log data yet.</div>
+    </div>
+
+    <div id="tab-settings" class="tab-content">
+      <h2 class="section-h">⚙️ About & Model Info</h2>
+      <div class="info-box">
+        <strong>How it works:</strong> brain.py runs on GitHub's servers via GitHub Actions.
+        Training happens once (30–90 min). Daily updates take a few minutes.
+        This page reads <code>data.json</code> and shows the results — no calculations happen here.<br><br>
+        <strong>API keys</strong> are stored as GitHub Secrets — never in any file.<br><br>
+        <strong>To train:</strong> GitHub repo → Actions → "Train Foundation" → Run workflow<br>
+        <strong>To update predictions:</strong> GitHub repo → Actions → "Daily Update" → Run workflow<br>
+        <strong>Auto-updates:</strong> Predictions refresh daily at 6 AM UTC automatically.
+      </div>
+      <div id="modelInfo"></div>
+      <hr class="divider">
+      <h3 class="section-h">📐 Calibration</h3>
+      <div class="section-sub">When the model says 70% confident, does it actually win ~70% of the time?</div>
+      <div id="calContent"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────
+// DATA LOADING
+// ─────────────────────────────────────────────
+let DATA = null;
+const SPORT_NAMES = {nfl:'NFL',nba:'NBA',mlb:'MLB',nhl:'NHL',ncaaf:'NCAAF',ncaabm:'NCAAB-M',ncaabw:'NCAAB-W'};
+const CONF_LABELS = {lock:'VERY LIKELY',strong:'LIKELY',medium:'LEAN',tossup:'TOSS-UP',coinflip:'COIN FLIP'};
+
+async function loadData() {
+  try {
+    const r = await fetch('data.json?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    DATA = await r.json();
+    if (!DATA || typeof DATA !== 'object') throw new Error('Bad structure');
+    applyOverrides();
+    render();
+  } catch(e) {
+    showAlert('error', 'Could not load data.json. Make sure it exists in your GitHub repository. Error: ' + e.message);
+    setText('stText','Failed to load','st-error');
+  }
+}
+
+function render() {
+  updateHeader();
+  updateStatus();
+  renderCurrentTab();
+  const ts = DATA.last_saved || DATA.last_daily_update;
+  if (ts) {
+    const mins = Math.round((Date.now() - new Date(ts)) / 60000);
+    const el = document.getElementById('lastUpd');
+    if (el) el.textContent = mins < 60 ? `Updated ${mins}m ago` : mins < 1440 ? `Updated ${Math.round(mins/60)}h ago` : `Updated ${Math.round(mins/1440)}d ago`;
+  }
+}
+
+// ─────────────────────────────────────────────
+// HEADER
+// ─────────────────────────────────────────────
+function updateHeader() {
+  if (!DATA) return;
+  const rec = DATA.running_record || {};
+  let w=0,l=0;
+  for (const s of Object.keys(rec)) { w += (rec[s]||{}).wins||0; l += (rec[s]||{}).losses||0; }
+  const tot = w+l;
+  const pct = tot>0 ? (w/tot*100).toFixed(0)+'%' : '—';
+  setEl('h-wl', `${w}–${l}`, tot>0?'hstat-val good':'hstat-val neutral');
+  setEl('h-pct', pct, tot>0?'hstat-val good':'hstat-val neutral');
+  const st = DATA.training_status||'untrained';
+  const stLabels = {trained:'✓ Ready',training:'⏳ Training',untrained:'✗ Untrained',error:'✗ Error'};
+  const stClass  = {trained:'hstat-val good',training:'hstat-val warn',untrained:'hstat-val neutral',error:'hstat-val bad'};
+  setEl('h-status', stLabels[st]||st, stClass[st]||'hstat-val neutral');
+}
+
+function updateStatus() {
+  if (!DATA) return;
+  const st = DATA.training_status||'untrained';
+  const stMap = {trained:'✓ Model Trained & Ready',training:'⏳ Training in progress…',untrained:'✗ Not Yet Trained',error:'✗ Training Error'};
+  const clMap = {trained:'status-label st-trained',training:'status-label st-training',untrained:'status-label st-untrained',error:'status-label st-error'};
+  const txt = document.getElementById('stText');
+  const det = document.getElementById('stDetail');
+  if (txt) { txt.textContent = stMap[st]||st; txt.className = clMap[st]||'status-label'; }
+  if (det) {
+    if (st==='trained') {
+      const rec = DATA.training_record||{};
+      const d = rec.date ? new Date(rec.date).toLocaleDateString() : '—';
+      const dur = rec.duration_seconds ? `${Math.floor(rec.duration_seconds/60)}m ${rec.duration_seconds%60}s` : '—';
+      det.textContent = `Trained: ${d} · Took: ${dur}`;
+    } else if (st==='untrained') {
+      det.textContent = 'GitHub → Actions → "Train Foundation" → Run workflow';
+    } else if (st==='error') {
+      det.textContent = DATA.last_error || 'Check Log tab for details';
+    } else {
+      det.textContent = 'Check Log tab for progress';
+    }
+  }
+}
+
+// ─────────────────────────────────────────────
+// TABS
+// ─────────────────────────────────────────────
+let currentTab = 'home';
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-btn').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const tc = document.getElementById('tab-'+name);
+  if (tc) tc.classList.add('active');
+  currentTab = name;
+  if (DATA) renderCurrentTab();
+}
+
+function renderCurrentTab() {
+  switch(currentTab) {
+    case 'home':    renderHome(); break;
+    case 'record':  renderRecord(); break;
+    case 'log':     renderLog(); break;
+    case 'cbs':     renderCBS(); break;
+    case 'march':   renderMarch(); break;
+    case 'betting': renderBetting(); break;
+    case 'settings':renderSettings(); break;
+    default:
+      if (SPORT_NAMES[currentTab]) renderSport(currentTab);
+  }
+}
+
+// ─────────────────────────────────────────────
+// HOME
+// ─────────────────────────────────────────────
+function renderHome() {
+  const el = document.getElementById('homeContent');
+  if (!el||!DATA) return;
+
+  const rec = DATA.training_record||{};
+  const st  = DATA.training_status||'untrained';
+
+  let html = '<div class="stat-grid">';
+  for (const s of Object.keys(SPORT_NAMES)) {
+    const games = (rec.data_collected||{})[s]||0;
+    const acc   = (rec.accuracy||{})[s]||0;
+    const pct   = acc>0 ? (acc*100).toFixed(1)+'%' : '—';
+    const cls   = acc>=0.65?'stat-val good':acc>0?'stat-val warn':'stat-val';
+    html += `<div class="stat-card"><div class="${cls}">${pct}</div><div class="stat-sub">${games.toLocaleString()} games</div><div class="stat-label">${SPORT_NAMES[s]}</div></div>`;
+  }
+  html += '</div>';
+
+  if (st !== 'trained') {
+    html += `<div class="alert alert-info show" style="margin-top:11px">
+      <strong>Model not trained yet.</strong><br>
+      GitHub → Actions → "Train Foundation" → Run workflow.<br>
+      Training takes 30–90 min and runs on GitHub's servers, not your phone.
+    </div>`;
+    el.innerHTML = html; return;
+  }
+
+  // Top picks
+  const allPreds = [];
+  for (const s of Object.keys(SPORT_NAMES)) {
+    for (const p of (DATA.predictions||{})[s]||[]) {
+      if (p && p.status==='pending') allPreds.push({...p, sport:s});
+    }
+  }
+  const top = allPreds.filter(p=>(p.pick_prob||0)>=0.60).sort((a,b)=>(b.pick_prob||0)-(a.pick_prob||0)).slice(0,8);
+
+  if (top.length) {
+    html += '<h3 class="section-h" style="margin-top:13px">🎯 Today\'s Best Picks</h3>';
+    for (const p of top) {
+      const pct = Math.round((p.pick_prob||0)*100);
+      html += `<div class="top-row">
+        <div class="tr-sport">${SPORT_NAMES[p.sport]||p.sport}</div>
+        <div class="tr-teams">${p.away||'?'} @ ${p.home||'?'}</div>
+        <div class="tr-pick">→ ${p.pick||'?'}</div>
+        <div class="tr-pct">${pct}%</div>
+      </div>`;
+    }
+  } else {
+    html += '<div class="empty-state" style="margin-top:12px">No high-confidence picks right now.<br>Predictions refresh daily automatically.</div>';
+  }
+
+  // CBS snapshot
+  const cbs = DATA.cbs_picks||{};
+  if ((cbs.assignment||[]).length) {
+    html += `<h3 class="section-h" style="margin-top:15px">📊 CBS Week ${cbs.week_number||'?'} Preview</h3>`;
+    html += `<div style="font-size:.82rem;color:var(--fg2);margin-bottom:7px">${cbs.num_games} games · Max ${cbs.max_possible_points}pts · Expected ~${cbs.expected_points}pts</div>`;
+    for (const a of (cbs.assignment||[]).slice(0,3)) {
+      html += `<div class="top-row">
+        <div class="tr-sport" style="color:var(--warning);font-weight:700">${a.point_value}pt</div>
+        <div class="tr-teams">${a.away||'?'} @ ${a.home||'?'}</div>
+        <div class="tr-pick">→ ${a.pick||'?'}</div>
+        <div class="tr-pct">${a.display_pct||'?'}</div>
+      </div>`;
+    }
+  }
+
+  el.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────
+// SPORT TABS
+// ─────────────────────────────────────────────
+function renderSport(sport) {
+  const el = document.getElementById('pred-'+sport);
+  if (!el||!DATA) return;
+  const preds = (DATA.predictions||{})[sport]||[];
+
+  if (!preds.length) {
+    el.innerHTML = '<div class="empty-state">No predictions yet.<br>Predictions update automatically each day.</div>';
+    return;
+  }
+
+  let html = '';
+  for (const p of preds) {
+    if (!p||!p.home||!p.away) continue;
+    const conf   = p.confidence||'coinflip';
+    const status = p.status||'pending';
+    const date   = p.date ? new Date(p.date).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}) : '';
+    const pct    = p.pick_prob ? Math.round(p.pick_prob*100) : '?';
+    const sigs   = (p.signals||[]).join(' · ');
+
+    html += `<div class="game-card gc-${conf}">`;
+    html += `<div class="gc-meta">${date}${p.venue?' · '+p.venue:''}</div>`;
+    html += `<div class="gc-teams">${p.away} @ ${p.home}</div>`;
+    html += `<div class="gc-pick">→ ${p.pick}</div>`;
+    html += `<div class="gc-conf">${CONF_LABELS[conf]||conf} · ${pct}% confidence${p.cal_note||''}</div>`;
+    if (sigs) html += `<div class="gc-signals">Signals: ${sigs}</div>`;
+    if (p.is_guess) html += `<div class="gc-warn">⚠ No historical data — home field only (effectively a coin flip)</div>`;
+    html += `<div class="gc-result" id="r-${p.id}">`;
+    if (status==='correct') html += '<span class="badge-w">✓ WIN — Auto-verified</span>';
+    else if (status==='wrong') html += '<span class="badge-l">✗ LOSS — Auto-verified</span>';
+    else {
+      html += `<button class="btn-w" onclick="mark('${p.id}','${sport}','correct')">✓ Won</button>`;
+      html += `<button class="btn-l" onclick="mark('${p.id}','${sport}','wrong')">✗ Lost</button>`;
+    }
+    html += '</div></div>';
+  }
+  el.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────
+// MANUAL RESULT MARKING
+// ─────────────────────────────────────────────
+function mark(id, sport, status) {
+  const preds = (DATA.predictions||{})[sport]||[];
+  const pred  = preds.find(p=>p&&p.id===id);
+  if (!pred) return;
+  pred.status = status;
+  let ov={};
+  try{ov=JSON.parse(localStorage.getItem('ep_ov')||'{}')}catch(e){}
+  ov[id]={sport,status};
+  try{localStorage.setItem('ep_ov',JSON.stringify(ov))}catch(e){}
+  const el = document.getElementById('r-'+id);
+  if (el) el.innerHTML = status==='correct' ? '<span class="badge-w">✓ WIN logged</span>' : '<span class="badge-l">✗ LOSS logged</span>';
+  showAlert('success','Result logged. Auto-verification will confirm within 24 hours.');
+}
+
+function applyOverrides() {
+  if (!DATA) return;
+  let ov={};
+  try{ov=JSON.parse(localStorage.getItem('ep_ov')||'{}')}catch(e){return}
+  for (const s of Object.keys(DATA.predictions||{})) {
+    for (const p of DATA.predictions[s]||[]) {
+      if (p&&p.id&&ov[p.id]&&p.status==='pending') p.status=ov[p.id].status;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────
+// CBS
+// ─────────────────────────────────────────────
+function renderCBS() {
+  const el = document.getElementById('cbsContent');
+  if (!el||!DATA) return;
+  const cbs = DATA.cbs_picks||{};
+  if (!(cbs.assignment||[]).length) {
+    el.innerHTML = '<div class="empty-state">No CBS picks yet.<br>GitHub → Actions → "CBS Picks" → Run workflow.</div>';
+    return;
+  }
+  const n = cbs.num_games||0;
+  const gen = cbs.generated_at ? new Date(cbs.generated_at).toLocaleDateString() : '—';
+  let html = `<div class="cbs-header">
+    <div style="font-family:var(--head);font-size:1.05rem;font-weight:800">Week ${cbs.week_number||'?'} — ${n} Games</div>
+    <div style="color:var(--fg2);font-size:.82rem;margin-top:3px">
+      Max: <strong style="color:var(--warning)">${cbs.max_possible_points}pts</strong>
+      · Expected: <strong style="color:var(--success)">~${cbs.expected_points}pts</strong>
+      · ${gen}
+    </div>
+    <div style="font-size:.74rem;color:var(--muted);margin-top:5px">Highest pts to most confident picks. EV math optimizes entire week.</div>
+  </div>`;
+
+  for (const a of cbs.assignment||[]) {
+    if (!a) continue;
+    const pt = a.point_value||0;
+    const lo = n*0.75, md = n*0.50;
+    const rc = pt>=lo?'risk-lo':pt>=md?'risk-md':'risk-hi';
+    const rt = pt>=lo?'🔒 LOW':pt>=md?'⚠ MED':'🎲 HIGH';
+    html += `<div class="cbs-row" style="${a.is_guess?'opacity:.65':''}">`;
+    html += `<div class="cbs-pt">${pt}pt</div>`;
+    html += `<div class="cbs-teams">${a.away||'?'} @ ${a.home||'?'}</div>`;
+    html += `<div class="cbs-pick">→ ${a.pick||'?'}</div>`;
+    html += `<div class="cbs-pct">${a.display_pct||'?'}</div>`;
+    html += `<div class="${rc}">${rt}</div>`;
+    if (a.is_guess) html += `<div class="cbs-guess">⚠ No data — assigned lowest available points</div>`;
+    html += '</div>';
+  }
+  el.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────
+// MARCH MADNESS
+// ─────────────────────────────────────────────
+function showMarch(gender, btn) {
+  document.getElementById('marchM').style.display = gender==='mens'?'':'none';
+  document.getElementById('marchW').style.display = gender==='womens'?'':'none';
+  document.getElementById('mTabM').classList.toggle('active', gender==='mens');
+  document.getElementById('mTabW').classList.toggle('active', gender==='womens');
+}
+
+function renderMarch() {
+  renderMarchFor('mens');
+  renderMarchFor('womens');
+}
+
+function renderMarchFor(gender) {
+  const key = gender==='mens'?'march_mens':'march_womens';
+  const el  = document.getElementById(gender==='mens'?'marchM':'marchW');
+  if (!el||!DATA) return;
+  const b = DATA[key]||{};
+  if (!(b.recommended_bracket||[]).length) {
+    el.innerHTML = '<div class="empty-state">No bracket yet.<br>GitHub → Actions → "March Madness" → Run workflow.</div>';
+    return;
+  }
+  const gen  = b.generated_at ? new Date(b.generated_at).toLocaleDateString() : '—';
+  const sims = (b.simulations_run||0).toLocaleString();
+
+  let html = `<div style="font-size:.8rem;color:var(--muted);margin-bottom:9px">${sims} simulations run · Generated ${gen}</div>`;
+
+  // Upset alerts first
+  for (const ua of b.upset_alerts||[]) {
+    html += `<div class="bracket-alert">⚡ <strong>UPSET ALERT:</strong> ${ua.message||ua.game||''}</div>`;
+  }
+
+  // Bracket games
+  for (const g of b.recommended_bracket||[]) {
+    if (!g) continue;
+    const homeS = g.home_seed ? `(${g.home_seed})` : '';
+    const awayS = g.away_seed ? `(${g.away_seed})` : '';
+    const sim   = Math.round(Math.max(g.home_prob||0.5, 1-(g.home_prob||0.5))*100);
+    const isUpset = g.home_seed && g.away_seed && g.home_seed > 0 && g.away_seed > 0
+      && ((g.recommended===g.home && g.home_seed > g.away_seed) || (g.recommended===g.away && g.away_seed > g.home_seed));
+    const pickClass = isUpset ? 'b-upset' : 'b-pick';
+    const date = g.date ? new Date(g.date).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
+
+    html += `<div class="bracket-game">
+      <div style="flex:1;min-width:150px">${awayS} ${g.away||'?'} @ ${homeS} ${g.home||'?'}</div>
+      <div class="${pickClass}">→ ${g.recommended||'?'}</div>
+      <div class="b-sim">${sim}%</div>
+      ${date?`<div class="b-seeds">${date}</div>`:''}
+    </div>`;
+  }
+  el.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────
+// BETTING
+// ─────────────────────────────────────────────
+function renderBetting() {
+  const el = document.getElementById('bettingContent');
+  if (!el||!DATA) return;
+  const bp = DATA.betting_picks||{};
+
+  if (!bp.safe_bet && !bp.value_bet && !bp.parlay) {
+    el.innerHTML = '<div class="empty-state">No betting picks yet.<br>Picks generate automatically during daily updates.</div>';
+    return;
+  }
+
+  let html = '<div class="info-box" style="margin-bottom:11px">⚠ <strong>Reminder:</strong> These are model outputs, not guaranteed wins. Never bet more than you can lose. Betting picks use NFL data and update with daily runs.</div>';
+
+  if (bp.safe_bet) {
+    html += betCard('🔒 Safe Bet — Highest Confidence', bp.safe_bet);
+  }
+  if (bp.value_bet) {
+    html += betCard('💡 Value Bet — Second Best Pick', bp.value_bet);
+  }
+  if (bp.parlay && (bp.parlay.legs||[]).length>=2) {
+    const p = bp.parlay;
+    html += `<div class="bet-card">
+      <div class="bet-title">⚡ Parlay — ${p.legs.length} Legs</div>`;
+    for (const leg of p.legs) {
+      html += `<div class="bet-row"><span>${leg.away||'?'} @ ${leg.home||'?'}</span><span>→ ${leg.pick||'?'} ${leg.pick_prob?Math.round(leg.pick_prob*100)+'%':''}</span></div>`;
+    }
+    html += `<div class="bet-row"><span>Combined probability</span><span>${Math.round((p.combined_prob||0)*100)}%</span></div>`;
+    html += `<div class="bet-row"><span>Approx multiplier</span><span>~${(p.approx_mult||0).toFixed(2)}x</span></div>`;
+    html += `<div class="bet-note">⚠ All legs must win. High risk — only use for entertainment.</div></div>`;
+  }
+  el.innerHTML = html;
+}
+
+function betCard(title, pick) {
+  if (!pick) return '';
+  const pct = pick.pick_prob ? Math.round(pick.pick_prob*100) : '?';
+  const sigs = (pick.signals||[]).join(', ');
+  return `<div class="bet-card">
+    <div class="bet-title">${title}</div>
+    <div class="bet-row"><span>Game</span><span>${pick.away||'?'} @ ${pick.home||'?'}</span></div>
+    <div class="bet-row"><span>Pick</span><span>${pick.pick||'?'}</span></div>
+    <div class="bet-row"><span>Confidence</span><span>${pct}% (${pick.confidence||'?'})</span></div>
+    ${sigs?`<div class="bet-row"><span>Signals</span><span>${sigs}</span></div>`:''}
+  </div>`;
+}
+
+// ─────────────────────────────────────────────
+// RECORD
+// ─────────────────────────────────────────────
+function renderRecord() {
+  const el = document.getElementById('recordContent');
+  if (!el||!DATA) return;
+  const rec  = DATA.running_record||{};
+  const acc  = (DATA.training_record||{}).accuracy||{};
+
+  let totalW=0, totalL=0;
+  for (const s of Object.keys(SPORT_NAMES)) { totalW+=(rec[s]||{}).wins||0; totalL+=(rec[s]||{}).losses||0; }
+  const tot = totalW+totalL;
+
+  let html = `<div class="stat-grid" style="margin-bottom:12px">
+    <div class="stat-card"><div class="stat-val good">${totalW}</div><div class="stat-label">Total Wins</div></div>
+    <div class="stat-card"><div class="stat-val bad">${totalL}</div><div class="stat-label">Total Losses</div></div>
+    <div class="stat-card"><div class="stat-val ${tot>0?'good':'neutral'}">${tot>0?(totalW/tot*100).toFixed(1)+'%':'—'}</div><div class="stat-label">Overall %</div></div>
+  </div>`;
+
+  html += '<table class="record-table"><thead><tr><th>Sport</th><th>W</th><th>L</th><th>%</th><th>Training Acc</th></tr></thead><tbody>';
+  for (const s of Object.keys(SPORT_NAMES)) {
+    const r  = rec[s]||{};
+    const w  = r.wins||0; const l = r.losses||0; const t = w+l;
+    const pct = t>0 ? (w/t*100).toFixed(1)+'%' : '—';
+    const cls = t>0?(w/t>=0.62?'pct-good':w/t>=0.52?'pct-ok':'pct-bad'):'';
+    const ta  = (acc[s]||0)>0 ? (acc[s]*100).toFixed(1)+'%' : '—';
+    const taCls = (acc[s]||0)>=0.65?'pct-good':(acc[s]||0)>0?'pct-ok':'';
+    html += `<tr><td>${SPORT_NAMES[s]}</td><td>${w}</td><td>${l}</td><td class="${cls}">${pct}</td><td class="${taCls}">${ta}</td></tr>`;
+  }
+  html += '</tbody></table>';
+
+  // Calibration summary
+  const cal = DATA.calibration||{};
+  const calSports = Object.keys(cal).filter(s=>Object.keys(cal[s]||{}).length>0);
+  if (calSports.length) {
+    html += '<h3 class="section-h" style="margin-top:14px">📐 Calibration by Sport</h3>';
+    html += '<div class="section-sub">Does stated confidence match real win rate?</div>';
+    for (const s of calSports) {
+      const buckets = Object.entries(cal[s]||{}).sort((a,b)=>parseFloat(a[0])-parseFloat(b[0]));
+      if (!buckets.length) continue;
+      html += `<div style="font-family:var(--head);font-weight:700;font-size:.85rem;color:var(--fg2);margin:9px 0 5px">${SPORT_NAMES[s]||s}</div>`;
+      html += '<div class="cal-grid">';
+      for (const [bucket, data] of buckets) {
+        if (!data||data.total<5) continue;
+        const actual = (data.correct/data.total*100).toFixed(0)+'%';
+        const gap = data.correct/data.total - parseFloat(bucket);
+        const cls = Math.abs(gap)<0.05?'cal-actual':gap>0?'cal-actual':'cal-actual warn';
+        html += `<div class="cal-card">
+          <div class="cal-pred">Said ${parseFloat(bucket)*100|0}%</div>
+          <div class="${cls}">${actual}</div>
+          <div class="cal-n">n=${data.total}</div>
+        </div>`;
+      }
+      html += '</div>';
+    }
+  }
+
+  el.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────
+// LOG
+// ─────────────────────────────────────────────
+function renderLog() {
+  const el = document.getElementById('logContent');
+  if (!el||!DATA) return;
+  const logs = DATA.training_log||[];
+  if (!logs.length) { el.innerHTML = '<span class="log-info">No log data yet.</span>'; return; }
+  el.innerHTML = logs.map(entry => {
+    const lvl = (entry.level||'INFO').toUpperCase();
+    const cls = lvl==='ERROR'?'log-error':lvl==='WARNING'?'log-warning':'log-info';
+    const time = entry.time ? entry.time.slice(11,19) : '';
+    const msg = (entry.message||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return `<div class="${cls}">[${time}] ${msg}</div>`;
+  }).join('');
+  el.scrollTop = el.scrollHeight;
+}
+
+// ─────────────────────────────────────────────
+// SETTINGS / ABOUT
+// ─────────────────────────────────────────────
+function renderSettings() {
+  const mi = document.getElementById('modelInfo');
+  const cc = document.getElementById('calContent');
+  if (!DATA) return;
+
+  if (mi) {
+    const rec = DATA.training_record||{};
+    let html = '<div class="stat-grid">';
+    for (const s of Object.keys(SPORT_NAMES)) {
+      const games = (rec.data_collected||{})[s]||0;
+      const acc   = (rec.accuracy||{})[s]||0;
+      const pct   = acc>0?(acc*100).toFixed(1)+'%':'—';
+      const cls   = acc>=0.65?'stat-val good':acc>0?'stat-val warn':'stat-val';
+      html += `<div class="stat-card"><div class="${cls}">${pct}</div><div class="stat-sub">${games.toLocaleString()} games trained</div><div class="stat-label">${SPORT_NAMES[s]}</div></div>`;
+    }
+    html += '</div>';
+    const w = DATA.weights||{};
+    html += '<h3 class="section-h" style="margin-top:13px">Current Weights (NFL)</h3>';
+    html += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(115px,1fr));gap:5px;margin-top:7px">';
+    for (const [key, val] of Object.entries(w.nfl||{})) {
+      html += `<div class="cal-card"><div class="cal-pred">${key}</div><div style="font-family:var(--head);font-size:1rem;font-weight:700;color:var(--primary)">${(+val).toFixed(2)}</div></div>`;
+    }
+    html += '</div>';
+    mi.innerHTML = html;
+  }
+
+  if (cc) {
+    const cal = DATA.calibration||{};
+    let html = '';
+    for (const s of Object.keys(SPORT_NAMES)) {
+      const buckets = Object.entries(cal[s]||{}).sort((a,b)=>parseFloat(a[0])-parseFloat(b[0]));
+      const valid = buckets.filter(([,d])=>d&&d.total>=10);
+      if (!valid.length) continue;
+      html += `<div style="font-family:var(--head);font-weight:700;margin:9px 0 5px">${SPORT_NAMES[s]}</div>`;
+      html += '<div class="cal-grid">';
+      for (const [bucket, d] of valid) {
+        const actual = (d.correct/d.total*100).toFixed(0)+'%';
+        const gap    = d.correct/d.total - parseFloat(bucket);
+        const cls    = Math.abs(gap)<0.05 ? 'cal-actual' : gap>0 ? 'cal-actual' : 'cal-actual warn';
+        html += `<div class="cal-card"><div class="cal-pred">Said ${parseFloat(bucket)*100|0}%</div><div class="${cls}">${actual}</div><div class="cal-n">n=${d.total}</div></div>`;
+      }
+      html += '</div>';
+    }
+    cc.innerHTML = html || '<div class="empty-state">No calibration data yet. Results are logged automatically after each game.</div>';
+  }
+}
+
+// ─────────────────────────────────────────────
+// HELPERS
+// ─────────────────────────────────────────────
+function showAlert(type, msg) {
+  const el = document.getElementById('gAlert');
+  if (!el) return;
+  el.className = `alert alert-${type} show`;
+  el.innerHTML = msg;
+  setTimeout(()=>el.classList.remove('show'), 5000);
+}
+
+function setEl(id, text, cls) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = text;
+  if (cls) el.className = cls;
+}
+
+function setText(id, text, cls) { setEl(id, text, cls); }
+
+// Start
+loadData();
+</script>
+</body>
+</html>
