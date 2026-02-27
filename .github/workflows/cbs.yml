@@ -1,0 +1,25 @@
+name: CBS Picks
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cbs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -r requirements.txt
+      - run: python brain.py --mode cbs
+        env:
+          ODDS_API_KEY:    ${{ secrets.ODDS_API_KEY }}
+          OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+          BALLDONTLIE_KEY: ${{ secrets.BALLDONTLIE_KEY }}
+      - run: |
+          git config user.name "EDGE Predict Bot"
+          git config user.email "bot@edge-predict"
+          git add data.json
+          git diff --staged --quiet || git commit -m "CBS picks $(date -u +%Y-%m-%d)"
+          git push
