@@ -2,8 +2,11 @@ name: Daily Update
 
 on:
   schedule:
-    - cron: '0 11 * * *'   # 6 AM CT daily (11 AM UTC)
-  workflow_dispatch:         # Also manually triggerable
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update:
@@ -13,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
