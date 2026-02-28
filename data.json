@@ -1,2508 +1,558 @@
 {
   "version": "1.0",
   "last_trained": "2026-02-27T22:45:38.961435",
-  "last_daily_update": null,
+  "last_daily_update": "2026-02-28T11:36:01.331925",
   "training_status": "trained",
   "training_log": [
     {
-      "time": "2026-02-27T22:31:00.049299",
-      "level": "WARNING",
-      "message": "[22:31:00] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:31:00.056854",
-      "level": "INFO",
-      "message": "[22:31:00] INFO:   Weights converged at iteration 6, accuracy 0.933"
-    },
-    {
-      "time": "2026-02-27T22:31:00.056915",
-      "level": "INFO",
-      "message": "[22:31:00] INFO:   nfl 2018: post-train accuracy: 93.3%"
-    },
-    {
-      "time": "2026-02-27T22:31:00.056967",
+      "time": "2026-02-28T11:35:26.054775",
       "level": "INFO",
-      "message": "[22:31:00] INFO:   Fetching nfl 2019..."
+      "message": "[11:35:26] INFO: EDGE Predict v1.0 starting in mode: update"
     },
     {
-      "time": "2026-02-27T22:31:00.252317",
+      "time": "2026-02-28T11:35:26.054822",
       "level": "INFO",
-      "message": "[22:31:00] INFO: TSDB nfl 2019: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:31:00.335069",
-      "level": "WARNING",
-      "message": "[22:31:00] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
+      "message": "[11:35:26] INFO: BallDontLie key: set"
     },
     {
-      "time": "2026-02-27T22:31:00.337244",
+      "time": "2026-02-28T11:35:26.054878",
       "level": "INFO",
-      "message": "[22:31:00] INFO:   nfl 2019: 15 games | pre-train accuracy: 66.7%"
+      "message": "[11:35:26] INFO: Odds API key:    set"
     },
     {
-      "time": "2026-02-27T22:31:00.441437",
-      "level": "WARNING",
-      "message": "[22:31:00] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:31:00.448732",
+      "time": "2026-02-28T11:35:26.054932",
       "level": "INFO",
-      "message": "[22:31:00] INFO:   Weights converged at iteration 6, accuracy 0.933"
+      "message": "[11:35:26] INFO: OpenWeather key: set"
     },
     {
-      "time": "2026-02-27T22:31:00.448773",
+      "time": "2026-02-28T11:35:26.057604",
       "level": "INFO",
-      "message": "[22:31:00] INFO:   nfl 2019: post-train accuracy: 93.3%"
+      "message": "[11:35:26] INFO: Data loaded (version: 1.0)"
     },
     {
-      "time": "2026-02-27T22:31:00.448862",
+      "time": "2026-02-28T11:35:26.057704",
       "level": "INFO",
-      "message": "[22:31:00] INFO:   Fetching nfl 2020..."
+      "message": "[11:35:26] INFO: Running daily update..."
     },
     {
-      "time": "2026-02-27T22:31:01.501462",
+      "time": "2026-02-28T11:35:26.057772",
       "level": "INFO",
-      "message": "[22:31:01] INFO: TSDB nfl 2020: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:31:01.622897",
-      "level": "WARNING",
-      "message": "[22:31:01] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:32:01.707515",
-      "level": "WARNING",
-      "message": "[22:32:01] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
+      "message": "[11:35:26] INFO: Fetching standings: nfl"
     },
     {
-      "time": "2026-02-27T22:32:01.709811",
+      "time": "2026-02-28T11:35:26.556098",
       "level": "INFO",
-      "message": "[22:32:01] INFO:   nfl 2020: 15 games | pre-train accuracy: 46.7%"
-    },
-    {
-      "time": "2026-02-27T22:32:01.794076",
-      "level": "WARNING",
-      "message": "[22:32:01] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
+      "message": "[11:35:26] INFO: ESPN standings nfl: 0 teams"
     },
     {
-      "time": "2026-02-27T22:32:01.801367",
+      "time": "2026-02-28T11:35:27.056384",
       "level": "INFO",
-      "message": "[22:32:01] INFO:   Weights converged at iteration 6, accuracy 0.800"
+      "message": "[11:35:27] INFO: Fetching standings: nba"
     },
     {
-      "time": "2026-02-27T22:32:01.801427",
+      "time": "2026-02-28T11:35:27.269203",
       "level": "INFO",
-      "message": "[22:32:01] INFO:   nfl 2020: post-train accuracy: 80.0%"
+      "message": "[11:35:27] INFO: ESPN standings nba: 0 teams"
     },
     {
-      "time": "2026-02-27T22:32:01.801477",
+      "time": "2026-02-28T11:35:27.769501",
       "level": "INFO",
-      "message": "[22:32:01] INFO:   Fetching nfl 2021..."
+      "message": "[11:35:27] INFO: Fetching standings: mlb"
     },
     {
-      "time": "2026-02-27T22:32:02.129486",
+      "time": "2026-02-28T11:35:28.123815",
       "level": "INFO",
-      "message": "[22:32:02] INFO: TSDB nfl 2021: 15 completed games"
+      "message": "[11:35:28] INFO: ESPN standings mlb: 0 teams"
     },
     {
-      "time": "2026-02-27T22:32:02.246116",
-      "level": "WARNING",
-      "message": "[22:32:02] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
-    },
-    {
-      "time": "2026-02-27T22:32:02.248560",
+      "time": "2026-02-28T11:35:28.624085",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   nfl 2021: 15 games | pre-train accuracy: 46.7%"
-    },
-    {
-      "time": "2026-02-27T22:32:02.358452",
-      "level": "WARNING",
-      "message": "[22:32:02] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
+      "message": "[11:35:28] INFO: Fetching standings: nhl"
     },
     {
-      "time": "2026-02-27T22:32:02.366077",
+      "time": "2026-02-28T11:35:28.807459",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   Weights converged at iteration 6, accuracy 1.000"
+      "message": "[11:35:28] INFO: ESPN standings nhl: 0 teams"
     },
     {
-      "time": "2026-02-27T22:32:02.366121",
+      "time": "2026-02-28T11:35:29.307687",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   nfl 2021: post-train accuracy: 100.0%"
+      "message": "[11:35:29] INFO: Fetching standings: ncaaf"
     },
     {
-      "time": "2026-02-27T22:32:02.366149",
+      "time": "2026-02-28T11:35:29.673990",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   Fetching nfl 2022..."
+      "message": "[11:35:29] INFO: ESPN standings ncaaf: 0 teams"
     },
     {
-      "time": "2026-02-27T22:32:02.561583",
+      "time": "2026-02-28T11:35:30.174234",
       "level": "INFO",
-      "message": "[22:32:02] INFO: TSDB nfl 2022: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:32:02.651347",
-      "level": "WARNING",
-      "message": "[22:32:02] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
+      "message": "[11:35:30] INFO: Fetching standings: ncaabm"
     },
     {
-      "time": "2026-02-27T22:32:02.653845",
+      "time": "2026-02-28T11:35:30.405942",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   nfl 2022: 15 games | pre-train accuracy: 66.7%"
-    },
-    {
-      "time": "2026-02-27T22:32:02.738025",
-      "level": "WARNING",
-      "message": "[22:32:02] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
+      "message": "[11:35:30] INFO: ESPN standings ncaabm: 0 teams"
     },
     {
-      "time": "2026-02-27T22:32:02.745332",
+      "time": "2026-02-28T11:35:30.906206",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   Weights converged at iteration 6, accuracy 0.733"
+      "message": "[11:35:30] INFO: Fetching standings: ncaabw"
     },
     {
-      "time": "2026-02-27T22:32:02.745374",
+      "time": "2026-02-28T11:35:31.207483",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   nfl 2022: post-train accuracy: 73.3%"
+      "message": "[11:35:31] INFO: ESPN standings ncaabw: 0 teams"
     },
     {
-      "time": "2026-02-27T22:32:02.745498",
+      "time": "2026-02-28T11:35:31.707705",
       "level": "INFO",
-      "message": "[22:32:02] INFO:   Fetching nfl 2023..."
+      "message": "[11:35:31] INFO: Generating predictions: nfl"
     },
     {
-      "time": "2026-02-27T22:32:02.936720",
+      "time": "2026-02-28T11:35:31.869177",
       "level": "INFO",
-      "message": "[22:32:02] INFO: TSDB nfl 2023: 15 completed games"
+      "message": "[11:35:31] INFO: ESPN scoreboard nfl: 1 games"
     },
     {
-      "time": "2026-02-27T22:32:03.046741",
+      "time": "2026-02-28T11:35:32.486454",
       "level": "WARNING",
-      "message": "[22:32:03] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
+      "message": "[11:35:32] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:32:03.049330",
+      "time": "2026-02-28T11:35:32.487962",
       "level": "INFO",
-      "message": "[22:32:03] INFO:   nfl 2023: 15 games | pre-train accuracy: 53.3%"
+      "message": "[11:35:32] INFO:   nfl: 1 predictions generated"
     },
     {
-      "time": "2026-02-27T22:32:03.134017",
-      "level": "WARNING",
-      "message": "[22:32:03] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:32:03.142894",
+      "time": "2026-02-28T11:35:32.788197",
       "level": "INFO",
-      "message": "[22:32:03] INFO:   Weights converged at iteration 6, accuracy 0.800"
+      "message": "[11:35:32] INFO: Generating predictions: nba"
     },
     {
-      "time": "2026-02-27T22:32:03.142936",
+      "time": "2026-02-28T11:35:32.915648",
       "level": "INFO",
-      "message": "[22:32:03] INFO:   nfl 2023: post-train accuracy: 80.0%"
+      "message": "[11:35:32] INFO: ESPN scoreboard nba: 5 games"
     },
     {
-      "time": "2026-02-27T22:32:03.142973",
+      "time": "2026-02-28T11:35:33.107988",
       "level": "INFO",
-      "message": "[22:32:03] INFO:   Fetching nfl 2024..."
+      "message": "[11:35:33] INFO:   nba: 5 predictions generated"
     },
     {
-      "time": "2026-02-27T22:32:03.483880",
+      "time": "2026-02-28T11:35:33.408244",
       "level": "INFO",
-      "message": "[22:32:03] INFO: TSDB nfl 2024: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:32:03.569788",
-      "level": "WARNING",
-      "message": "[22:32:03] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
+      "message": "[11:35:33] INFO: Generating predictions: mlb"
     },
     {
-      "time": "2026-02-27T22:32:03.572272",
+      "time": "2026-02-28T11:35:33.542460",
       "level": "INFO",
-      "message": "[22:32:03] INFO:   nfl 2024: 15 games | pre-train accuracy: 20.0%"
+      "message": "[11:35:33] INFO: ESPN scoreboard mlb: 16 games"
     },
     {
-      "time": "2026-02-27T22:32:03.648163",
+      "time": "2026-02-28T11:35:34.065259",
       "level": "WARNING",
-      "message": "[22:32:03] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:32:03.657243",
-      "level": "INFO",
-      "message": "[22:32:03] INFO:   Weights converged at iteration 6, accuracy 0.867"
-    },
-    {
-      "time": "2026-02-27T22:32:03.657294",
-      "level": "INFO",
-      "message": "[22:32:03] INFO:   nfl 2024: post-train accuracy: 86.7%"
+      "message": "[11:35:34] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:32:03.657345",
-      "level": "INFO",
-      "message": "[22:32:03] INFO:   Fetching nfl 2025..."
-    },
-    {
-      "time": "2026-02-27T22:32:03.847452",
-      "level": "INFO",
-      "message": "[22:32:03] INFO: TSDB nfl 2025: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:32:03.950009",
+      "time": "2026-02-28T11:35:34.372421",
       "level": "WARNING",
-      "message": "[22:32:03] WARNING: Rate limited - waiting 60s"
+      "message": "[11:35:34] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.047263",
+      "time": "2026-02-28T11:35:34.676932",
       "level": "WARNING",
-      "message": "[22:33:04] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
+      "message": "[11:35:34] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.049993",
-      "level": "INFO",
-      "message": "[22:33:04] INFO:   nfl 2025: 15 games | pre-train accuracy: 53.3%"
+      "time": "2026-02-28T11:35:34.982014",
+      "level": "WARNING",
+      "message": "[11:35:34] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.135165",
+      "time": "2026-02-28T11:35:35.282999",
       "level": "WARNING",
-      "message": "[22:33:04] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nfl/season_averages"
+      "message": "[11:35:35] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.144311",
-      "level": "INFO",
-      "message": "[22:33:04] INFO:   Weights converged at iteration 6, accuracy 0.800"
+      "time": "2026-02-28T11:35:35.592184",
+      "level": "WARNING",
+      "message": "[11:35:35] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.144355",
-      "level": "INFO",
-      "message": "[22:33:04] INFO:   nfl 2025: post-train accuracy: 80.0%"
+      "time": "2026-02-28T11:35:35.897437",
+      "level": "WARNING",
+      "message": "[11:35:35] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.144452",
-      "level": "INFO",
-      "message": "[22:33:04] INFO:   Fetching nfl 2026..."
+      "time": "2026-02-28T11:35:36.401416",
+      "level": "WARNING",
+      "message": "[11:35:36] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.330868",
-      "level": "INFO",
-      "message": "[22:33:04] INFO: TSDB nfl 2026: 0 completed games"
+      "time": "2026-02-28T11:35:36.709354",
+      "level": "WARNING",
+      "message": "[11:35:36] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.431552",
+      "time": "2026-02-28T11:35:37.410041",
       "level": "WARNING",
-      "message": "[22:33:04] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nfl/games"
+      "message": "[11:35:37] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.432746",
+      "time": "2026-02-28T11:35:37.717483",
       "level": "WARNING",
-      "message": "[22:33:04] WARNING:   nfl 2026: no games retrieved"
+      "message": "[11:35:37] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.624323",
-      "level": "INFO",
-      "message": "[22:33:04] INFO: TSDB nfl 2025: 15 completed games"
+      "time": "2026-02-28T11:35:38.023278",
+      "level": "WARNING",
+      "message": "[11:35:38] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:04.625877",
+      "time": "2026-02-28T11:35:38.225686",
       "level": "INFO",
-      "message": "[22:33:04] INFO:   NFL HOLDOUT 2025: 80.0% accuracy on 15 games"
+      "message": "[11:35:38] INFO:   mlb: 16 predictions generated"
     },
     {
-      "time": "2026-02-27T22:33:04.625914",
+      "time": "2026-02-28T11:35:38.525907",
       "level": "INFO",
-      "message": "[22:33:04] INFO: \n>> TRAINING NBA <<"
+      "message": "[11:35:38] INFO: Generating predictions: nhl"
     },
     {
-      "time": "2026-02-27T22:33:04.625981",
+      "time": "2026-02-28T11:35:38.652400",
       "level": "INFO",
-      "message": "[22:33:04] INFO:   Fetching nba 2010..."
+      "message": "[11:35:38] INFO: ESPN scoreboard nhl: 4 games"
     },
     {
-      "time": "2026-02-27T22:33:04.816734",
+      "time": "2026-02-28T11:35:38.928581",
       "level": "INFO",
-      "message": "[22:33:04] INFO: TSDB nba 2010: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:33:04.906850",
-      "level": "WARNING",
-      "message": "[22:33:04] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
-    },
-    {
-      "time": "2026-02-27T22:33:04.908718",
-      "level": "WARNING",
-      "message": "[22:33:04] WARNING:   nba 2010: no games retrieved"
+      "message": "[11:35:38] INFO:   nhl: 4 predictions generated"
     },
     {
-      "time": "2026-02-27T22:33:04.908782",
+      "time": "2026-02-28T11:35:39.228876",
       "level": "INFO",
-      "message": "[22:33:04] INFO:   Fetching nba 2011..."
+      "message": "[11:35:39] INFO: Generating predictions: ncaaf"
     },
     {
-      "time": "2026-02-27T22:33:05.108636",
+      "time": "2026-02-28T11:35:39.371006",
       "level": "INFO",
-      "message": "[22:33:05] INFO: TSDB nba 2011: 0 completed games"
+      "message": "[11:35:39] INFO: ESPN scoreboard ncaaf: 72 games"
     },
     {
-      "time": "2026-02-27T22:33:05.191922",
+      "time": "2026-02-28T11:35:39.887754",
       "level": "WARNING",
-      "message": "[22:33:05] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:39] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:05.193119",
+      "time": "2026-02-28T11:35:40.389070",
       "level": "WARNING",
-      "message": "[22:33:05] WARNING:   nba 2011: no games retrieved"
+      "message": "[11:35:40] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:05.193174",
-      "level": "INFO",
-      "message": "[22:33:05] INFO:   Fetching nba 2012..."
-    },
-    {
-      "time": "2026-02-27T22:33:05.381001",
-      "level": "INFO",
-      "message": "[22:33:05] INFO: TSDB nba 2012: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:33:05.483720",
+      "time": "2026-02-28T11:35:40.701384",
       "level": "WARNING",
-      "message": "[22:33:05] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:40] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:05.484900",
+      "time": "2026-02-28T11:35:41.008921",
       "level": "WARNING",
-      "message": "[22:33:05] WARNING:   nba 2012: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:33:05.484939",
-      "level": "INFO",
-      "message": "[22:33:05] INFO:   Fetching nba 2013..."
-    },
-    {
-      "time": "2026-02-27T22:33:05.674994",
-      "level": "INFO",
-      "message": "[22:33:05] INFO: TSDB nba 2013: 0 completed games"
+      "message": "[11:35:41] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:33:05.753894",
+      "time": "2026-02-28T11:35:41.309511",
       "level": "WARNING",
-      "message": "[22:33:05] WARNING: Rate limited - waiting 60s"
+      "message": "[11:35:41] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:05.844171",
+      "time": "2026-02-28T11:35:41.613209",
       "level": "WARNING",
-      "message": "[22:34:05] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:41] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:05.845216",
+      "time": "2026-02-28T11:35:41.916907",
       "level": "WARNING",
-      "message": "[22:34:05] WARNING:   nba 2013: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:34:05.845272",
-      "level": "INFO",
-      "message": "[22:34:05] INFO:   Fetching nba 2014..."
-    },
-    {
-      "time": "2026-02-27T22:34:06.036535",
-      "level": "INFO",
-      "message": "[22:34:06] INFO: TSDB nba 2014: 0 completed games"
+      "message": "[11:35:41] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:06.110793",
+      "time": "2026-02-28T11:35:42.225019",
       "level": "WARNING",
-      "message": "[22:34:06] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:42] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:06.111888",
+      "time": "2026-02-28T11:35:42.530820",
       "level": "WARNING",
-      "message": "[22:34:06] WARNING:   nba 2014: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:34:06.111923",
-      "level": "INFO",
-      "message": "[22:34:06] INFO:   Fetching nba 2015..."
-    },
-    {
-      "time": "2026-02-27T22:34:06.299952",
-      "level": "INFO",
-      "message": "[22:34:06] INFO: TSDB nba 2015: 0 completed games"
+      "message": "[11:35:42] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:06.444863",
+      "time": "2026-02-28T11:35:43.039337",
       "level": "WARNING",
-      "message": "[22:34:06] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:43] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:06.446046",
+      "time": "2026-02-28T11:35:43.577024",
       "level": "WARNING",
-      "message": "[22:34:06] WARNING:   nba 2015: no games retrieved"
+      "message": "[11:35:43] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:06.446083",
-      "level": "INFO",
-      "message": "[22:34:06] INFO:   Fetching nba 2016..."
-    },
-    {
-      "time": "2026-02-27T22:34:06.633755",
-      "level": "INFO",
-      "message": "[22:34:06] INFO: TSDB nba 2016: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:34:06.821525",
+      "time": "2026-02-28T11:35:43.886065",
       "level": "WARNING",
-      "message": "[22:34:06] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:43] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:06.822787",
+      "time": "2026-02-28T11:35:44.199394",
       "level": "WARNING",
-      "message": "[22:34:06] WARNING:   nba 2016: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:34:06.822845",
-      "level": "INFO",
-      "message": "[22:34:06] INFO:   Fetching nba 2017..."
-    },
-    {
-      "time": "2026-02-27T22:34:07.017232",
-      "level": "INFO",
-      "message": "[22:34:07] INFO: TSDB nba 2017: 0 completed games"
+      "message": "[11:35:44] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:07.099573",
+      "time": "2026-02-28T11:35:44.509097",
       "level": "WARNING",
-      "message": "[22:34:07] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:44] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:07.100714",
+      "time": "2026-02-28T11:35:45.012239",
       "level": "WARNING",
-      "message": "[22:34:07] WARNING:   nba 2017: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:34:07.100782",
-      "level": "INFO",
-      "message": "[22:34:07] INFO:   Fetching nba 2018..."
-    },
-    {
-      "time": "2026-02-27T22:34:07.292670",
-      "level": "INFO",
-      "message": "[22:34:07] INFO: TSDB nba 2018: 0 completed games"
+      "message": "[11:35:45] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:34:07.379969",
+      "time": "2026-02-28T11:35:45.317612",
       "level": "WARNING",
-      "message": "[22:34:07] WARNING: Rate limited - waiting 60s"
+      "message": "[11:35:45] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:07.517635",
+      "time": "2026-02-28T11:35:45.624163",
       "level": "WARNING",
-      "message": "[22:35:07] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:45] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:07.518728",
+      "time": "2026-02-28T11:35:45.930719",
       "level": "WARNING",
-      "message": "[22:35:07] WARNING:   nba 2018: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:35:07.518769",
-      "level": "INFO",
-      "message": "[22:35:07] INFO:   Fetching nba 2019..."
-    },
-    {
-      "time": "2026-02-27T22:35:07.751263",
-      "level": "INFO",
-      "message": "[22:35:07] INFO: TSDB nba 2019: 0 completed games"
+      "message": "[11:35:45] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:07.853049",
+      "time": "2026-02-28T11:35:46.234528",
       "level": "WARNING",
-      "message": "[22:35:07] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:46] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:07.854194",
+      "time": "2026-02-28T11:35:46.539234",
       "level": "WARNING",
-      "message": "[22:35:07] WARNING:   nba 2019: no games retrieved"
+      "message": "[11:35:46] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:07.854251",
-      "level": "INFO",
-      "message": "[22:35:07] INFO:   Fetching nba 2020..."
-    },
-    {
-      "time": "2026-02-27T22:35:08.045058",
-      "level": "INFO",
-      "message": "[22:35:08] INFO: TSDB nba 2020: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:35:08.161569",
+      "time": "2026-02-28T11:35:46.840622",
       "level": "WARNING",
-      "message": "[22:35:08] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:46] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:08.162657",
+      "time": "2026-02-28T11:35:47.354583",
       "level": "WARNING",
-      "message": "[22:35:08] WARNING:   nba 2020: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:35:08.162728",
-      "level": "INFO",
-      "message": "[22:35:08] INFO:   Fetching nba 2021..."
-    },
-    {
-      "time": "2026-02-27T22:35:08.353343",
-      "level": "INFO",
-      "message": "[22:35:08] INFO: TSDB nba 2021: 0 completed games"
+      "message": "[11:35:47] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:08.438704",
+      "time": "2026-02-28T11:35:47.857804",
       "level": "WARNING",
-      "message": "[22:35:08] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:47] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:08.439880",
+      "time": "2026-02-28T11:35:48.172586",
       "level": "WARNING",
-      "message": "[22:35:08] WARNING:   nba 2021: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:35:08.439937",
-      "level": "INFO",
-      "message": "[22:35:08] INFO:   Fetching nba 2022..."
-    },
-    {
-      "time": "2026-02-27T22:35:08.774547",
-      "level": "INFO",
-      "message": "[22:35:08] INFO: TSDB nba 2022: 0 completed games"
+      "message": "[11:35:48] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:08.872512",
+      "time": "2026-02-28T11:35:48.476442",
       "level": "WARNING",
-      "message": "[22:35:08] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:48] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:08.873710",
+      "time": "2026-02-28T11:35:49.186244",
       "level": "WARNING",
-      "message": "[22:35:08] WARNING:   nba 2022: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:35:08.873772",
-      "level": "INFO",
-      "message": "[22:35:08] INFO:   Fetching nba 2023..."
-    },
-    {
-      "time": "2026-02-27T22:35:09.064152",
-      "level": "INFO",
-      "message": "[22:35:09] INFO: TSDB nba 2023: 7 completed games"
+      "message": "[11:35:49] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:35:09.153194",
+      "time": "2026-02-28T11:35:49.491156",
       "level": "WARNING",
-      "message": "[22:35:09] WARNING: Rate limited - waiting 60s"
+      "message": "[11:35:49] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:09.236679",
+      "time": "2026-02-28T11:35:49.794172",
       "level": "WARNING",
-      "message": "[22:36:09] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:49] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:09.237515",
-      "level": "INFO",
-      "message": "[22:36:09] INFO:   nba 2023: 7 games (building baseline)"
-    },
-    {
-      "time": "2026-02-27T22:36:09.321515",
+      "time": "2026-02-28T11:35:50.098015",
       "level": "WARNING",
-      "message": "[22:36:09] WARNING: HTTP 401 from https://api.balldontlie.io/v1/nba/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:36:09.322765",
-      "level": "INFO",
-      "message": "[22:36:09] INFO:   nba 2023: post-train accuracy: 0.0%"
-    },
-    {
-      "time": "2026-02-27T22:36:09.322836",
-      "level": "INFO",
-      "message": "[22:36:09] INFO:   Fetching nba 2024..."
-    },
-    {
-      "time": "2026-02-27T22:36:09.511678",
-      "level": "INFO",
-      "message": "[22:36:09] INFO: TSDB nba 2024: 0 completed games"
+      "message": "[11:35:50] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:09.608171",
+      "time": "2026-02-28T11:35:50.405464",
       "level": "WARNING",
-      "message": "[22:36:09] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:50] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:09.609396",
+      "time": "2026-02-28T11:35:50.715694",
       "level": "WARNING",
-      "message": "[22:36:09] WARNING:   nba 2024: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:36:09.609453",
-      "level": "INFO",
-      "message": "[22:36:09] INFO:   Fetching nba 2025..."
-    },
-    {
-      "time": "2026-02-27T22:36:09.796525",
-      "level": "INFO",
-      "message": "[22:36:09] INFO: TSDB nba 2025: 0 completed games"
+      "message": "[11:35:50] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:09.903694",
+      "time": "2026-02-28T11:35:51.020536",
       "level": "WARNING",
-      "message": "[22:36:09] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:51] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:09.904880",
+      "time": "2026-02-28T11:35:51.329989",
       "level": "WARNING",
-      "message": "[22:36:09] WARNING:   nba 2025: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:36:09.904923",
-      "level": "INFO",
-      "message": "[22:36:09] INFO:   Fetching nba 2026..."
-    },
-    {
-      "time": "2026-02-27T22:36:10.096325",
-      "level": "INFO",
-      "message": "[22:36:10] INFO: TSDB nba 2026: 0 completed games"
+      "message": "[11:35:51] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:10.180720",
+      "time": "2026-02-28T11:35:51.637402",
       "level": "WARNING",
-      "message": "[22:36:10] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nba/games"
+      "message": "[11:35:51] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:10.181944",
+      "time": "2026-02-28T11:35:51.938067",
       "level": "WARNING",
-      "message": "[22:36:10] WARNING:   nba 2026: no games retrieved"
+      "message": "[11:35:51] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:10.182002",
+      "time": "2026-02-28T11:35:52.446928",
       "level": "WARNING",
-      "message": "[22:36:10] WARNING:   nba: limited data (7 games) - predictions will be low confidence"
-    },
-    {
-      "time": "2026-02-27T22:36:10.182055",
-      "level": "INFO",
-      "message": "[22:36:10] INFO: \n>> TRAINING MLB <<"
-    },
-    {
-      "time": "2026-02-27T22:36:10.182143",
-      "level": "INFO",
-      "message": "[22:36:10] INFO:   Fetching mlb 2010..."
-    },
-    {
-      "time": "2026-02-27T22:36:10.383161",
-      "level": "INFO",
-      "message": "[22:36:10] INFO: TSDB mlb 2010: 15 completed games"
+      "message": "[11:35:52] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:10.463073",
+      "time": "2026-02-28T11:35:52.746159",
       "level": "WARNING",
-      "message": "[22:36:10] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:36:10.464211",
-      "level": "INFO",
-      "message": "[22:36:10] INFO:   mlb 2010: 15 games (building baseline)"
+      "message": "[11:35:52] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:10.550748",
+      "time": "2026-02-28T11:35:53.052883",
       "level": "WARNING",
-      "message": "[22:36:10] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:36:10.555152",
-      "level": "INFO",
-      "message": "[22:36:10] INFO:   Weights converged at iteration 6, accuracy 0.800"
-    },
-    {
-      "time": "2026-02-27T22:36:10.555195",
-      "level": "INFO",
-      "message": "[22:36:10] INFO:   mlb 2010: post-train accuracy: 80.0%"
-    },
-    {
-      "time": "2026-02-27T22:36:10.555273",
-      "level": "INFO",
-      "message": "[22:36:10] INFO:   Fetching mlb 2011..."
-    },
-    {
-      "time": "2026-02-27T22:36:10.756197",
-      "level": "INFO",
-      "message": "[22:36:10] INFO: TSDB mlb 2011: 15 completed games"
+      "message": "[11:35:53] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:36:10.842862",
+      "time": "2026-02-28T11:35:53.756223",
       "level": "WARNING",
-      "message": "[22:36:10] WARNING: Rate limited - waiting 60s"
+      "message": "[11:35:53] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:10.924210",
+      "time": "2026-02-28T11:35:54.062916",
       "level": "WARNING",
-      "message": "[22:37:10] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
+      "message": "[11:35:54] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:10.925285",
-      "level": "INFO",
-      "message": "[22:37:10] INFO:   mlb 2011: 15 games (building baseline)"
-    },
-    {
-      "time": "2026-02-27T22:37:11.000923",
+      "time": "2026-02-28T11:35:54.368243",
       "level": "WARNING",
-      "message": "[22:37:11] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:37:11.006417",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   Weights converged at iteration 6, accuracy 0.667"
-    },
-    {
-      "time": "2026-02-27T22:37:11.006464",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   mlb 2011: post-train accuracy: 66.7%"
-    },
-    {
-      "time": "2026-02-27T22:37:11.006515",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   Fetching mlb 2012..."
+      "message": "[11:35:54] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:11.206623",
-      "level": "INFO",
-      "message": "[22:37:11] INFO: TSDB mlb 2012: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:37:11.306948",
+      "time": "2026-02-28T11:35:54.878277",
       "level": "WARNING",
-      "message": "[22:37:11] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:37:11.308180",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   mlb 2012: 15 games (building baseline)"
+      "message": "[11:35:54] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:11.395720",
+      "time": "2026-02-28T11:35:55.385833",
       "level": "WARNING",
-      "message": "[22:37:11] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:37:11.401962",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   Weights converged at iteration 6, accuracy 0.800"
-    },
-    {
-      "time": "2026-02-27T22:37:11.402007",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   mlb 2012: post-train accuracy: 80.0%"
+      "message": "[11:35:55] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:11.402059",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   Fetching mlb 2013..."
-    },
-    {
-      "time": "2026-02-27T22:37:11.603307",
-      "level": "INFO",
-      "message": "[22:37:11] INFO: TSDB mlb 2013: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:37:11.688379",
+      "time": "2026-02-28T11:35:55.605576",
       "level": "WARNING",
-      "message": "[22:37:11] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:37:11.689224",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   mlb 2013: 15 games (building baseline)"
+      "message": "[11:35:55] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:11.774537",
+      "time": "2026-02-28T11:35:55.911379",
       "level": "WARNING",
-      "message": "[22:37:11] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:37:11.780398",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   Weights converged at iteration 6, accuracy 0.933"
-    },
-    {
-      "time": "2026-02-27T22:37:11.780439",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   mlb 2013: post-train accuracy: 93.3%"
-    },
-    {
-      "time": "2026-02-27T22:37:11.780513",
-      "level": "INFO",
-      "message": "[22:37:11] INFO:   Fetching mlb 2014..."
-    },
-    {
-      "time": "2026-02-27T22:37:12.574344",
-      "level": "INFO",
-      "message": "[22:37:12] INFO: TSDB mlb 2014: 15 completed games"
+      "message": "[11:35:55] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:12.672057",
+      "time": "2026-02-28T11:35:56.419516",
       "level": "WARNING",
-      "message": "[22:37:12] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:37:12.674200",
-      "level": "INFO",
-      "message": "[22:37:12] INFO:   mlb 2014: 15 games | pre-train accuracy: 40.0%"
+      "message": "[11:35:56] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:12.751660",
+      "time": "2026-02-28T11:35:56.729083",
       "level": "WARNING",
-      "message": "[22:37:12] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
+      "message": "[11:35:56] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:12.758143",
-      "level": "INFO",
-      "message": "[22:37:12] INFO:   Weights converged at iteration 6, accuracy 0.800"
+      "time": "2026-02-28T11:35:57.034324",
+      "level": "WARNING",
+      "message": "[11:35:57] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:12.758184",
-      "level": "INFO",
-      "message": "[22:37:12] INFO:   mlb 2014: post-train accuracy: 80.0%"
+      "time": "2026-02-28T11:35:57.341096",
+      "level": "WARNING",
+      "message": "[11:35:57] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:12.758219",
-      "level": "INFO",
-      "message": "[22:37:12] INFO:   Fetching mlb 2015..."
+      "time": "2026-02-28T11:35:57.643635",
+      "level": "WARNING",
+      "message": "[11:35:57] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:12.958428",
-      "level": "INFO",
-      "message": "[22:37:12] INFO: TSDB mlb 2015: 15 completed games"
+      "time": "2026-02-28T11:35:57.945206",
+      "level": "WARNING",
+      "message": "[11:35:57] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:13.275530",
+      "time": "2026-02-28T11:35:58.453627",
       "level": "WARNING",
-      "message": "[22:37:13] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
+      "message": "[11:35:58] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:13.277610",
-      "level": "INFO",
-      "message": "[22:37:13] INFO:   mlb 2015: 15 games | pre-train accuracy: 60.0%"
+      "time": "2026-02-28T11:35:58.756362",
+      "level": "WARNING",
+      "message": "[11:35:58] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:13.365777",
+      "time": "2026-02-28T11:35:59.464919",
       "level": "WARNING",
-      "message": "[22:37:13] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
+      "message": "[11:35:59] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:13.372440",
-      "level": "INFO",
-      "message": "[22:37:13] INFO:   Weights converged at iteration 6, accuracy 0.733"
+      "time": "2026-02-28T11:35:59.622191",
+      "level": "WARNING",
+      "message": "[11:35:59] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-02-27T22:37:13.372482",
+      "time": "2026-02-28T11:35:59.623088",
       "level": "INFO",
-      "message": "[22:37:13] INFO:   mlb 2015: post-train accuracy: 73.3%"
+      "message": "[11:35:59] INFO:   ncaaf: 72 predictions generated"
     },
     {
-      "time": "2026-02-27T22:37:13.372518",
+      "time": "2026-02-28T11:35:59.923318",
       "level": "INFO",
-      "message": "[22:37:13] INFO:   Fetching mlb 2016..."
+      "message": "[11:35:59] INFO: Generating predictions: ncaabm"
     },
     {
-      "time": "2026-02-27T22:37:14.172998",
+      "time": "2026-02-28T11:36:00.234178",
       "level": "INFO",
-      "message": "[22:37:14] INFO: TSDB mlb 2016: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:37:14.321726",
-      "level": "WARNING",
-      "message": "[22:37:14] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:38:14.634241",
-      "level": "WARNING",
-      "message": "[22:38:14] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:38:14.636243",
-      "level": "INFO",
-      "message": "[22:38:14] INFO:   mlb 2016: 15 games | pre-train accuracy: 46.7%"
-    },
-    {
-      "time": "2026-02-27T22:38:14.739029",
-      "level": "WARNING",
-      "message": "[22:38:14] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:38:14.745891",
-      "level": "INFO",
-      "message": "[22:38:14] INFO:   Weights converged at iteration 6, accuracy 0.867"
-    },
-    {
-      "time": "2026-02-27T22:38:14.745955",
-      "level": "INFO",
-      "message": "[22:38:14] INFO:   mlb 2016: post-train accuracy: 86.7%"
-    },
-    {
-      "time": "2026-02-27T22:38:14.746054",
-      "level": "INFO",
-      "message": "[22:38:14] INFO:   Fetching mlb 2017..."
-    },
-    {
-      "time": "2026-02-27T22:38:14.944096",
-      "level": "INFO",
-      "message": "[22:38:14] INFO: TSDB mlb 2017: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:38:15.035026",
-      "level": "WARNING",
-      "message": "[22:38:15] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:38:15.037069",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   mlb 2017: 15 games | pre-train accuracy: 73.3%"
-    },
-    {
-      "time": "2026-02-27T22:38:15.152209",
-      "level": "WARNING",
-      "message": "[22:38:15] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:38:15.159039",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   Weights converged at iteration 6, accuracy 1.000"
-    },
-    {
-      "time": "2026-02-27T22:38:15.159079",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   mlb 2017: post-train accuracy: 100.0%"
-    },
-    {
-      "time": "2026-02-27T22:38:15.159110",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   Fetching mlb 2018..."
-    },
-    {
-      "time": "2026-02-27T22:38:15.360495",
-      "level": "INFO",
-      "message": "[22:38:15] INFO: TSDB mlb 2018: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:38:15.623981",
-      "level": "WARNING",
-      "message": "[22:38:15] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:38:15.626122",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   mlb 2018: 15 games | pre-train accuracy: 46.7%"
-    },
-    {
-      "time": "2026-02-27T22:38:15.740566",
-      "level": "WARNING",
-      "message": "[22:38:15] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:38:15.747894",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   Weights converged at iteration 6, accuracy 0.733"
-    },
-    {
-      "time": "2026-02-27T22:38:15.747937",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   mlb 2018: post-train accuracy: 73.3%"
-    },
-    {
-      "time": "2026-02-27T22:38:15.747964",
-      "level": "INFO",
-      "message": "[22:38:15] INFO:   Fetching mlb 2019..."
-    },
-    {
-      "time": "2026-02-27T22:38:15.944183",
-      "level": "INFO",
-      "message": "[22:38:15] INFO: TSDB mlb 2019: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:38:16.041200",
-      "level": "WARNING",
-      "message": "[22:38:16] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:38:16.043427",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   mlb 2019: 15 games | pre-train accuracy: 60.0%"
-    },
-    {
-      "time": "2026-02-27T22:38:16.155985",
-      "level": "WARNING",
-      "message": "[22:38:16] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:38:16.163042",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   Weights converged at iteration 6, accuracy 1.000"
-    },
-    {
-      "time": "2026-02-27T22:38:16.163083",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   mlb 2019: post-train accuracy: 100.0%"
-    },
-    {
-      "time": "2026-02-27T22:38:16.163201",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   Fetching mlb 2020..."
-    },
-    {
-      "time": "2026-02-27T22:38:16.359371",
-      "level": "INFO",
-      "message": "[22:38:16] INFO: TSDB mlb 2020: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:38:16.459797",
-      "level": "WARNING",
-      "message": "[22:38:16] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:38:16.461819",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   mlb 2020: 15 games | pre-train accuracy: 46.7%"
-    },
-    {
-      "time": "2026-02-27T22:38:16.535910",
-      "level": "WARNING",
-      "message": "[22:38:16] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:38:16.542900",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   Weights converged at iteration 6, accuracy 0.800"
-    },
-    {
-      "time": "2026-02-27T22:38:16.542970",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   mlb 2020: post-train accuracy: 80.0%"
-    },
-    {
-      "time": "2026-02-27T22:38:16.543028",
-      "level": "INFO",
-      "message": "[22:38:16] INFO:   Fetching mlb 2021..."
-    },
-    {
-      "time": "2026-02-27T22:38:16.740450",
-      "level": "INFO",
-      "message": "[22:38:16] INFO: TSDB mlb 2021: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:38:16.844258",
-      "level": "WARNING",
-      "message": "[22:38:16] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:39:16.952560",
-      "level": "WARNING",
-      "message": "[22:39:16] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:39:16.954746",
-      "level": "INFO",
-      "message": "[22:39:16] INFO:   mlb 2021: 15 games | pre-train accuracy: 53.3%"
-    },
-    {
-      "time": "2026-02-27T22:39:17.042857",
-      "level": "WARNING",
-      "message": "[22:39:17] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:39:17.050172",
-      "level": "INFO",
-      "message": "[22:39:17] INFO:   Weights converged at iteration 6, accuracy 0.867"
-    },
-    {
-      "time": "2026-02-27T22:39:17.050214",
-      "level": "INFO",
-      "message": "[22:39:17] INFO:   mlb 2021: post-train accuracy: 86.7%"
-    },
-    {
-      "time": "2026-02-27T22:39:17.050263",
-      "level": "INFO",
-      "message": "[22:39:17] INFO:   Fetching mlb 2022..."
-    },
-    {
-      "time": "2026-02-27T22:39:17.842026",
-      "level": "INFO",
-      "message": "[22:39:17] INFO: TSDB mlb 2022: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:39:17.967348",
-      "level": "WARNING",
-      "message": "[22:39:17] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:39:17.969649",
-      "level": "INFO",
-      "message": "[22:39:17] INFO:   mlb 2022: 15 games | pre-train accuracy: 46.7%"
-    },
-    {
-      "time": "2026-02-27T22:39:18.059253",
-      "level": "WARNING",
-      "message": "[22:39:18] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:39:18.066653",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   Weights converged at iteration 6, accuracy 0.800"
-    },
-    {
-      "time": "2026-02-27T22:39:18.066694",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   mlb 2022: post-train accuracy: 80.0%"
-    },
-    {
-      "time": "2026-02-27T22:39:18.066780",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   Fetching mlb 2023..."
-    },
-    {
-      "time": "2026-02-27T22:39:18.415424",
-      "level": "INFO",
-      "message": "[22:39:18] INFO: TSDB mlb 2023: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:39:18.522045",
-      "level": "WARNING",
-      "message": "[22:39:18] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:39:18.524385",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   mlb 2023: 15 games | pre-train accuracy: 66.7%"
-    },
-    {
-      "time": "2026-02-27T22:39:18.602915",
-      "level": "WARNING",
-      "message": "[22:39:18] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:39:18.610238",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   Weights converged at iteration 6, accuracy 1.000"
-    },
-    {
-      "time": "2026-02-27T22:39:18.610281",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   mlb 2023: post-train accuracy: 100.0%"
-    },
-    {
-      "time": "2026-02-27T22:39:18.610309",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   Fetching mlb 2024..."
-    },
-    {
-      "time": "2026-02-27T22:39:18.816979",
-      "level": "INFO",
-      "message": "[22:39:18] INFO: TSDB mlb 2024: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:39:18.970883",
-      "level": "WARNING",
-      "message": "[22:39:18] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:39:18.973334",
-      "level": "INFO",
-      "message": "[22:39:18] INFO:   mlb 2024: 15 games | pre-train accuracy: 60.0%"
-    },
-    {
-      "time": "2026-02-27T22:39:19.055030",
-      "level": "WARNING",
-      "message": "[22:39:19] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:39:19.063928",
-      "level": "INFO",
-      "message": "[22:39:19] INFO:   Weights converged at iteration 6, accuracy 0.800"
-    },
-    {
-      "time": "2026-02-27T22:39:19.063993",
-      "level": "INFO",
-      "message": "[22:39:19] INFO:   mlb 2024: post-train accuracy: 80.0%"
-    },
-    {
-      "time": "2026-02-27T22:39:19.064044",
-      "level": "INFO",
-      "message": "[22:39:19] INFO:   Fetching mlb 2025..."
-    },
-    {
-      "time": "2026-02-27T22:39:19.267250",
-      "level": "INFO",
-      "message": "[22:39:19] INFO: TSDB mlb 2025: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:39:19.345289",
-      "level": "WARNING",
-      "message": "[22:39:19] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:39:19.347639",
-      "level": "INFO",
-      "message": "[22:39:19] INFO:   mlb 2025: 15 games | pre-train accuracy: 73.3%"
-    },
-    {
-      "time": "2026-02-27T22:39:19.423211",
-      "level": "WARNING",
-      "message": "[22:39:19] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:39:19.431743",
-      "level": "INFO",
-      "message": "[22:39:19] INFO:   Weights converged at iteration 6, accuracy 1.000"
-    },
-    {
-      "time": "2026-02-27T22:39:19.431785",
-      "level": "INFO",
-      "message": "[22:39:19] INFO:   mlb 2025: post-train accuracy: 100.0%"
-    },
-    {
-      "time": "2026-02-27T22:39:19.431898",
-      "level": "INFO",
-      "message": "[22:39:19] INFO:   Fetching mlb 2026..."
-    },
-    {
-      "time": "2026-02-27T22:39:19.638220",
-      "level": "INFO",
-      "message": "[22:39:19] INFO: TSDB mlb 2026: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:39:19.711047",
-      "level": "WARNING",
-      "message": "[22:39:19] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:40:20.435228",
-      "level": "WARNING",
-      "message": "[22:40:20] WARNING: HTTP 404 from https://api.balldontlie.io/v1/mlb/games"
-    },
-    {
-      "time": "2026-02-27T22:40:20.437710",
-      "level": "INFO",
-      "message": "[22:40:20] INFO:   mlb 2026: 15 games | pre-train accuracy: 26.7%"
-    },
-    {
-      "time": "2026-02-27T22:40:20.548211",
-      "level": "WARNING",
-      "message": "[22:40:20] WARNING: HTTP 401 from https://api.balldontlie.io/v1/mlb/season_averages"
-    },
-    {
-      "time": "2026-02-27T22:40:20.556806",
-      "level": "INFO",
-      "message": "[22:40:20] INFO:   Weights converged at iteration 6, accuracy 0.867"
-    },
-    {
-      "time": "2026-02-27T22:40:20.556865",
-      "level": "INFO",
-      "message": "[22:40:20] INFO:   mlb 2026: post-train accuracy: 86.7%"
-    },
-    {
-      "time": "2026-02-27T22:40:20.785569",
-      "level": "INFO",
-      "message": "[22:40:20] INFO: TSDB mlb 2025: 15 completed games"
-    },
-    {
-      "time": "2026-02-27T22:40:20.787134",
-      "level": "INFO",
-      "message": "[22:40:20] INFO:   MLB HOLDOUT 2025: 53.3% accuracy on 15 games"
-    },
-    {
-      "time": "2026-02-27T22:40:20.787178",
-      "level": "INFO",
-      "message": "[22:40:20] INFO: \n>> TRAINING NHL <<"
-    },
-    {
-      "time": "2026-02-27T22:40:20.787266",
-      "level": "INFO",
-      "message": "[22:40:20] INFO:   Fetching nhl 2010..."
-    },
-    {
-      "time": "2026-02-27T22:40:20.974464",
-      "level": "INFO",
-      "message": "[22:40:20] INFO: TSDB nhl 2010: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.072226",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.073318",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING:   nhl 2010: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:40:21.073356",
-      "level": "INFO",
-      "message": "[22:40:21] INFO:   Fetching nhl 2011..."
-    },
-    {
-      "time": "2026-02-27T22:40:21.260353",
-      "level": "INFO",
-      "message": "[22:40:21] INFO: TSDB nhl 2011: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.344449",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.345445",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING:   nhl 2011: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:40:21.345482",
-      "level": "INFO",
-      "message": "[22:40:21] INFO:   Fetching nhl 2012..."
-    },
-    {
-      "time": "2026-02-27T22:40:21.533184",
-      "level": "INFO",
-      "message": "[22:40:21] INFO: TSDB nhl 2012: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.627966",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.628980",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING:   nhl 2012: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:40:21.629034",
-      "level": "INFO",
-      "message": "[22:40:21] INFO:   Fetching nhl 2013..."
-    },
-    {
-      "time": "2026-02-27T22:40:21.818247",
-      "level": "INFO",
-      "message": "[22:40:21] INFO: TSDB nhl 2013: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.900874",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:40:21.901815",
-      "level": "WARNING",
-      "message": "[22:40:21] WARNING:   nhl 2013: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:40:21.901874",
-      "level": "INFO",
-      "message": "[22:40:21] INFO:   Fetching nhl 2014..."
-    },
-    {
-      "time": "2026-02-27T22:40:22.102653",
-      "level": "INFO",
-      "message": "[22:40:22] INFO: TSDB nhl 2014: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:40:22.184686",
-      "level": "WARNING",
-      "message": "[22:40:22] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:41:22.264141",
-      "level": "WARNING",
-      "message": "[22:41:22] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:41:22.264981",
-      "level": "WARNING",
-      "message": "[22:41:22] WARNING:   nhl 2014: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:41:22.265018",
-      "level": "INFO",
-      "message": "[22:41:22] INFO:   Fetching nhl 2015..."
-    },
-    {
-      "time": "2026-02-27T22:41:22.452960",
-      "level": "INFO",
-      "message": "[22:41:22] INFO: TSDB nhl 2015: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:41:22.548146",
-      "level": "WARNING",
-      "message": "[22:41:22] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:41:22.549101",
-      "level": "WARNING",
-      "message": "[22:41:22] WARNING:   nhl 2015: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:41:22.549146",
-      "level": "INFO",
-      "message": "[22:41:22] INFO:   Fetching nhl 2016..."
-    },
-    {
-      "time": "2026-02-27T22:41:22.733967",
-      "level": "INFO",
-      "message": "[22:41:22] INFO: TSDB nhl 2016: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:41:22.857868",
-      "level": "WARNING",
-      "message": "[22:41:22] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:41:22.858674",
-      "level": "WARNING",
-      "message": "[22:41:22] WARNING:   nhl 2016: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:41:22.858722",
-      "level": "INFO",
-      "message": "[22:41:22] INFO:   Fetching nhl 2017..."
-    },
-    {
-      "time": "2026-02-27T22:41:23.047160",
-      "level": "INFO",
-      "message": "[22:41:23] INFO: TSDB nhl 2017: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:41:23.121581",
-      "level": "WARNING",
-      "message": "[22:41:23] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:41:23.122647",
-      "level": "WARNING",
-      "message": "[22:41:23] WARNING:   nhl 2017: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:41:23.122701",
-      "level": "INFO",
-      "message": "[22:41:23] INFO:   Fetching nhl 2018..."
-    },
-    {
-      "time": "2026-02-27T22:41:23.310393",
-      "level": "INFO",
-      "message": "[22:41:23] INFO: TSDB nhl 2018: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:41:23.384519",
-      "level": "WARNING",
-      "message": "[22:41:23] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:41:23.385505",
-      "level": "WARNING",
-      "message": "[22:41:23] WARNING:   nhl 2018: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:41:23.385543",
-      "level": "INFO",
-      "message": "[22:41:23] INFO:   Fetching nhl 2019..."
-    },
-    {
-      "time": "2026-02-27T22:41:23.878533",
-      "level": "INFO",
-      "message": "[22:41:23] INFO: TSDB nhl 2019: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:41:23.957942",
-      "level": "WARNING",
-      "message": "[22:41:23] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:42:24.744368",
-      "level": "WARNING",
-      "message": "[22:42:24] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:42:24.745257",
-      "level": "WARNING",
-      "message": "[22:42:24] WARNING:   nhl 2019: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:42:24.745293",
-      "level": "INFO",
-      "message": "[22:42:24] INFO:   Fetching nhl 2020..."
-    },
-    {
-      "time": "2026-02-27T22:42:24.932326",
-      "level": "INFO",
-      "message": "[22:42:24] INFO: TSDB nhl 2020: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:42:25.745958",
-      "level": "WARNING",
-      "message": "[22:42:25] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:42:25.746894",
-      "level": "WARNING",
-      "message": "[22:42:25] WARNING:   nhl 2020: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:42:25.746933",
-      "level": "INFO",
-      "message": "[22:42:25] INFO:   Fetching nhl 2021..."
-    },
-    {
-      "time": "2026-02-27T22:42:25.936323",
-      "level": "INFO",
-      "message": "[22:42:25] INFO: TSDB nhl 2021: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:42:26.077105",
-      "level": "WARNING",
-      "message": "[22:42:26] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:42:26.077926",
-      "level": "WARNING",
-      "message": "[22:42:26] WARNING:   nhl 2021: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:42:26.077965",
-      "level": "INFO",
-      "message": "[22:42:26] INFO:   Fetching nhl 2022..."
-    },
-    {
-      "time": "2026-02-27T22:42:26.267490",
-      "level": "INFO",
-      "message": "[22:42:26] INFO: TSDB nhl 2022: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:42:26.440294",
-      "level": "WARNING",
-      "message": "[22:42:26] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:42:26.441432",
-      "level": "WARNING",
-      "message": "[22:42:26] WARNING:   nhl 2022: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:42:26.441472",
-      "level": "INFO",
-      "message": "[22:42:26] INFO:   Fetching nhl 2023..."
-    },
-    {
-      "time": "2026-02-27T22:42:26.629005",
-      "level": "INFO",
-      "message": "[22:42:26] INFO: TSDB nhl 2023: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:42:27.056132",
-      "level": "WARNING",
-      "message": "[22:42:27] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:42:27.057084",
-      "level": "WARNING",
-      "message": "[22:42:27] WARNING:   nhl 2023: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:42:27.057122",
-      "level": "INFO",
-      "message": "[22:42:27] INFO:   Fetching nhl 2024..."
-    },
-    {
-      "time": "2026-02-27T22:42:27.397906",
-      "level": "INFO",
-      "message": "[22:42:27] INFO: TSDB nhl 2024: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:42:27.484551",
-      "level": "WARNING",
-      "message": "[22:42:27] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:43:27.576005",
-      "level": "WARNING",
-      "message": "[22:43:27] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:43:27.576767",
-      "level": "WARNING",
-      "message": "[22:43:27] WARNING:   nhl 2024: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:27.576824",
-      "level": "INFO",
-      "message": "[22:43:27] INFO:   Fetching nhl 2025..."
-    },
-    {
-      "time": "2026-02-27T22:43:27.765900",
-      "level": "INFO",
-      "message": "[22:43:27] INFO: TSDB nhl 2025: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:27.843535",
-      "level": "WARNING",
-      "message": "[22:43:27] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:43:27.844340",
-      "level": "WARNING",
-      "message": "[22:43:27] WARNING:   nhl 2025: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:27.844394",
-      "level": "INFO",
-      "message": "[22:43:27] INFO:   Fetching nhl 2026..."
-    },
-    {
-      "time": "2026-02-27T22:43:28.041293",
-      "level": "INFO",
-      "message": "[22:43:28] INFO: TSDB nhl 2026: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:28.121168",
-      "level": "WARNING",
-      "message": "[22:43:28] WARNING: HTTP 404 from https://api.balldontlie.io/v1/nhl/games"
-    },
-    {
-      "time": "2026-02-27T22:43:28.122348",
-      "level": "WARNING",
-      "message": "[22:43:28] WARNING:   nhl 2026: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:28.122420",
-      "level": "WARNING",
-      "message": "[22:43:28] WARNING:   nhl: limited data (0 games) - predictions will be low confidence"
-    },
-    {
-      "time": "2026-02-27T22:43:28.122473",
-      "level": "INFO",
-      "message": "[22:43:28] INFO: \n>> TRAINING NCAAF <<"
-    },
-    {
-      "time": "2026-02-27T22:43:28.122540",
-      "level": "INFO",
-      "message": "[22:43:28] INFO:   Fetching ncaaf 2010..."
-    },
-    {
-      "time": "2026-02-27T22:43:28.311524",
-      "level": "INFO",
-      "message": "[22:43:28] INFO: TSDB ncaaf 2010: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:28.311587",
-      "level": "WARNING",
-      "message": "[22:43:28] WARNING:   ncaaf 2010: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:28.311661",
-      "level": "INFO",
-      "message": "[22:43:28] INFO:   Fetching ncaaf 2011..."
-    },
-    {
-      "time": "2026-02-27T22:43:28.499504",
-      "level": "INFO",
-      "message": "[22:43:28] INFO: TSDB ncaaf 2011: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:28.499542",
-      "level": "WARNING",
-      "message": "[22:43:28] WARNING:   ncaaf 2011: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:28.499581",
-      "level": "INFO",
-      "message": "[22:43:28] INFO:   Fetching ncaaf 2012..."
-    },
-    {
-      "time": "2026-02-27T22:43:28.692871",
-      "level": "INFO",
-      "message": "[22:43:28] INFO: TSDB ncaaf 2012: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:28.692910",
-      "level": "WARNING",
-      "message": "[22:43:28] WARNING:   ncaaf 2012: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:28.692955",
-      "level": "INFO",
-      "message": "[22:43:28] INFO:   Fetching ncaaf 2013..."
-    },
-    {
-      "time": "2026-02-27T22:43:28.877765",
-      "level": "INFO",
-      "message": "[22:43:28] INFO: TSDB ncaaf 2013: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:28.877804",
-      "level": "WARNING",
-      "message": "[22:43:28] WARNING:   ncaaf 2013: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:28.877831",
-      "level": "INFO",
-      "message": "[22:43:28] INFO:   Fetching ncaaf 2014..."
-    },
-    {
-      "time": "2026-02-27T22:43:29.063566",
-      "level": "INFO",
-      "message": "[22:43:29] INFO: TSDB ncaaf 2014: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:29.063642",
-      "level": "WARNING",
-      "message": "[22:43:29] WARNING:   ncaaf 2014: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:29.063698",
-      "level": "INFO",
-      "message": "[22:43:29] INFO:   Fetching ncaaf 2015..."
-    },
-    {
-      "time": "2026-02-27T22:43:29.263526",
-      "level": "INFO",
-      "message": "[22:43:29] INFO: TSDB ncaaf 2015: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:29.263564",
-      "level": "WARNING",
-      "message": "[22:43:29] WARNING:   ncaaf 2015: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:29.263631",
-      "level": "INFO",
-      "message": "[22:43:29] INFO:   Fetching ncaaf 2016..."
-    },
-    {
-      "time": "2026-02-27T22:43:29.452642",
-      "level": "INFO",
-      "message": "[22:43:29] INFO: TSDB ncaaf 2016: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:29.452690",
-      "level": "WARNING",
-      "message": "[22:43:29] WARNING:   ncaaf 2016: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:29.452725",
-      "level": "INFO",
-      "message": "[22:43:29] INFO:   Fetching ncaaf 2017..."
-    },
-    {
-      "time": "2026-02-27T22:43:29.643505",
-      "level": "INFO",
-      "message": "[22:43:29] INFO: TSDB ncaaf 2017: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:29.643544",
-      "level": "WARNING",
-      "message": "[22:43:29] WARNING:   ncaaf 2017: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:29.643614",
-      "level": "INFO",
-      "message": "[22:43:29] INFO:   Fetching ncaaf 2018..."
-    },
-    {
-      "time": "2026-02-27T22:43:29.830416",
-      "level": "INFO",
-      "message": "[22:43:29] INFO: TSDB ncaaf 2018: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:29.830457",
-      "level": "WARNING",
-      "message": "[22:43:29] WARNING:   ncaaf 2018: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:29.830503",
-      "level": "INFO",
-      "message": "[22:43:29] INFO:   Fetching ncaaf 2019..."
-    },
-    {
-      "time": "2026-02-27T22:43:30.018755",
-      "level": "INFO",
-      "message": "[22:43:30] INFO: TSDB ncaaf 2019: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:30.018806",
-      "level": "WARNING",
-      "message": "[22:43:30] WARNING:   ncaaf 2019: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:30.018854",
-      "level": "INFO",
-      "message": "[22:43:30] INFO:   Fetching ncaaf 2020..."
-    },
-    {
-      "time": "2026-02-27T22:43:30.212167",
-      "level": "INFO",
-      "message": "[22:43:30] INFO: TSDB ncaaf 2020: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:30.212210",
-      "level": "WARNING",
-      "message": "[22:43:30] WARNING:   ncaaf 2020: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:30.212256",
-      "level": "INFO",
-      "message": "[22:43:30] INFO:   Fetching ncaaf 2021..."
-    },
-    {
-      "time": "2026-02-27T22:43:30.398950",
-      "level": "INFO",
-      "message": "[22:43:30] INFO: TSDB ncaaf 2021: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:30.398991",
-      "level": "WARNING",
-      "message": "[22:43:30] WARNING:   ncaaf 2021: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:30.399039",
-      "level": "INFO",
-      "message": "[22:43:30] INFO:   Fetching ncaaf 2022..."
-    },
-    {
-      "time": "2026-02-27T22:43:30.593338",
-      "level": "INFO",
-      "message": "[22:43:30] INFO: TSDB ncaaf 2022: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:30.593377",
-      "level": "WARNING",
-      "message": "[22:43:30] WARNING:   ncaaf 2022: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:30.593424",
-      "level": "INFO",
-      "message": "[22:43:30] INFO:   Fetching ncaaf 2023..."
-    },
-    {
-      "time": "2026-02-27T22:43:30.782891",
-      "level": "INFO",
-      "message": "[22:43:30] INFO: TSDB ncaaf 2023: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:30.782931",
-      "level": "WARNING",
-      "message": "[22:43:30] WARNING:   ncaaf 2023: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:30.782978",
-      "level": "INFO",
-      "message": "[22:43:30] INFO:   Fetching ncaaf 2024..."
-    },
-    {
-      "time": "2026-02-27T22:43:30.975684",
-      "level": "INFO",
-      "message": "[22:43:30] INFO: TSDB ncaaf 2024: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:30.975744",
-      "level": "WARNING",
-      "message": "[22:43:30] WARNING:   ncaaf 2024: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:30.975809",
-      "level": "INFO",
-      "message": "[22:43:30] INFO:   Fetching ncaaf 2025..."
-    },
-    {
-      "time": "2026-02-27T22:43:31.164830",
-      "level": "INFO",
-      "message": "[22:43:31] INFO: TSDB ncaaf 2025: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:31.164888",
-      "level": "WARNING",
-      "message": "[22:43:31] WARNING:   ncaaf 2025: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:31.164948",
-      "level": "INFO",
-      "message": "[22:43:31] INFO:   Fetching ncaaf 2026..."
-    },
-    {
-      "time": "2026-02-27T22:43:31.354386",
-      "level": "INFO",
-      "message": "[22:43:31] INFO: TSDB ncaaf 2026: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:31.354425",
-      "level": "WARNING",
-      "message": "[22:43:31] WARNING:   ncaaf 2026: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:31.354479",
-      "level": "WARNING",
-      "message": "[22:43:31] WARNING:   ncaaf: limited data (0 games) - predictions will be low confidence"
-    },
-    {
-      "time": "2026-02-27T22:43:31.354536",
-      "level": "INFO",
-      "message": "[22:43:31] INFO: \n>> TRAINING NCAABM <<"
-    },
-    {
-      "time": "2026-02-27T22:43:31.354646",
-      "level": "INFO",
-      "message": "[22:43:31] INFO:   Fetching ncaabm 2010..."
-    },
-    {
-      "time": "2026-02-27T22:43:31.552131",
-      "level": "INFO",
-      "message": "[22:43:31] INFO: TSDB ncaabm 2010: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:31.552174",
-      "level": "WARNING",
-      "message": "[22:43:31] WARNING:   ncaabm 2010: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:31.552225",
-      "level": "INFO",
-      "message": "[22:43:31] INFO:   Fetching ncaabm 2011..."
-    },
-    {
-      "time": "2026-02-27T22:43:31.741208",
-      "level": "INFO",
-      "message": "[22:43:31] INFO: TSDB ncaabm 2011: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:31.741248",
-      "level": "WARNING",
-      "message": "[22:43:31] WARNING:   ncaabm 2011: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:31.741293",
-      "level": "INFO",
-      "message": "[22:43:31] INFO:   Fetching ncaabm 2012..."
-    },
-    {
-      "time": "2026-02-27T22:43:31.937695",
-      "level": "INFO",
-      "message": "[22:43:31] INFO: TSDB ncaabm 2012: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:31.937767",
-      "level": "WARNING",
-      "message": "[22:43:31] WARNING:   ncaabm 2012: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:31.937830",
-      "level": "INFO",
-      "message": "[22:43:31] INFO:   Fetching ncaabm 2013..."
-    },
-    {
-      "time": "2026-02-27T22:43:32.127299",
-      "level": "INFO",
-      "message": "[22:43:32] INFO: TSDB ncaabm 2013: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:32.127343",
-      "level": "WARNING",
-      "message": "[22:43:32] WARNING:   ncaabm 2013: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:32.127390",
-      "level": "INFO",
-      "message": "[22:43:32] INFO:   Fetching ncaabm 2014..."
-    },
-    {
-      "time": "2026-02-27T22:43:32.318689",
-      "level": "INFO",
-      "message": "[22:43:32] INFO: TSDB ncaabm 2014: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:32.318735",
-      "level": "WARNING",
-      "message": "[22:43:32] WARNING:   ncaabm 2014: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:32.318781",
-      "level": "INFO",
-      "message": "[22:43:32] INFO:   Fetching ncaabm 2015..."
-    },
-    {
-      "time": "2026-02-27T22:43:32.510567",
-      "level": "INFO",
-      "message": "[22:43:32] INFO: TSDB ncaabm 2015: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:32.510642",
-      "level": "WARNING",
-      "message": "[22:43:32] WARNING:   ncaabm 2015: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:32.510699",
-      "level": "INFO",
-      "message": "[22:43:32] INFO:   Fetching ncaabm 2016..."
-    },
-    {
-      "time": "2026-02-27T22:43:32.698866",
-      "level": "INFO",
-      "message": "[22:43:32] INFO: TSDB ncaabm 2016: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:32.698912",
-      "level": "WARNING",
-      "message": "[22:43:32] WARNING:   ncaabm 2016: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:32.698943",
-      "level": "INFO",
-      "message": "[22:43:32] INFO:   Fetching ncaabm 2017..."
-    },
-    {
-      "time": "2026-02-27T22:43:32.884022",
-      "level": "INFO",
-      "message": "[22:43:32] INFO: TSDB ncaabm 2017: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:32.884068",
-      "level": "WARNING",
-      "message": "[22:43:32] WARNING:   ncaabm 2017: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:32.884115",
-      "level": "INFO",
-      "message": "[22:43:32] INFO:   Fetching ncaabm 2018..."
-    },
-    {
-      "time": "2026-02-27T22:43:33.069247",
-      "level": "INFO",
-      "message": "[22:43:33] INFO: TSDB ncaabm 2018: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:43:33.069299",
-      "level": "WARNING",
-      "message": "[22:43:33] WARNING:   ncaabm 2018: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:43:33.069346",
-      "level": "INFO",
-      "message": "[22:43:33] INFO:   Fetching ncaabm 2019..."
-    },
-    {
-      "time": "2026-02-27T22:43:33.108039",
-      "level": "WARNING",
-      "message": "[22:43:33] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:44:33.145613",
-      "level": "WARNING",
-      "message": "[22:44:33] WARNING: Rate limited - waiting 60s"
-    },
-    {
-      "time": "2026-02-27T22:45:33.362424",
-      "level": "INFO",
-      "message": "[22:45:33] INFO: TSDB ncaabm 2019: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:33.362469",
-      "level": "WARNING",
-      "message": "[22:45:33] WARNING:   ncaabm 2019: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:33.362495",
-      "level": "INFO",
-      "message": "[22:45:33] INFO:   Fetching ncaabm 2020..."
-    },
-    {
-      "time": "2026-02-27T22:45:33.549385",
-      "level": "INFO",
-      "message": "[22:45:33] INFO: TSDB ncaabm 2020: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:33.549427",
-      "level": "WARNING",
-      "message": "[22:45:33] WARNING:   ncaabm 2020: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:33.549475",
-      "level": "INFO",
-      "message": "[22:45:33] INFO:   Fetching ncaabm 2021..."
-    },
-    {
-      "time": "2026-02-27T22:45:33.736335",
-      "level": "INFO",
-      "message": "[22:45:33] INFO: TSDB ncaabm 2021: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:33.736378",
-      "level": "WARNING",
-      "message": "[22:45:33] WARNING:   ncaabm 2021: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:33.736425",
-      "level": "INFO",
-      "message": "[22:45:33] INFO:   Fetching ncaabm 2022..."
-    },
-    {
-      "time": "2026-02-27T22:45:33.923958",
-      "level": "INFO",
-      "message": "[22:45:33] INFO: TSDB ncaabm 2022: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:33.924000",
-      "level": "WARNING",
-      "message": "[22:45:33] WARNING:   ncaabm 2022: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:33.924047",
-      "level": "INFO",
-      "message": "[22:45:33] INFO:   Fetching ncaabm 2023..."
-    },
-    {
-      "time": "2026-02-27T22:45:34.112007",
-      "level": "INFO",
-      "message": "[22:45:34] INFO: TSDB ncaabm 2023: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:34.112051",
-      "level": "WARNING",
-      "message": "[22:45:34] WARNING:   ncaabm 2023: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:34.112100",
-      "level": "INFO",
-      "message": "[22:45:34] INFO:   Fetching ncaabm 2024..."
-    },
-    {
-      "time": "2026-02-27T22:45:34.297668",
-      "level": "INFO",
-      "message": "[22:45:34] INFO: TSDB ncaabm 2024: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:34.297722",
-      "level": "WARNING",
-      "message": "[22:45:34] WARNING:   ncaabm 2024: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:34.297767",
-      "level": "INFO",
-      "message": "[22:45:34] INFO:   Fetching ncaabm 2025..."
-    },
-    {
-      "time": "2026-02-27T22:45:34.487082",
-      "level": "INFO",
-      "message": "[22:45:34] INFO: TSDB ncaabm 2025: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:34.487125",
-      "level": "WARNING",
-      "message": "[22:45:34] WARNING:   ncaabm 2025: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:34.487174",
-      "level": "INFO",
-      "message": "[22:45:34] INFO:   Fetching ncaabm 2026..."
-    },
-    {
-      "time": "2026-02-27T22:45:34.672734",
-      "level": "INFO",
-      "message": "[22:45:34] INFO: TSDB ncaabm 2026: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:34.672780",
-      "level": "WARNING",
-      "message": "[22:45:34] WARNING:   ncaabm 2026: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:34.672832",
-      "level": "WARNING",
-      "message": "[22:45:34] WARNING:   ncaabm: limited data (0 games) - predictions will be low confidence"
-    },
-    {
-      "time": "2026-02-27T22:45:34.672882",
-      "level": "INFO",
-      "message": "[22:45:34] INFO: \n>> TRAINING NCAABW <<"
-    },
-    {
-      "time": "2026-02-27T22:45:34.672957",
-      "level": "INFO",
-      "message": "[22:45:34] INFO:   Fetching ncaabw 2010..."
-    },
-    {
-      "time": "2026-02-27T22:45:35.004816",
-      "level": "INFO",
-      "message": "[22:45:35] INFO: TSDB ncaabw 2010: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:35.004881",
-      "level": "WARNING",
-      "message": "[22:45:35] WARNING:   ncaabw 2010: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:35.004927",
-      "level": "INFO",
-      "message": "[22:45:35] INFO:   Fetching ncaabw 2011..."
-    },
-    {
-      "time": "2026-02-27T22:45:35.195712",
-      "level": "INFO",
-      "message": "[22:45:35] INFO: TSDB ncaabw 2011: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:35.195781",
-      "level": "WARNING",
-      "message": "[22:45:35] WARNING:   ncaabw 2011: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:35.195832",
-      "level": "INFO",
-      "message": "[22:45:35] INFO:   Fetching ncaabw 2012..."
-    },
-    {
-      "time": "2026-02-27T22:45:35.693431",
-      "level": "INFO",
-      "message": "[22:45:35] INFO: TSDB ncaabw 2012: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:35.693495",
-      "level": "WARNING",
-      "message": "[22:45:35] WARNING:   ncaabw 2012: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:35.693544",
-      "level": "INFO",
-      "message": "[22:45:35] INFO:   Fetching ncaabw 2013..."
-    },
-    {
-      "time": "2026-02-27T22:45:35.880617",
-      "level": "INFO",
-      "message": "[22:45:35] INFO: TSDB ncaabw 2013: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:35.880680",
-      "level": "WARNING",
-      "message": "[22:45:35] WARNING:   ncaabw 2013: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:35.880734",
-      "level": "INFO",
-      "message": "[22:45:35] INFO:   Fetching ncaabw 2014..."
-    },
-    {
-      "time": "2026-02-27T22:45:36.066085",
-      "level": "INFO",
-      "message": "[22:45:36] INFO: TSDB ncaabw 2014: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:36.066149",
-      "level": "WARNING",
-      "message": "[22:45:36] WARNING:   ncaabw 2014: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:36.066206",
-      "level": "INFO",
-      "message": "[22:45:36] INFO:   Fetching ncaabw 2015..."
-    },
-    {
-      "time": "2026-02-27T22:45:36.255156",
-      "level": "INFO",
-      "message": "[22:45:36] INFO: TSDB ncaabw 2015: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:36.255215",
-      "level": "WARNING",
-      "message": "[22:45:36] WARNING:   ncaabw 2015: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:36.255262",
-      "level": "INFO",
-      "message": "[22:45:36] INFO:   Fetching ncaabw 2016..."
-    },
-    {
-      "time": "2026-02-27T22:45:36.755231",
-      "level": "INFO",
-      "message": "[22:45:36] INFO: TSDB ncaabw 2016: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:36.755299",
-      "level": "WARNING",
-      "message": "[22:45:36] WARNING:   ncaabw 2016: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:36.755349",
-      "level": "INFO",
-      "message": "[22:45:36] INFO:   Fetching ncaabw 2017..."
-    },
-    {
-      "time": "2026-02-27T22:45:36.944786",
-      "level": "INFO",
-      "message": "[22:45:36] INFO: TSDB ncaabw 2017: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:36.944847",
-      "level": "WARNING",
-      "message": "[22:45:36] WARNING:   ncaabw 2017: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:36.944892",
-      "level": "INFO",
-      "message": "[22:45:36] INFO:   Fetching ncaabw 2018..."
-    },
-    {
-      "time": "2026-02-27T22:45:37.133968",
-      "level": "INFO",
-      "message": "[22:45:37] INFO: TSDB ncaabw 2018: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:37.134032",
-      "level": "WARNING",
-      "message": "[22:45:37] WARNING:   ncaabw 2018: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:37.134079",
-      "level": "INFO",
-      "message": "[22:45:37] INFO:   Fetching ncaabw 2019..."
-    },
-    {
-      "time": "2026-02-27T22:45:37.324118",
-      "level": "INFO",
-      "message": "[22:45:37] INFO: TSDB ncaabw 2019: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:37.324179",
-      "level": "WARNING",
-      "message": "[22:45:37] WARNING:   ncaabw 2019: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:37.324229",
-      "level": "INFO",
-      "message": "[22:45:37] INFO:   Fetching ncaabw 2020..."
-    },
-    {
-      "time": "2026-02-27T22:45:37.514790",
-      "level": "INFO",
-      "message": "[22:45:37] INFO: TSDB ncaabw 2020: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:37.514851",
-      "level": "WARNING",
-      "message": "[22:45:37] WARNING:   ncaabw 2020: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:37.514900",
-      "level": "INFO",
-      "message": "[22:45:37] INFO:   Fetching ncaabw 2021..."
-    },
-    {
-      "time": "2026-02-27T22:45:38.016870",
-      "level": "INFO",
-      "message": "[22:45:38] INFO: TSDB ncaabw 2021: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:38.016935",
-      "level": "WARNING",
-      "message": "[22:45:38] WARNING:   ncaabw 2021: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:38.016984",
-      "level": "INFO",
-      "message": "[22:45:38] INFO:   Fetching ncaabw 2022..."
-    },
-    {
-      "time": "2026-02-27T22:45:38.204307",
-      "level": "INFO",
-      "message": "[22:45:38] INFO: TSDB ncaabw 2022: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:38.204368",
-      "level": "WARNING",
-      "message": "[22:45:38] WARNING:   ncaabw 2022: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:38.204412",
-      "level": "INFO",
-      "message": "[22:45:38] INFO:   Fetching ncaabw 2023..."
-    },
-    {
-      "time": "2026-02-27T22:45:38.396502",
-      "level": "INFO",
-      "message": "[22:45:38] INFO: TSDB ncaabw 2023: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:38.396565",
-      "level": "WARNING",
-      "message": "[22:45:38] WARNING:   ncaabw 2023: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:38.396643",
-      "level": "INFO",
-      "message": "[22:45:38] INFO:   Fetching ncaabw 2024..."
-    },
-    {
-      "time": "2026-02-27T22:45:38.582417",
-      "level": "INFO",
-      "message": "[22:45:38] INFO: TSDB ncaabw 2024: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:38.582477",
-      "level": "WARNING",
-      "message": "[22:45:38] WARNING:   ncaabw 2024: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:38.582523",
-      "level": "INFO",
-      "message": "[22:45:38] INFO:   Fetching ncaabw 2025..."
-    },
-    {
-      "time": "2026-02-27T22:45:38.772361",
-      "level": "INFO",
-      "message": "[22:45:38] INFO: TSDB ncaabw 2025: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:38.772422",
-      "level": "WARNING",
-      "message": "[22:45:38] WARNING:   ncaabw 2025: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:38.772470",
-      "level": "INFO",
-      "message": "[22:45:38] INFO:   Fetching ncaabw 2026..."
-    },
-    {
-      "time": "2026-02-27T22:45:38.961257",
-      "level": "INFO",
-      "message": "[22:45:38] INFO: TSDB ncaabw 2026: 0 completed games"
-    },
-    {
-      "time": "2026-02-27T22:45:38.961324",
-      "level": "WARNING",
-      "message": "[22:45:38] WARNING:   ncaabw 2026: no games retrieved"
-    },
-    {
-      "time": "2026-02-27T22:45:38.961379",
-      "level": "WARNING",
-      "message": "[22:45:38] WARNING:   ncaabw: limited data (0 games) - predictions will be low confidence"
+      "message": "[11:36:00] INFO: ESPN scoreboard ncaabm: 2 games"
     },
     {
-      "time": "2026-02-27T22:45:38.961486",
+      "time": "2026-02-28T11:36:00.600811",
       "level": "INFO",
-      "message": "[22:45:38] INFO: ======================================================="
+      "message": "[11:36:00] INFO:   ncaabm: 2 predictions generated"
     },
     {
-      "time": "2026-02-27T22:45:38.961534",
+      "time": "2026-02-28T11:36:00.901073",
       "level": "INFO",
-      "message": "[22:45:38] INFO: FOUNDATION TRAINING COMPLETE"
+      "message": "[11:36:00] INFO: Generating predictions: ncaabw"
     },
     {
-      "time": "2026-02-27T22:45:38.961580",
+      "time": "2026-02-28T11:36:01.031495",
       "level": "INFO",
-      "message": "[22:45:38] INFO: Total games: 502"
+      "message": "[11:36:01] INFO: ESPN scoreboard ncaabw: 1 games"
     },
     {
-      "time": "2026-02-27T22:45:38.961656",
+      "time": "2026-02-28T11:36:01.031714",
       "level": "INFO",
-      "message": "[22:45:38] INFO: Duration: 15m 46s"
+      "message": "[11:36:01] INFO:   ncaabw: 1 predictions generated"
     },
     {
-      "time": "2026-02-27T22:45:38.961701",
+      "time": "2026-02-28T11:36:01.332042",
       "level": "INFO",
-      "message": "[22:45:38] INFO: ======================================================="
+      "message": "[11:36:01] INFO: Daily update complete"
     }
   ],
   "weights": {
@@ -10228,13 +8278,1916 @@
     "ncaabw": {}
   },
   "predictions": {
-    "nfl": [],
-    "nba": [],
-    "mlb": [],
-    "nhl": [],
-    "ncaaf": [],
-    "ncaabm": [],
-    "ncaabw": []
+    "nfl": [
+      {
+        "id": "nfl_New England Patriots_Seattle Seahawks_2026-02-08",
+        "home": "New England Patriots",
+        "away": "Seattle Seahawks",
+        "date": "2026-02-08",
+        "venue": "Levi's Stadium",
+        "pick": "New England Patriots",
+        "home_prob": 0.6250132650091811,
+        "pick_prob": 0.6250132650091811,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "elo",
+          "bounce_back"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:32.487910"
+      }
+    ],
+    "nba": [
+      {
+        "id": "nba_Detroit Pistons_Cleveland Cavaliers_2026-02-28",
+        "home": "Detroit Pistons",
+        "away": "Cleveland Cavaliers",
+        "date": "2026-02-28",
+        "venue": "Little Caesars Arena",
+        "pick": "Cleveland Cavaliers",
+        "home_prob": 0.41855470759786106,
+        "pick_prob": 0.5814452924021389,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "elo"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:33.107578"
+      },
+      {
+        "id": "nba_Boston Celtics_Brooklyn Nets_2026-02-28",
+        "home": "Boston Celtics",
+        "away": "Brooklyn Nets",
+        "date": "2026-02-28",
+        "venue": "TD Garden",
+        "pick": "Boston Celtics",
+        "home_prob": 0.6880243458845398,
+        "pick_prob": 0.6880243458845398,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "elo",
+          "rest"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:33.107675"
+      },
+      {
+        "id": "nba_Milwaukee Bucks_New York Knicks_2026-02-28",
+        "home": "Milwaukee Bucks",
+        "away": "New York Knicks",
+        "date": "2026-02-28",
+        "venue": "Fiserv Forum",
+        "pick": "Milwaukee Bucks",
+        "home_prob": 0.752415106032804,
+        "pick_prob": 0.752415106032804,
+        "confidence": "lock",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "pythag",
+          "elo",
+          "rest"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:33.107796"
+      },
+      {
+        "id": "nba_Dallas Mavericks_Memphis Grizzlies_2026-02-28",
+        "home": "Dallas Mavericks",
+        "away": "Memphis Grizzlies",
+        "date": "2026-02-28",
+        "venue": "American Airlines Center",
+        "pick": "Dallas Mavericks",
+        "home_prob": 0.5192393928204504,
+        "pick_prob": 0.5192393928204504,
+        "confidence": "tossup",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "elo"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:33.107860"
+      },
+      {
+        "id": "nba_Oklahoma City Thunder_Denver Nuggets_2026-02-28",
+        "home": "Oklahoma City Thunder",
+        "away": "Denver Nuggets",
+        "date": "2026-02-28",
+        "venue": "Paycom Center",
+        "pick": "Denver Nuggets",
+        "home_prob": 0.47684786849716715,
+        "pick_prob": 0.5231521315028329,
+        "confidence": "tossup",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "elo"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:33.107910"
+      }
+    ],
+    "mlb": [
+      {
+        "id": "mlb_Atlanta Braves_Boston Red Sox_2026-02-27",
+        "home": "Atlanta Braves",
+        "away": "Boston Red Sox",
+        "date": "2026-02-27",
+        "venue": "CoolToday Park",
+        "pick": "Boston Red Sox",
+        "home_prob": 0.4779617205471646,
+        "pick_prob": 0.5220382794528353,
+        "confidence": "tossup",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:34.066444"
+      },
+      {
+        "id": "mlb_Detroit Tigers_Philadelphia Phillies_2026-02-27",
+        "home": "Detroit Tigers",
+        "away": "Philadelphia Phillies",
+        "date": "2026-02-27",
+        "venue": "Publix Field at Joker Marchant Stadium",
+        "pick": "Detroit Tigers",
+        "home_prob": 0.5169559478544158,
+        "pick_prob": 0.5169559478544158,
+        "confidence": "tossup",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "bounce_back"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:34.373590"
+      },
+      {
+        "id": "mlb_Minnesota Twins_New York Yankees_2026-02-27",
+        "home": "Minnesota Twins",
+        "away": "New York Yankees",
+        "date": "2026-02-27",
+        "venue": "Lee Health Sports Complex",
+        "pick": "New York Yankees",
+        "home_prob": 0.3458364577417999,
+        "pick_prob": 0.6541635422582002,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "bounce_back"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:34.678229"
+      },
+      {
+        "id": "mlb_Philadelphia Phillies_Miami Marlins_2026-02-27",
+        "home": "Philadelphia Phillies",
+        "away": "Miami Marlins",
+        "date": "2026-02-27",
+        "venue": "BayCare Ballpark",
+        "pick": "Miami Marlins",
+        "home_prob": 0.30273768311379845,
+        "pick_prob": 0.6972623168862015,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:34.983082"
+      },
+      {
+        "id": "mlb_Pittsburgh Pirates_Baltimore Orioles_2026-02-27",
+        "home": "Pittsburgh Pirates",
+        "away": "Baltimore Orioles",
+        "date": "2026-02-27",
+        "venue": "LECOM Park",
+        "pick": "Pittsburgh Pirates",
+        "home_prob": 0.5710734805420753,
+        "pick_prob": 0.5710734805420753,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "rest"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:35.284298"
+      },
+      {
+        "id": "mlb_St. Louis Cardinals_New York Mets_2026-02-27",
+        "home": "St. Louis Cardinals",
+        "away": "New York Mets",
+        "date": "2026-02-27",
+        "venue": "Roger Dean Chevrolet Stadium",
+        "pick": "New York Mets",
+        "home_prob": 0.4732248921746116,
+        "pick_prob": 0.5267751078253884,
+        "confidence": "tossup",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:35.593355"
+      },
+      {
+        "id": "mlb_Tampa Bay Rays_Toronto Blue Jays_2026-02-27",
+        "home": "Tampa Bay Rays",
+        "away": "Toronto Blue Jays",
+        "date": "2026-02-27",
+        "venue": "Charlotte Sports Park",
+        "pick": "Toronto Blue Jays",
+        "home_prob": 0.2646441230492113,
+        "pick_prob": 0.7353558769507886,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "travel"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:35.898759"
+      },
+      {
+        "id": "mlb_Chicago Cubs_Cleveland Guardians_2026-02-27",
+        "home": "Chicago Cubs",
+        "away": "Cleveland Guardians",
+        "date": "2026-02-27",
+        "venue": "Sloan Park",
+        "pick": "Cleveland Guardians",
+        "home_prob": 0.3847180291001373,
+        "pick_prob": 0.6152819708998627,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "rest",
+          "bounce_back",
+          "weather"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:36.099325"
+      },
+      {
+        "id": "mlb_Chicago White Sox_Texas Rangers_2026-02-27",
+        "home": "Chicago White Sox",
+        "away": "Texas Rangers",
+        "date": "2026-02-27",
+        "venue": "Camelback Ranch - Glendale",
+        "pick": "Chicago White Sox",
+        "home_prob": 0.727601387142829,
+        "pick_prob": 0.727601387142829,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "bounce_back"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:36.403200"
+      },
+      {
+        "id": "mlb_Cincinnati Reds_Los Angeles Angels_2026-02-27",
+        "home": "Cincinnati Reds",
+        "away": "Los Angeles Angels",
+        "date": "2026-02-27",
+        "venue": "Goodyear Ballpark",
+        "pick": "Cincinnati Reds",
+        "home_prob": 0.7125742546412659,
+        "pick_prob": 0.7125742546412659,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "rest",
+          "bounce_back"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:36.710712"
+      },
+      {
+        "id": "mlb_Kansas City Royals_Athletics_2026-02-27",
+        "home": "Kansas City Royals",
+        "away": "Athletics",
+        "date": "2026-02-27",
+        "venue": "Surprise Stadium",
+        "pick": "Kansas City Royals",
+        "home_prob": 0.7282427304922124,
+        "pick_prob": 0.7282427304922124,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "pythag",
+          "rest",
+          "bounce_back"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:36.909113"
+      },
+      {
+        "id": "mlb_San Francisco Giants_Los Angeles Dodgers_2026-02-27",
+        "home": "San Francisco Giants",
+        "away": "Los Angeles Dodgers",
+        "date": "2026-02-27",
+        "venue": "Scottsdale Stadium",
+        "pick": "Los Angeles Dodgers",
+        "home_prob": 0.40330977248268,
+        "pick_prob": 0.59669022751732,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "bounce_back"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:37.107326"
+      },
+      {
+        "id": "mlb_Colorado Rockies_San Diego Padres_2026-02-27",
+        "home": "Colorado Rockies",
+        "away": "San Diego Padres",
+        "date": "2026-02-27",
+        "venue": "Salt River Fields at Talking Stick",
+        "pick": "Colorado Rockies",
+        "home_prob": 0.6224306069846149,
+        "pick_prob": 0.6224306069846149,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:37.411190"
+      },
+      {
+        "id": "mlb_Milwaukee Brewers_Chicago White Sox_2026-02-27",
+        "home": "Milwaukee Brewers",
+        "away": "Chicago White Sox",
+        "date": "2026-02-27",
+        "venue": "American Family Fields of Phoenix",
+        "pick": "Chicago White Sox",
+        "home_prob": 0.376390868030381,
+        "pick_prob": 0.623609131969619,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "rest",
+          "bounce_back",
+          "travel"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:37.718665"
+      },
+      {
+        "id": "mlb_Washington Nationals_Houston Astros_2026-02-27",
+        "home": "Washington Nationals",
+        "away": "Houston Astros",
+        "date": "2026-02-27",
+        "venue": "CACTI Park of the Palm Beaches",
+        "pick": "Washington Nationals",
+        "home_prob": 0.7513559539863345,
+        "pick_prob": 0.7513559539863345,
+        "confidence": "lock",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:38.024616"
+      },
+      {
+        "id": "mlb_Seattle Mariners_Arizona Diamondbacks_2026-02-28",
+        "home": "Seattle Mariners",
+        "away": "Arizona Diamondbacks",
+        "date": "2026-02-28",
+        "venue": "Peoria Stadium",
+        "pick": "Arizona Diamondbacks",
+        "home_prob": 0.45342835760301925,
+        "pick_prob": 0.5465716423969808,
+        "confidence": "tossup",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "form",
+          "pythag",
+          "rest"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:38.225596"
+      }
+    ],
+    "nhl": [
+      {
+        "id": "nhl_Florida Panthers_Buffalo Sabres_2026-02-28",
+        "home": "Florida Panthers",
+        "away": "Buffalo Sabres",
+        "date": "2026-02-28",
+        "venue": "Amerant Bank Arena",
+        "pick": "Florida Panthers",
+        "home_prob": 0.55,
+        "pick_prob": 0.55,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:38.928370"
+      },
+      {
+        "id": "nhl_Washington Capitals_Vegas Golden Knights_2026-02-28",
+        "home": "Washington Capitals",
+        "away": "Vegas Golden Knights",
+        "date": "2026-02-28",
+        "venue": "Capital One Arena",
+        "pick": "Washington Capitals",
+        "home_prob": 0.55,
+        "pick_prob": 0.55,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:38.928425"
+      },
+      {
+        "id": "nhl_Utah Mammoth_Minnesota Wild_2026-02-28",
+        "home": "Utah Mammoth",
+        "away": "Minnesota Wild",
+        "date": "2026-02-28",
+        "venue": "Delta Center",
+        "pick": "Utah Mammoth",
+        "home_prob": 0.55,
+        "pick_prob": 0.55,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:38.928478"
+      },
+      {
+        "id": "nhl_Anaheim Ducks_Winnipeg Jets_2026-02-28",
+        "home": "Anaheim Ducks",
+        "away": "Winnipeg Jets",
+        "date": "2026-02-28",
+        "venue": "Honda Center",
+        "pick": "Anaheim Ducks",
+        "home_prob": 0.55,
+        "pick_prob": 0.55,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:38.928514"
+      }
+    ],
+    "ncaaf": [
+      {
+        "id": "ncaaf_TCU Horned Frogs_North Carolina Tar Heels_2026-08-29",
+        "home": "TCU Horned Frogs",
+        "away": "North Carolina Tar Heels",
+        "date": "2026-08-29",
+        "venue": "Aviva Stadium",
+        "pick": "TCU Horned Frogs",
+        "home_prob": 0.6085545814461943,
+        "pick_prob": 0.6085545814461943,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "market",
+          "spread"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:39.888588"
+      },
+      {
+        "id": "ncaaf_Stanford Cardinal_Hawai'i Rainbow Warriors_2026-08-29",
+        "home": "Stanford Cardinal",
+        "away": "Hawai'i Rainbow Warriors",
+        "date": "2026-08-29",
+        "venue": "Stanford Stadium",
+        "pick": "Stanford Cardinal",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:40.087594"
+      },
+      {
+        "id": "ncaaf_Virginia Cavaliers_NC State Wolfpack_2026-08-29",
+        "home": "Virginia Cavaliers",
+        "away": "NC State Wolfpack",
+        "date": "2026-08-29",
+        "venue": "Nilton Santos Stadium",
+        "pick": "Virginia Cavaliers",
+        "home_prob": 0.577317344101613,
+        "pick_prob": 0.577317344101613,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "market",
+          "spread"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:40.390215"
+      },
+      {
+        "id": "ncaaf_Florida State Seminoles_New Mexico State Aggies_2026-08-29",
+        "home": "Florida State Seminoles",
+        "away": "New Mexico State Aggies",
+        "date": "2026-08-29",
+        "venue": "Doak Campbell Stadium",
+        "pick": "Florida State Seminoles",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:40.702627"
+      },
+      {
+        "id": "ncaaf_UNLV Rebels_Memphis Tigers_2026-08-29",
+        "home": "UNLV Rebels",
+        "away": "Memphis Tigers",
+        "date": "2026-08-29",
+        "venue": "Allegiant Stadium",
+        "pick": "UNLV Rebels",
+        "home_prob": 0.6,
+        "pick_prob": 0.6,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:41.010146"
+      },
+      {
+        "id": "ncaaf_UCF Knights_Bethune-Cookman Wildcats_2026-09-03",
+        "home": "UCF Knights",
+        "away": "Bethune-Cookman Wildcats",
+        "date": "2026-09-03",
+        "venue": "Acrisure Bounce House",
+        "pick": "UCF Knights",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:41.310830"
+      },
+      {
+        "id": "ncaaf_Utah Utes_Idaho Vandals_2026-09-03",
+        "home": "Utah Utes",
+        "away": "Idaho Vandals",
+        "date": "2026-09-03",
+        "venue": "Rice-Eccles Stadium",
+        "pick": "Utah Utes",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:41.614221"
+      },
+      {
+        "id": "ncaaf_Georgia Tech Yellow Jackets_Colorado Buffaloes_2026-09-03",
+        "home": "Georgia Tech Yellow Jackets",
+        "away": "Colorado Buffaloes",
+        "date": "2026-09-03",
+        "venue": "Bobby Dodd Stadium",
+        "pick": "Georgia Tech Yellow Jackets",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:41.918102"
+      },
+      {
+        "id": "ncaaf_Wake Forest Demon Deacons_Akron Zips_2026-09-03",
+        "home": "Wake Forest Demon Deacons",
+        "away": "Akron Zips",
+        "date": "2026-09-03",
+        "venue": "Allegacy Federal Credit Union Stadium",
+        "pick": "Wake Forest Demon Deacons",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:42.226081"
+      },
+      {
+        "id": "ncaaf_Minnesota Golden Gophers_Eastern Illinois Panthers_2026-09-03",
+        "home": "Minnesota Golden Gophers",
+        "away": "Eastern Illinois Panthers",
+        "date": "2026-09-03",
+        "venue": "Huntington Bank Stadium",
+        "pick": "Minnesota Golden Gophers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:42.532024"
+      },
+      {
+        "id": "ncaaf_Rutgers Scarlet Knights_Massachusetts Minutemen_2026-09-03",
+        "home": "Rutgers Scarlet Knights",
+        "away": "Massachusetts Minutemen",
+        "date": "2026-09-03",
+        "venue": "SHI Stadium",
+        "pick": "Rutgers Scarlet Knights",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:42.734386"
+      },
+      {
+        "id": "ncaaf_Kansas Jayhawks_Long Island University Sharks_2026-09-04",
+        "home": "Kansas Jayhawks",
+        "away": "Long Island University Sharks",
+        "date": "2026-09-04",
+        "venue": "David Booth Kansas Memorial Stadium",
+        "pick": "Kansas Jayhawks",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:43.040588"
+      },
+      {
+        "id": "ncaaf_Stanford Cardinal_Miami Hurricanes_2026-09-04",
+        "home": "Stanford Cardinal",
+        "away": "Miami Hurricanes",
+        "date": "2026-09-04",
+        "venue": "Stanford Stadium",
+        "pick": "Stanford Cardinal",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:43.239783"
+      },
+      {
+        "id": "ncaaf_Alabama Crimson Tide_East Carolina Pirates_2026-09-05",
+        "home": "Alabama Crimson Tide",
+        "away": "East Carolina Pirates",
+        "date": "2026-09-05",
+        "venue": "Bryant-Denny Stadium",
+        "pick": "Alabama Crimson Tide",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:43.577925"
+      },
+      {
+        "id": "ncaaf_Arkansas Razorbacks_North Alabama Lions_2026-09-05",
+        "home": "Arkansas Razorbacks",
+        "away": "North Alabama Lions",
+        "date": "2026-09-05",
+        "venue": "Razorback Stadium",
+        "pick": "Arkansas Razorbacks",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:43.887288"
+      },
+      {
+        "id": "ncaaf_Auburn Tigers_Baylor Bears_2026-09-05",
+        "home": "Auburn Tigers",
+        "away": "Baylor Bears",
+        "date": "2026-09-05",
+        "venue": "Mercedes-Benz Stadium",
+        "pick": "Auburn Tigers",
+        "home_prob": 0.6084759075339946,
+        "pick_prob": 0.6084759075339946,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "market",
+          "spread"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:44.200413"
+      },
+      {
+        "id": "ncaaf_Florida Gators_Florida Atlantic Owls_2026-09-05",
+        "home": "Florida Gators",
+        "away": "Florida Atlantic Owls",
+        "date": "2026-09-05",
+        "venue": "Ben Hill Griffin Stadium",
+        "pick": "Florida Gators",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:44.510381"
+      },
+      {
+        "id": "ncaaf_Georgia Bulldogs_Tennessee State Tigers_2026-09-05",
+        "home": "Georgia Bulldogs",
+        "away": "Tennessee State Tigers",
+        "date": "2026-09-05",
+        "venue": "Sanford Stadium",
+        "pick": "Georgia Bulldogs",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:44.712513"
+      },
+      {
+        "id": "ncaaf_Kentucky Wildcats_Youngstown State Penguins_2026-09-05",
+        "home": "Kentucky Wildcats",
+        "away": "Youngstown State Penguins",
+        "date": "2026-09-05",
+        "venue": "Kroger Field",
+        "pick": "Kentucky Wildcats",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:45.013373"
+      },
+      {
+        "id": "ncaaf_LSU Tigers_Clemson Tigers_2026-09-05",
+        "home": "LSU Tigers",
+        "away": "Clemson Tigers",
+        "date": "2026-09-05",
+        "venue": "Tiger Stadium (LA)",
+        "pick": "LSU Tigers",
+        "home_prob": 0.6363770321109002,
+        "pick_prob": 0.6363770321109002,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "market",
+          "spread"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:45.318636"
+      },
+      {
+        "id": "ncaaf_Ole Miss Rebels_Louisville Cardinals_2026-09-05",
+        "home": "Ole Miss Rebels",
+        "away": "Louisville Cardinals",
+        "date": "2026-09-05",
+        "venue": "Nissan Stadium",
+        "pick": "Ole Miss Rebels",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:45.625396"
+      },
+      {
+        "id": "ncaaf_Mississippi State Bulldogs_UL Monroe Warhawks_2026-09-05",
+        "home": "Mississippi State Bulldogs",
+        "away": "UL Monroe Warhawks",
+        "date": "2026-09-05",
+        "venue": "Davis Wade Stadium",
+        "pick": "Mississippi State Bulldogs",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:45.932044"
+      },
+      {
+        "id": "ncaaf_Missouri Tigers_Arkansas-Pine Bluff Golden Lions_2026-09-05",
+        "home": "Missouri Tigers",
+        "away": "Arkansas-Pine Bluff Golden Lions",
+        "date": "2026-09-05",
+        "venue": "Memorial Stadium",
+        "pick": "Missouri Tigers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:46.235756"
+      },
+      {
+        "id": "ncaaf_Oklahoma Sooners_UTEP Miners_2026-09-05",
+        "home": "Oklahoma Sooners",
+        "away": "UTEP Miners",
+        "date": "2026-09-05",
+        "venue": "Memorial Stadium (Norman, OK)",
+        "pick": "Oklahoma Sooners",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:46.540511"
+      },
+      {
+        "id": "ncaaf_South Carolina Gamecocks_Kent State Golden Flashes_2026-09-05",
+        "home": "South Carolina Gamecocks",
+        "away": "Kent State Golden Flashes",
+        "date": "2026-09-05",
+        "venue": "Williams-Brice Stadium",
+        "pick": "South Carolina Gamecocks",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:46.841950"
+      },
+      {
+        "id": "ncaaf_Tennessee Volunteers_Furman Paladins_2026-09-05",
+        "home": "Tennessee Volunteers",
+        "away": "Furman Paladins",
+        "date": "2026-09-05",
+        "venue": "Neyland Stadium",
+        "pick": "Tennessee Volunteers",
+        "home_prob": 0.629,
+        "pick_prob": 0.629,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "weather"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:47.048071"
+      },
+      {
+        "id": "ncaaf_Texas Longhorns_Texas State Bobcats_2026-09-05",
+        "home": "Texas Longhorns",
+        "away": "Texas State Bobcats",
+        "date": "2026-09-05",
+        "venue": "DKR-Texas Memorial Stadium",
+        "pick": "Texas Longhorns",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:47.355884"
+      },
+      {
+        "id": "ncaaf_Texas A&M Aggies_Missouri State Bears_2026-09-05",
+        "home": "Texas A&M Aggies",
+        "away": "Missouri State Bears",
+        "date": "2026-09-05",
+        "venue": "Kyle Field",
+        "pick": "Texas A&M Aggies",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:47.556206"
+      },
+      {
+        "id": "ncaaf_Vanderbilt Commodores_Austin Peay Governors_2026-09-05",
+        "home": "Vanderbilt Commodores",
+        "away": "Austin Peay Governors",
+        "date": "2026-09-05",
+        "venue": "FirstBank Stadium",
+        "pick": "Vanderbilt Commodores",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:47.859092"
+      },
+      {
+        "id": "ncaaf_Texas Tech Red Raiders_Abilene Christian Wildcats_2026-09-05",
+        "home": "Texas Tech Red Raiders",
+        "away": "Abilene Christian Wildcats",
+        "date": "2026-09-05",
+        "venue": "Jones AT&T Stadium",
+        "pick": "Texas Tech Red Raiders",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:48.173750"
+      },
+      {
+        "id": "ncaaf_Kansas State Wildcats_Nicholls Colonels_2026-09-05",
+        "home": "Kansas State Wildcats",
+        "away": "Nicholls Colonels",
+        "date": "2026-09-05",
+        "venue": "Bill Snyder Family Stadium",
+        "pick": "Kansas State Wildcats",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:48.477505"
+      },
+      {
+        "id": "ncaaf_Tulsa Golden Hurricane_Oklahoma State Cowboys_2026-09-05",
+        "home": "Tulsa Golden Hurricane",
+        "away": "Oklahoma State Cowboys",
+        "date": "2026-09-05",
+        "venue": "Chapman Stadium",
+        "pick": "Tulsa Golden Hurricane",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:48.676638"
+      },
+      {
+        "id": "ncaaf_Arizona Wildcats_Northern Arizona Lumberjacks_2026-09-05",
+        "home": "Arizona Wildcats",
+        "away": "Northern Arizona Lumberjacks",
+        "date": "2026-09-05",
+        "venue": "Arizona Stadium",
+        "pick": "Arizona Wildcats",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:48.878027"
+      },
+      {
+        "id": "ncaaf_Arizona State Sun Devils_Morgan State Bears_2026-09-05",
+        "home": "Arizona State Sun Devils",
+        "away": "Morgan State Bears",
+        "date": "2026-09-05",
+        "venue": "Mountain America Stadium",
+        "pick": "Arizona State Sun Devils",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:49.187470"
+      },
+      {
+        "id": "ncaaf_BYU Cougars_Utah Tech Trailblazers_2026-09-05",
+        "home": "BYU Cougars",
+        "away": "Utah Tech Trailblazers",
+        "date": "2026-09-05",
+        "venue": "LaVell Edwards Stadium",
+        "pick": "BYU Cougars",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:49.492271"
+      },
+      {
+        "id": "ncaaf_Cincinnati Bearcats_Boston College Eagles_2026-09-05",
+        "home": "Cincinnati Bearcats",
+        "away": "Boston College Eagles",
+        "date": "2026-09-05",
+        "venue": "Nippert Stadium",
+        "pick": "Cincinnati Bearcats",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:49.795433"
+      },
+      {
+        "id": "ncaaf_Houston Cougars_Oregon State Beavers_2026-09-05",
+        "home": "Houston Cougars",
+        "away": "Oregon State Beavers",
+        "date": "2026-09-05",
+        "venue": "TDECU Stadium",
+        "pick": "Houston Cougars",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:50.099331"
+      },
+      {
+        "id": "ncaaf_Iowa State Cyclones_Southeast Missouri State Redhawks_2026-09-05",
+        "home": "Iowa State Cyclones",
+        "away": "Southeast Missouri State Redhawks",
+        "date": "2026-09-05",
+        "venue": "Jack Trice Stadium",
+        "pick": "Iowa State Cyclones",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:50.406769"
+      },
+      {
+        "id": "ncaaf_West Virginia Mountaineers_Coastal Carolina Chanticleers_2026-09-05",
+        "home": "West Virginia Mountaineers",
+        "away": "Coastal Carolina Chanticleers",
+        "date": "2026-09-05",
+        "venue": "Milan Puskar Stadium",
+        "pick": "West Virginia Mountaineers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:50.716912"
+      },
+      {
+        "id": "ncaaf_Pittsburgh Panthers_Miami (OH) RedHawks_2026-09-05",
+        "home": "Pittsburgh Panthers",
+        "away": "Miami (OH) RedHawks",
+        "date": "2026-09-05",
+        "venue": "Acrisure Stadium",
+        "pick": "Pittsburgh Panthers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:51.021626"
+      },
+      {
+        "id": "ncaaf_Syracuse Orange_New Hampshire Wildcats_2026-09-05",
+        "home": "Syracuse Orange",
+        "away": "New Hampshire Wildcats",
+        "date": "2026-09-05",
+        "venue": "JMA Wireless Dome",
+        "pick": "Syracuse Orange",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:51.331331"
+      },
+      {
+        "id": "ncaaf_Duke Blue Devils_Tulane Green Wave_2026-09-05",
+        "home": "Duke Blue Devils",
+        "away": "Tulane Green Wave",
+        "date": "2026-09-05",
+        "venue": "Wallace Wade Stadium",
+        "pick": "Duke Blue Devils",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:51.638365"
+      },
+      {
+        "id": "ncaaf_California Golden Bears_UCLA Bruins_2026-09-05",
+        "home": "California Golden Bears",
+        "away": "UCLA Bruins",
+        "date": "2026-09-05",
+        "venue": "California Memorial Stadium",
+        "pick": "California Golden Bears",
+        "home_prob": 0.5772644629217886,
+        "pick_prob": 0.5772644629217886,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "market",
+          "spread"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:51.939345"
+      },
+      {
+        "id": "ncaaf_Virginia Tech Hokies_VMI Keydets_2026-09-05",
+        "home": "Virginia Tech Hokies",
+        "away": "VMI Keydets",
+        "date": "2026-09-05",
+        "venue": "Lane Stadium",
+        "pick": "Virginia Tech Hokies",
+        "home_prob": 0.626,
+        "pick_prob": 0.626,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "weather"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:52.140929"
+      },
+      {
+        "id": "ncaaf_Illinois Fighting Illini_UAB Blazers_2026-09-05",
+        "home": "Illinois Fighting Illini",
+        "away": "UAB Blazers",
+        "date": "2026-09-05",
+        "venue": "Memorial Stadium (Champaign, IL)",
+        "pick": "Illinois Fighting Illini",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:52.447884"
+      },
+      {
+        "id": "ncaaf_Indiana Hoosiers_North Texas Mean Green_2026-09-05",
+        "home": "Indiana Hoosiers",
+        "away": "North Texas Mean Green",
+        "date": "2026-09-05",
+        "venue": "Memorial Stadium (Bloomington, IN)",
+        "pick": "Indiana Hoosiers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:52.747415"
+      },
+      {
+        "id": "ncaaf_Iowa Hawkeyes_Northern Illinois Huskies_2026-09-05",
+        "home": "Iowa Hawkeyes",
+        "away": "Northern Illinois Huskies",
+        "date": "2026-09-05",
+        "venue": "Kinnick Stadium",
+        "pick": "Iowa Hawkeyes",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:53.054148"
+      },
+      {
+        "id": "ncaaf_Maryland Terrapins_Howard Bison_2026-09-05",
+        "home": "Maryland Terrapins",
+        "away": "Howard Bison",
+        "date": "2026-09-05",
+        "venue": "SECU Stadium",
+        "pick": "Maryland Terrapins",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:53.255062"
+      },
+      {
+        "id": "ncaaf_Michigan Wolverines_Western Michigan Broncos_2026-09-05",
+        "home": "Michigan Wolverines",
+        "away": "Western Michigan Broncos",
+        "date": "2026-09-05",
+        "venue": "Michigan Stadium",
+        "pick": "Michigan Wolverines",
+        "home_prob": 0.629,
+        "pick_prob": 0.629,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "weather"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:53.454158"
+      },
+      {
+        "id": "ncaaf_Michigan State Spartans_Toledo Rockets_2026-09-05",
+        "home": "Michigan State Spartans",
+        "away": "Toledo Rockets",
+        "date": "2026-09-05",
+        "venue": "Spartan Stadium",
+        "pick": "Michigan State Spartans",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:53.757481"
+      },
+      {
+        "id": "ncaaf_Nebraska Cornhuskers_Ohio Bobcats_2026-09-05",
+        "home": "Nebraska Cornhuskers",
+        "away": "Ohio Bobcats",
+        "date": "2026-09-05",
+        "venue": "Memorial Stadium (Lincoln, NE)",
+        "pick": "Nebraska Cornhuskers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:54.064202"
+      },
+      {
+        "id": "ncaaf_Northwestern Wildcats_South Dakota State Jackrabbits_2026-09-05",
+        "home": "Northwestern Wildcats",
+        "away": "South Dakota State Jackrabbits",
+        "date": "2026-09-05",
+        "venue": "Northwestern Medicine Field at Martin Stadium",
+        "pick": "Northwestern Wildcats",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:54.369498"
+      },
+      {
+        "id": "ncaaf_Ohio State Buckeyes_Ball State Cardinals_2026-09-05",
+        "home": "Ohio State Buckeyes",
+        "away": "Ball State Cardinals",
+        "date": "2026-09-05",
+        "venue": "Ohio Stadium",
+        "pick": "Ohio State Buckeyes",
+        "home_prob": 0.635,
+        "pick_prob": 0.635,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "weather"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:54.574250"
+      },
+      {
+        "id": "ncaaf_Oregon Ducks_Boise State Broncos_2026-09-05",
+        "home": "Oregon Ducks",
+        "away": "Boise State Broncos",
+        "date": "2026-09-05",
+        "venue": "Autzen Stadium",
+        "pick": "Oregon Ducks",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:54.879360"
+      },
+      {
+        "id": "ncaaf_Penn State Nittany Lions_Marshall Thundering Herd_2026-09-05",
+        "home": "Penn State Nittany Lions",
+        "away": "Marshall Thundering Herd",
+        "date": "2026-09-05",
+        "venue": "Beaver Stadium",
+        "pick": "Penn State Nittany Lions",
+        "home_prob": 0.626,
+        "pick_prob": 0.626,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "weather"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:55.080485"
+      },
+      {
+        "id": "ncaaf_Purdue Boilermakers_Indiana State Sycamores_2026-09-05",
+        "home": "Purdue Boilermakers",
+        "away": "Indiana State Sycamores",
+        "date": "2026-09-05",
+        "venue": "Ross-Ade Stadium",
+        "pick": "Purdue Boilermakers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:55.387018"
+      },
+      {
+        "id": "ncaaf_USC Trojans_Fresno State Bulldogs_2026-09-05",
+        "home": "USC Trojans",
+        "away": "Fresno State Bulldogs",
+        "date": "2026-09-05",
+        "venue": "Los Angeles Memorial Coliseum",
+        "pick": "USC Trojans",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:55.606409"
+      },
+      {
+        "id": "ncaaf_Washington Huskies_Washington State Cougars_2026-09-05",
+        "home": "Washington Huskies",
+        "away": "Washington State Cougars",
+        "date": "2026-09-05",
+        "venue": "Husky Stadium",
+        "pick": "Washington Huskies",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:55.912650"
+      },
+      {
+        "id": "ncaaf_Colorado State Rams_Wyoming Cowboys_2026-09-05",
+        "home": "Colorado State Rams",
+        "away": "Wyoming Cowboys",
+        "date": "2026-09-05",
+        "venue": "Canvas Stadium",
+        "pick": "Colorado State Rams",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:56.114198"
+      },
+      {
+        "id": "ncaaf_San Diego State Aztecs_Portland State Vikings_2026-09-05",
+        "home": "San Diego State Aztecs",
+        "away": "Portland State Vikings",
+        "date": "2026-09-05",
+        "venue": "Snapdragon Stadium",
+        "pick": "San Diego State Aztecs",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:56.420698"
+      },
+      {
+        "id": "ncaaf_Utah State Aggies_Idaho State Bengals_2026-09-05",
+        "home": "Utah State Aggies",
+        "away": "Idaho State Bengals",
+        "date": "2026-09-05",
+        "venue": "Maverik Stadium",
+        "pick": "Utah State Aggies",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:56.730316"
+      },
+      {
+        "id": "ncaaf_UConn Huskies_Lafayette Leopards_2026-09-05",
+        "home": "UConn Huskies",
+        "away": "Lafayette Leopards",
+        "date": "2026-09-05",
+        "venue": "Pratt & Whitney Stadium",
+        "pick": "UConn Huskies",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:57.035496"
+      },
+      {
+        "id": "ncaaf_Charlotte 49ers_The Citadel Bulldogs_2026-09-05",
+        "home": "Charlotte 49ers",
+        "away": "The Citadel Bulldogs",
+        "date": "2026-09-05",
+        "venue": "Jerry Richardson Stadium",
+        "pick": "Charlotte 49ers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:57.342185"
+      },
+      {
+        "id": "ncaaf_Memphis Tigers_Arkansas State Red Wolves_2026-09-05",
+        "home": "Memphis Tigers",
+        "away": "Arkansas State Red Wolves",
+        "date": "2026-09-05",
+        "venue": "Simmons Bank Liberty Stadium",
+        "pick": "Memphis Tigers",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:57.644905"
+      },
+      {
+        "id": "ncaaf_Navy Midshipmen_Towson Tigers_2026-09-05",
+        "home": "Navy Midshipmen",
+        "away": "Towson Tigers",
+        "date": "2026-09-05",
+        "venue": "Navy-Marine Corps Memorial Stadium",
+        "pick": "Navy Midshipmen",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:57.946294"
+      },
+      {
+        "id": "ncaaf_Rice Owls_Houston Christian Huskies_2026-09-05",
+        "home": "Rice Owls",
+        "away": "Houston Christian Huskies",
+        "date": "2026-09-05",
+        "venue": "Rice Stadium",
+        "pick": "Rice Owls",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:58.146173"
+      },
+      {
+        "id": "ncaaf_Temple Owls_Rhode Island Rams_2026-09-05",
+        "home": "Temple Owls",
+        "away": "Rhode Island Rams",
+        "date": "2026-09-05",
+        "venue": "Lincoln Financial Field",
+        "pick": "Temple Owls",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:58.454909"
+      },
+      {
+        "id": "ncaaf_South Florida Bulls_Florida International Panthers_2026-09-05",
+        "home": "South Florida Bulls",
+        "away": "Florida International Panthers",
+        "date": "2026-09-05",
+        "venue": "Raymond James Stadium",
+        "pick": "South Florida Bulls",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:58.757647"
+      },
+      {
+        "id": "ncaaf_UTSA Roadrunners_UT Rio Grande Valley Vaqueros_2026-09-05",
+        "home": "UTSA Roadrunners",
+        "away": "UT Rio Grande Valley Vaqueros",
+        "date": "2026-09-05",
+        "venue": "Alamodome",
+        "pick": "UTSA Roadrunners",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:58.958431"
+      },
+      {
+        "id": "ncaaf_Army Black Knights_Bryant Bulldogs_2026-09-05",
+        "home": "Army Black Knights",
+        "away": "Bryant Bulldogs",
+        "date": "2026-09-05",
+        "venue": "Michie Stadium",
+        "pick": "Army Black Knights",
+        "home_prob": 0.626,
+        "pick_prob": 0.626,
+        "confidence": "medium",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "weather"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:59.161386"
+      },
+      {
+        "id": "ncaaf_Wisconsin Badgers_Notre Dame Fighting Irish_2026-09-06",
+        "home": "Wisconsin Badgers",
+        "away": "Notre Dame Fighting Irish",
+        "date": "2026-09-06",
+        "venue": "Lambeau Field",
+        "pick": "Wisconsin Badgers",
+        "home_prob": 0.6659779548372047,
+        "pick_prob": 0.6659779548372047,
+        "confidence": "strong",
+        "is_guess": false,
+        "signals": [
+          "hfa",
+          "market",
+          "spread"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:59.466213"
+      },
+      {
+        "id": "ncaaf_Florida State Seminoles_SMU Mustangs_2026-09-07",
+        "home": "Florida State Seminoles",
+        "away": "SMU Mustangs",
+        "date": "2026-09-07",
+        "venue": "Doak Campbell Stadium",
+        "pick": "Florida State Seminoles",
+        "home_prob": 0.62,
+        "pick_prob": 0.62,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:35:59.623037"
+      }
+    ],
+    "ncaabm": [
+      {
+        "id": "ncaabm_Illinois Fighting Illini_Michigan Wolverines_2026-02-28",
+        "home": "Illinois Fighting Illini",
+        "away": "Michigan Wolverines",
+        "date": "2026-02-28",
+        "venue": "State Farm Center",
+        "pick": "Illinois Fighting Illini",
+        "home_prob": 0.64,
+        "pick_prob": 0.64,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:36:00.600645"
+      },
+      {
+        "id": "ncaabm_Western Michigan Broncos_Miami (OH) RedHawks_2026-02-27",
+        "home": "Western Michigan Broncos",
+        "away": "Miami (OH) RedHawks",
+        "date": "2026-02-27",
+        "venue": "University Arena (MI)",
+        "pick": "Western Michigan Broncos",
+        "home_prob": 0.64,
+        "pick_prob": 0.64,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:36:00.600714"
+      }
+    ],
+    "ncaabw": [
+      {
+        "id": "ncaabw_Dartmouth Big Green_Princeton Tigers_2026-02-27",
+        "home": "Dartmouth Big Green",
+        "away": "Princeton Tigers",
+        "date": "2026-02-27",
+        "venue": "Leede Arena",
+        "pick": "Dartmouth Big Green",
+        "home_prob": 0.64,
+        "pick_prob": 0.64,
+        "confidence": "medium",
+        "is_guess": true,
+        "signals": [
+          "hfa"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-02-28T11:36:01.031648"
+      }
+    ]
   },
   "cbs_picks": {
     "generated_at": null,
@@ -10257,8 +10210,22 @@
     "upset_alerts": []
   },
   "betting_picks": {
-    "generated_at": null,
-    "safe_bet": null,
+    "generated_at": "2026-02-28T11:36:01.331909",
+    "safe_bet": {
+      "home": "New England Patriots",
+      "away": "Seattle Seahawks",
+      "pick": "New England Patriots",
+      "pick_prob": 0.6250132650091811,
+      "confidence": "medium",
+      "signals": [
+        "hfa",
+        "form",
+        "pythag",
+        "elo",
+        "bounce_back"
+      ],
+      "date": "2026-02-08"
+    },
     "value_bet": null,
     "parlay": null
   },
@@ -10314,5 +10281,5 @@
       "ncaabw": 0.0
     }
   },
-  "last_saved": "2026-02-27T22:45:38.961734"
+  "last_saved": "2026-02-28T11:36:01.333349"
 }
