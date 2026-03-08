@@ -1,0 +1,44 @@
+name: Tune Hyperparameters
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  train_tune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install PyTorch Geometric
+        run: pip install torch-geometric
+
+      - name: Run hyperparameter optimization
+        env:
+          ODDS_API_KEY:    ${{ secrets.ODDS_API_KEY }}
+          OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+          BALLDONTLIE_KEY: ${{ secrets.BALLDONTLIE_KEY }}
+        run: python brain.py --mode train --tune
+
+      - name: Save results
+        run: |
+          git config user.name  "EDGE Predict Bot"
+          git config user.email "bot@edge-predict"
+          git add data.json models.pkl mind_models.pkl transformer_models.pkl graph_models.pkl stack_models.pkl
+          git diff --staged --quiet || git commit -m "Hyperparameter tuning complete $(date -u +%Y-%m-%d)"
+          git push
