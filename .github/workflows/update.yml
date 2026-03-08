@@ -2,7 +2,7 @@ name: Daily Update
 
 on:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '0 11 * * *'   # 6 AM CT (UTC-5) — runs every day
   workflow_dispatch:
 
 permissions:
@@ -34,10 +34,10 @@ jobs:
           BALLDONTLIE_KEY: ${{ secrets.BALLDONTLIE_KEY }}
         run: python brain.py --mode update
 
-      - name: Save results to repository
+      - name: Save results
         run: |
           git config user.name  "EDGE Predict Bot"
           git config user.email "bot@edge-predict"
           git add data.json
-          git diff --staged --quiet || git commit -m "Daily update $(date -u +%Y-%m-%dT%H:%M)"
+          git diff --staged --quiet || git commit -m "Daily update $(date -u +%Y-%m-%d)"
           git push
