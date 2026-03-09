@@ -38,4 +38,4 @@ jobs:
           git config user.email "bot@edge-predict"
           git add data.json
           git diff --staged --quiet || git commit -m "March brackets generated $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase && git push
