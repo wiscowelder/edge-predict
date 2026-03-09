@@ -56,4 +56,4 @@ jobs:
             [ -f "$f" ] && git add -f "$f" || echo "Skipping $f (not found)"
           done
           git diff --staged --quiet || git commit -m "Advanced models training complete $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase && git push
