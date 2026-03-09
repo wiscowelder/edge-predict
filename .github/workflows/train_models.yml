@@ -26,7 +26,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install PyTorch Geometric
-        run: pip install torch-geometric
+        run: pip install "torch-geometric>=2.4,<3.0"
 
       - name: Run advanced model training
         env:
@@ -35,10 +35,25 @@ jobs:
           BALLDONTLIE_KEY: ${{ secrets.BALLDONTLIE_KEY }}
         run: python brain.py --mode train_models
 
+      - name: Verify training output
+        run: |
+          missing=()
+          for f in transformer_models.pkl graph_models.pkl stack_models.pkl explain_models.pkl simulate_models.pkl; do
+            [ -f "$f" ] || missing+=("$f")
+          done
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "WARNING: The following model files were not produced: ${missing[*]}"
+          else
+            echo "All model files confirmed present."
+          fi
+
       - name: Save results
         run: |
           git config user.name  "EDGE Predict Bot"
           git config user.email "bot@edge-predict"
-          git add data.json transformer_models.pkl graph_models.pkl stack_models.pkl
+          [ -f "data.json" ] && git add -f "data.json" || echo "Skipping data.json (not found)"
+          for f in transformer_models.pkl graph_models.pkl stack_models.pkl explain_models.pkl simulate_models.pkl; do
+            [ -f "$f" ] && git add -f "$f" || echo "Skipping $f (not found)"
+          done
           git diff --staged --quiet || git commit -m "Advanced models training complete $(date -u +%Y-%m-%d)"
           git push
