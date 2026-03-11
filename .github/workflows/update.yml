@@ -40,4 +40,4 @@ jobs:
           git config user.email "bot@edge-predict"
           git add data.json
           git diff --staged --quiet || git commit -m "Daily update $(date -u +%Y-%m-%d)"
-          git pull --rebase && git push
+          git push
