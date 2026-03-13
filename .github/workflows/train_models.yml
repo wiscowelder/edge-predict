@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Install PyTorch
+        run: pip install "torch>=2.0.0"
+
       - name: Install PyTorch Geometric
         run: pip install "torch-geometric>=2.4,<3.0"
 
@@ -56,4 +59,4 @@ jobs:
             [ -f "$f" ] && git add -f "$f" || echo "Skipping $f (not found)"
           done
           git diff --staged --quiet || git commit -m "Advanced models training complete $(date -u +%Y-%m-%d)"
-          git pull --rebase && git push
+          git push
