@@ -1,0 +1,50 @@
+name: Train Foundation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  train_foundation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run foundation training
+        env:
+          ODDS_API_KEY:    ${{ secrets.ODDS_API_KEY }}
+          OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+          BALLDONTLIE_KEY: ${{ secrets.BALLDONTLIE_KEY }}
+        run: python brain.py --mode train
+
+      - name: Save results
+        run: |
+          git config user.name  "EDGE Predict Bot"
+          git config user.email "bot@edge-predict"
+          [ -f "data.json" ] && git add -f "data.json" || echo "Skipping data.json (not found)"
+          # games_cache.pkl contains the full historical game sequences written by
+          # brain.py --mode train. It is required by train_models.yml so that
+          # transformer.py and graph.py have sufficient data to train on.
+          # save_data() intentionally strips all_games_by_sport from data.json
+          # (too large for the frontend), so this file is the only cross-workflow
+          # carrier of that data. Without it, all advanced models skip training.
+          for f in models.pkl mind_models.pkl scout_models.pkl games_cache.pkl; do
+            [ -f "$f" ] && git add -f "$f" || echo "Skipping $f (not found)"
+          done
+          git diff --staged --quiet || git commit -m "Foundation training complete $(date -u +%Y-%m-%d)"
+          git push
