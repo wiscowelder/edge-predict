@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDGE Predict</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c0f;
+    --surface: #111318;
+    --surface2: #1a1d24;
+    --border: #252830;
+    --accent: #00e5a0;
+    --accent2: #ff4d6d;
+    --accent3: #ffd166;
+    --text: #e8eaf0;
+    --text2: #8a8fa0;
+    --lock: #ff9f40;
+    --lock-bg: rgba(255,159,64,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+  .logo span { color: var(--text2); font-weight: 400; }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .record-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text2);
+    letter-spacing: 0.05em;
+  }
+  .record-badge b { color: var(--accent); }
+
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--text2);
+    display: inline-block;
+  }
+  .status-dot.trained { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+  .status-dot.training { background: var(--accent3); animation: pulse 1s infinite; }
+  .status-dot.error { background: var(--accent2); }
+
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+  /* ── TABS ── */
+  nav {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    padding: 0 24px;
+    gap: 4px;
+  }
+
+  .tab {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    cursor: pointer;
+    color: var(--text2);
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+    background: none;
+    border-left: none; border-right: none; border-top: none;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ── MAIN CONTENT ── */
+  main { padding: 24px; max-width: 1100px; margin: 0 auto; }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* ── SECTION HEADERS ── */
+  .section-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text2);
+    margin-bottom: 12px;
+  }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: 1px solid;
+    transition: all 0.15s;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    font-weight: 700;
+  }
+  .btn-primary:hover { background: #00ffb2; border-color: #00ffb2; }
+  .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--text2);
+    border-color: var(--border);
+  }
+  .btn-ghost:hover { color: var(--text); border-color: var(--text2); }
+
+  .btn-warning {
+    background: var(--accent3);
+    color: #000;
+    border-color: var(--accent3);
+    font-weight: 700;
+  }
+  .btn-warning:hover { background: #ffe080; }
+
+  /* ── TRIGGER BAR ── */
+  .trigger-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .trigger-status {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text2);
+    flex: 1;
+  }
+  .trigger-status.running { color: var(--accent3); }
+  .trigger-status.done { color: var(--accent); }
+  .trigger-status.error { color: var(--accent2); }
+
+  /* ── TABLES ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .data-table th {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text2);
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .data-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+  }
+  .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* ── PREDICTIONS GRID ── */
+  .predictions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 10px;
+  }
+
+  .pred-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    transition: border-color 0.15s;
+  }
+  .pred-card:hover { border-color: rgba(0,229,160,0.25); }
+  .pred-card.correct { border-left: 3px solid var(--accent); }
+  .pred-card.wrong { border-left: 3px solid var(--accent2); }
+
+  .pred-matchup {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+  .pred-pick { color: var(--accent); }
+  .pred-meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text2);
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+  }
+
+  /* Confidence badges */
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .badge-lock    { background: rgba(0,229,160,0.15); color: var(--accent); }
+  .badge-strong  { background: rgba(0,229,160,0.09); color: var(--accent); }
+  .badge-medium  { background: rgba(255,209,102,0.12); color: var(--accent3); }
+  .badge-tossup  { background: rgba(255,255,255,0.05); color: var(--text2); }
+  .badge-coinflip{ background: rgba(255,255,255,0.04); color: var(--text2); }
+  .badge-locked  { background: var(--lock-bg); color: var(--lock); }
+  .badge-xgb     { background: rgba(99,102,241,0.15); color: #818cf8; }
+
+  /* ── CBS TABLE ── */
+  .cbs-row-locked { background: var(--lock-bg) !important; }
+  .cbs-pts {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    min-width: 40px;
+    text-align: center;
+  }
+  .cbs-pts.high { color: var(--accent); }
+  .cbs-pts.low  { color: var(--text2); }
+
+  .cbs-summary {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .cbs-stat { flex: 1; text-align: center; }
+  .cbs-stat .val {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+  }
+  .cbs-stat .lbl {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text2);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── MARCH ── */
+  .bracket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .champion-card {
+    background: linear-gradient(135deg, rgba(0,229,160,0.08), rgba(0,229,160,0.03));
+    border: 1px solid rgba(0,229,160,0.3);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .champion-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text2);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .champion-name {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+  }
+  .champion-prob {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    color: var(--text2);
+    margin-top: 4px;
+  }
+  .trophy { font-size: 36px; }
+
+  .upset-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,77,109,0.12);
+    border: 1px solid rgba(255,77,109,0.3);
+    color: var(--accent2);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .round-section { margin-bottom: 24px; }
+  .round-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--text2);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  /* ── BETTING ── */
+  .betting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .bet-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bet-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .bet-card.safe::before   { background: var(--accent); }
+  .bet-card.value::before  { background: #818cf8; }
+  .bet-card.longshot::before { background: var(--accent2); }
+  .bet-card.parlay::before { background: var(--accent3); }
+
+  .bet-type {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text2);
+    margin-bottom: 10px;
+  }
+  .bet-card.safe .bet-type   { color: var(--accent); }
+  .bet-card.value .bet-type  { color: #818cf8; }
+  .bet-card.longshot .bet-type { color: var(--accent2); }
+  .bet-card.parlay .bet-type { color: var(--accent3); }
+
+  .bet-pick { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+  .bet-matchup { font-size: 13px; color: var(--text2); margin-bottom: 10px; }
+
+  .bet-payout {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .bet-payout .risk {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--text2);
+  }
+  .bet-payout .win {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .bet-meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text2);
+    flex-wrap: wrap;
+  }
+  .bet-meta .ml  { color: var(--text); }
+  .bet-meta .kelly { color: var(--accent3); }
+  .bet-meta .edge  { color: #818cf8; }
+  .bet-meta .ev    { color: var(--accent2); }
+
+  .parlay-legs { margin-top: 12px; }
+  .parlay-leg {
+    padding: 6px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .parlay-leg .prob {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+  }
+
+  /* ── SPORT TABS (predictions) ── */
+  .sport-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .sport-tab {
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text2);
+    transition: all 0.12s;
+  }
+  .sport-tab:hover { border-color: var(--text2); color: var(--text); }
+  .sport-tab.active { background: rgba(0,229,160,0.1); border-color: var(--accent); color: var(--accent); }
+
+  /* ── ACCURACY GRID ── */
+  .accuracy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .acc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px;
+    text-align: center;
+  }
+  .acc-sport {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+  }
+  .acc-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .acc-val.good   { color: var(--accent); }
+  .acc-val.ok     { color: var(--accent3); }
+  .acc-val.bad    { color: var(--accent2); }
+  .acc-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text2);
+    margin-top: 4px;
+  }
+
+  /* ── ABOUT ── */
+  .about-section {
+    max-width: 640px;
+  }
+  .about-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .about-block h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .about-block p {
+    color: var(--text2);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .about-block p:last-child { margin-bottom: 0; }
+  .code-block {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    white-space: pre;
+    overflow-x: auto;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
+
+  /* ── MISC ── */
+  .empty-state {
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--text2);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+  }
+
+  select {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+  }
+
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    background: var(--surface2);
+    color: var(--text2);
+    margin: 1px;
+  }
+
+  .xgb-tag { background: rgba(99,102,241,0.1); color: #818cf8; }
+  .no-picks { color: var(--text2); font-size: 14px; font-style: italic; margin: 8px 0; }
+
+  @media (max-width: 600px) {
+    main { padding: 12px; }
+    .cbs-summary { flex-wrap: wrap; }
+    .betting-grid { grid-template-columns: 1fr; }
+    .predictions-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EDGE<span>_</span>PREDICT</div>
+  <div class="header-right">
+    <span class="record-badge" id="headerRecord"></span>
+    <span class="status-dot" id="statusDot" title=""></span>
+  </div>
+</header>
+
+<div id="tokenBanner" style="background:rgba(0,229,160,0.07);border-bottom:1px solid rgba(0,229,160,0.2);padding:8px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+  <span style="color:var(--text2);font-size:12px;white-space:nowrap;">GITHUB TOKEN</span>
+  <input id="sessionToken" type="password" placeholder="Paste your GitHub token here (ghp_...)" autocomplete="off"
+    style="flex:1;min-width:220px;max-width:480px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:4px;padding:5px 10px;color:var(--text);font-size:13px;font-family:monospace;outline:none;"
+    oninput="updateSessionToken(this.value)"
+  />
+  <span id="tokenStatus" style="font-size:12px;color:var(--text2);">Not set</span>
+</div>
+
+<nav>
+  <button class="tab active" onclick="switchTab('predictions')">Predictions</button>
+  <button class="tab" onclick="switchTab('cbs')">CBS Pool</button>
+  <button class="tab" onclick="switchTab('march')">March</button>
+  <button class="tab" onclick="switchTab('betting')">Betting</button>
+  <button class="tab" onclick="switchTab('playoffs')">Playoffs</button>
+  <button class="tab" onclick="switchTab('system')">System</button>
+  <button class="tab" onclick="switchTab('about')">About</button>
+</nav>
+
+<main>
+
+  <!-- ═══════════════════════ PREDICTIONS ═══════════════════════ -->
+  <div class="panel active" id="panel-predictions">
+    <div class="flex-between" style="margin-bottom:16px">
+      <div>
+        <div class="section-title">Today's Picks</div>
+        <div id="lastUpdated" style="font-size:12px;color:var(--text2);font-family:'Space Mono',monospace;"></div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="btn btn-ghost" onclick="triggerWorkflow('update')" id="btnUpdate">⚡ Run Update</button>
+        <span class="trigger-status" id="updateStatus"></span>
+      </div>
+    </div>
+
+    <div class="accuracy-grid" id="accuracyGrid"></div>
+
+    <div class="sport-tabs" id="sportTabs"></div>
+    <div class="predictions-grid" id="predictionsGrid"></div>
+  </div>
+
+  <!-- ═══════════════════════ CBS POOL ═══════════════════════ -->
+  <div class="panel" id="panel-cbs">
+    <div class="trigger-bar">
+      <div>
+        <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;">CBS NFL Confidence Pool</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-top:2px;">ILP optimizer · PuLP CBC · Uncertainty-adjusted probabilities</div>
+      </div>
+      <button class="btn btn-primary" onclick="triggerWorkflow('cbs')" id="btnCbs">⚡ Generate Picks</button>
+      <span class="trigger-status" id="cbsStatus"></span>
+    </div>
+
+    <div id="cbsContent"></div>
+  </div>
+
+  <!-- ═══════════════════════ MARCH MADNESS ═══════════════════════ -->
+  <div class="panel" id="panel-march">
+    <div class="trigger-bar">
+      <div>
+        <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;">March Madness Brackets</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-top:2px;">500,000 simulations · CBS round scoring · Strategic upset detection</div>
+      </div>
+      <button class="btn btn-primary" onclick="triggerWorkflow('march')" id="btnMarch">⚡ Generate Brackets</button>
+      <span class="trigger-status" id="marchStatus"></span>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-bottom:16px;">
+      <button class="btn btn-ghost active" id="marchMensBtn" onclick="showMarch('mens')">Men's</button>
+      <button class="btn btn-ghost" id="marchWomensBtn" onclick="showMarch('womens')">Women's</button>
+    </div>
+
+    <div id="marchMens"></div>
+    <div id="marchWomens" style="display:none;"></div>
+  </div>
+
+  <!-- ═══════════════════════ BETTING ═══════════════════════ -->
+  <div class="panel" id="panel-betting">
+    <div class="flex-between" style="margin-bottom:20px;">
+      <div>
+        <div class="section-title">Betting Picks — All Sports</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);" id="bettingUpdated"></div>
+      </div>
+    </div>
+
+    <div class="betting-grid" id="bettingGrid"></div>
+
+    <div id="parlaySection"></div>
+  </div>
+
+  <!-- ═══════════════════════ PLAYOFFS ═══════════════════════ -->
+  <div class="panel" id="panel-playoffs">
+    <div class="flex-between" style="margin-bottom:16px;">
+      <div>
+        <div class="section-title">Playoff Championship Odds</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);">100k Monte Carlo simulations per sport · Updates with each daily run</div>
+      </div>
+    </div>
+    <div id="playoffsContent"></div>
+  </div>
+
+  <!-- ═══════════════════════ SYSTEM ═══════════════════════ -->
+  <div class="panel" id="panel-system">
+    <div class="flex-between" style="margin-bottom:16px;">
+      <div>
+        <div class="section-title">System Health &amp; Model Status</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);">Baseline accuracy · Bias audit · SHAP noise signals · Training controls</div>
+      </div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px;">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;margin-bottom:12px;letter-spacing:.06em;">TRAINING WORKFLOWS</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <button class="btn btn-ghost" onclick="triggerWorkflow('train_foundation')" id="btnTrainFoundation">⚡ Foundation</button>
+          <span class="trigger-status" id="trainFoundationStatus"></span>
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">brain + mind + scout (~2.5h)</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <button class="btn btn-ghost" onclick="triggerWorkflow('train_models')" id="btnTrainModels">⚡ Advanced Models</button>
+          <span class="trigger-status" id="trainModelsStatus"></span>
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">transformer + graph + stack (~2.5h)</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <button class="btn btn-ghost" onclick="triggerWorkflow('train_tune')" id="btnTrainTune">⚡ Tune</button>
+          <span class="trigger-status" id="trainTuneStatus"></span>
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">Optuna optimization (~2.5h)</span>
+        </div>
+      </div>
+    </div>
+    <div id="systemContent"></div>
+  </div>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <div class="panel" id="panel-about">
+    <div class="about-section">
+      <div class="about-block">
+        <h3>Overview</h3>
+        <p>EDGE Predict is a machine-learning sports prediction system running on GitHub Actions — no server costs. Predictions update daily at 6 AM CT automatically.</p>
+        <p>The model trains on historical data from 1999–present using XGBoost with 30+ signals per sport. Primary goal: win CBS NFL Confidence Pool and March Madness brackets.</p>
+      </div>
+
+      <div class="about-block">
+        <h3>Setup: GitHub Token</h3>
+        <p>The "Generate" buttons need your GitHub token. Paste it into the token bar at the top of the page — it stays in memory only and is never saved or committed anywhere.</p>
+        <p>Generate a classic token at GitHub → Settings → Developer settings → Tokens (classic). Check <code style="color:var(--accent);">repo</code> and <code style="color:var(--accent);">workflow</code> scopes. Set no expiration.</p>
+        <p>Your <code style="color:var(--accent);">config.json</code> only needs owner and repo — no token required:</p>
+        <div class="code-block">{
+  "github_config": {
+    "owner": "wiscowelder",
+    "repo":  "edge-predict"
+  }
+}</div>
+        <p>⚠️ Never paste your token in chat or commit it to the repo.</p>
+      </div>
+
+      <div class="about-block">
+        <h3>API Keys (GitHub Secrets)</h3>
+        <p>Add these in your repo → Settings → Secrets → Actions:</p>
+        <div class="code-block">BALLDONTLIE_KEY  — Required. Free at balldontlie.io
+ODDS_API_KEY     — Recommended. Free at the-odds-api.com
+OPENWEATHER_KEY  — Optional. Free at openweathermap.org</div>
+      </div>
+
+      <div class="about-block">
+        <h3>Workflows</h3>
+        <p><strong>Train Foundation</strong> — Run manually after updating brain.py. Takes 60–90 min. Required after first setup and after major model changes.</p>
+        <p><strong>Daily Update</strong> — Runs automatically at 6 AM CT. Also triggerable via the Predictions tab button above.</p>
+        <p><strong>CBS Picks</strong> — Generate before Thursday Night Football kickoff each week. Re-generate any time before a game starts — locked games are preserved.</p>
+        <p><strong>March Madness</strong> — Available after Selection Sunday. Generate once, then re-generate after each round completes.</p>
+      </div>
+
+      <div class="about-block">
+        <h3>Training Status</h3>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:4px">
+          <span class="status-dot" id="aboutStatusDot"></span>
+          <span id="aboutStatusText" style="font-family:'Space Mono',monospace;font-size:12px;"></span>
+        </div>
+        <div id="aboutTrainDetail" style="margin-top:10px;font-family:'Space Mono',monospace;font-size:11px;color:var(--text2);line-height:1.8;"></div>
+        <div style="margin-top:12px;">
+          <button class="btn btn-warning" onclick="triggerWorkflow('train')" id="btnTrain">⚡ Run Training (60–90 min)</button>
+          <span class="trigger-status" id="trainStatus" style="margin-left:12px;"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// DATA LOADING
+// ═══════════════════════════════════════════════════════════════
+let DATA = null;
+let CURRENT_SPORT = 'nfl';
+let MARCH_GENDER = 'mens';
+
+async function loadData() {
+  try {
+    const r = await fetch('data.json?t=' + Date.now());
+    if (!r.ok) throw new Error('data.json not found');
+    DATA = await r.json();
+  } catch (e) {
+    DATA = {};
+  }
+
+  // Load config.json and merge github_config (overrides data.json)
+  try {
+    const r2 = await fetch('config.json?t=' + Date.now());
+    if (r2.ok) {
+      const cfg = await r2.json();
+      if (cfg && cfg.github_config) {
+        DATA.github_config = cfg.github_config;
+      }
+    }
+  } catch (_) {}
+
+  render();
+}
+
+function render() {
+  renderHeader();
+  renderAccuracy();
+  renderSportTabs();
+  renderPredictions();
+  renderCbs();
+  renderMarch();
+  renderBetting();
+  renderAbout();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// HEADER
+// ═══════════════════════════════════════════════════════════════
+function renderHeader() {
+  const status = DATA.training_status || 'untrained';
+  const dot    = document.getElementById('statusDot');
+  dot.className = 'status-dot ' + status;
+  dot.title = status;
+
+  const rec = DATA.running_record || {};
+  let totalW = 0, totalL = 0;
+  Object.values(rec).forEach(s => { totalW += (s.wins||0); totalL += (s.losses||0); });
+  const total = totalW + totalL;
+  const pct   = total > 0 ? (totalW / total * 100).toFixed(1) : '--';
+  document.getElementById('headerRecord').innerHTML =
+    `<b>${pct}%</b> (${totalW}–${totalL})`;
+
+  if (DATA.last_daily_update) {
+    const d = new Date(DATA.last_daily_update);
+    document.getElementById('lastUpdated').textContent =
+      'Updated ' + d.toLocaleString('en-US', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ACCURACY GRID
+// ═══════════════════════════════════════════════════════════════
+function renderAccuracy() {
+  const grid = document.getElementById('accuracyGrid');
+  const rec  = DATA.running_record || {};
+  const tr   = DATA.training_record || {};
+  const sports = ['nfl','nba','mlb','nhl','ncaaf','ncaabm','ncaabw'];
+  const labels = {nfl:'NFL',nba:'NBA',mlb:'MLB',nhl:'NHL',ncaaf:'NCAAF',ncaabm:'NCAAB♂',ncaabw:'NCAAB♀'};
+
+  grid.innerHTML = sports.map(s => {
+    const r = rec[s] || {};
+    const w = r.wins || 0, l = r.losses || 0;
+    const tot = w + l;
+    const pct = tot > 0 ? (w / tot * 100) : null;
+    const ta  = (tr.accuracy || {})[s];
+    let cls = 'ok', display = '--';
+    if (pct !== null) {
+      display = pct.toFixed(1) + '%';
+      cls = pct >= 62 ? 'good' : pct >= 55 ? 'ok' : 'bad';
+    }
+    const trainStr = ta ? `Train: ${(ta*100).toFixed(1)}%` : '';
+    return `<div class="acc-card">
+      <div class="acc-sport">${labels[s]}</div>
+      <div class="acc-val ${cls}">${display}</div>
+      <div class="acc-sub">${tot > 0 ? w+'–'+l : 'no games'}</div>
+      ${trainStr ? `<div class="acc-sub">${trainStr}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PREDICTIONS
+// ═══════════════════════════════════════════════════════════════
+function renderSportTabs() {
+  const preds  = DATA.predictions || {};
+  const labels = {nfl:'NFL',nba:'NBA',mlb:'MLB',nhl:'NHL',ncaaf:'NCAAF',ncaabm:'NCAAB♂',ncaabw:'NCAAB♀'};
+  const sports = Object.keys(labels).filter(s => (preds[s]||[]).length > 0);
+  const tabs   = document.getElementById('sportTabs');
+  if (!sports.length) { tabs.innerHTML = ''; return; }
+  if (!sports.includes(CURRENT_SPORT)) CURRENT_SPORT = sports[0];
+  tabs.innerHTML = sports.map(s =>
+    `<button class="sport-tab ${s===CURRENT_SPORT?'active':''}" onclick="selectSport('${s}')">${labels[s]} <span style="opacity:0.5">(${(preds[s]||[]).length})</span></button>`
+  ).join('');
+}
+
+function selectSport(s) {
+  CURRENT_SPORT = s;
+  renderSportTabs();
+  renderPredictions();
+}
+
+function renderPredictions() {
+  const grid  = document.getElementById('predictionsGrid');
+  const preds = (DATA.predictions || {})[CURRENT_SPORT] || [];
+
+  if (!preds.length) {
+    grid.innerHTML = '<div class="empty-state">No predictions available. Run daily update.</div>';
+    return;
+  }
+
+  grid.innerHTML = preds.map(p => {
+    const pp      = p.pick_prob ? (p.pick_prob * 100).toFixed(0) + '%' : '~50%';
+    const conf    = p.confidence || 'tossup';
+    const isXGB   = (p.signals||[]).includes('xgboost');
+    const signals = (p.signals||[]).filter(s=>s!=='xgboost').slice(0,6);
+    const statusCls = p.status === 'correct' ? 'correct' : p.status === 'wrong' ? 'wrong' : '';
+    const dateStr = p.date ? new Date(p.date).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
+    return `<div class="pred-card ${statusCls}">
+      <div class="pred-matchup">${p.away} <span style="color:var(--text2)">@</span> ${p.home}</div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <span style="font-size:15px;font-weight:700;">→ <span class="pred-pick">${p.pick}</span></span>
+        <span class="badge badge-${conf}">${pp} · ${conf}</span>
+        ${isXGB ? '<span class="badge badge-xgb">XGB</span>' : ''}
+        ${p.status==='correct'?'<span style="color:var(--accent);font-size:13px;">✓</span>':p.status==='wrong'?'<span style="color:var(--accent2);font-size:13px;">✗</span>':''}
+      </div>
+      <div class="pred-meta">
+        ${dateStr ? `<span>${dateStr}</span>` : ''}
+        ${signals.map(s=>`<span class="tag">${s}</span>`).join('')}
+        ${p.cal_note ? `<span style="color:var(--accent3)">${p.cal_note}</span>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BETTING
+// ═══════════════════════════════════════════════════════════════
+function renderBetting() {
+  const bp   = DATA.betting_picks || {};
+  const grid = document.getElementById('bettingGrid');
+  const parl = document.getElementById('parlaySection');
+
+  if (bp.generated_at) {
+    const d = new Date(bp.generated_at);
+    document.getElementById('bettingUpdated').textContent =
+      'Updated ' + d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+  }
+
+  const cards = [];
+
+  if (bp.safe_bet) cards.push(renderBetCard(bp.safe_bet, 'safe', 'SAFE BET', 'Highest confidence · Best odds'));
+  if (bp.value_bet) cards.push(renderBetCard(bp.value_bet, 'value', 'VALUE BET', 'Model vs market edge ≥ 8%'));
+  if (bp.longshot)  cards.push(renderBetCard(bp.longshot, 'longshot', 'LONGSHOT', 'Positive EV underdog'));
+
+  if (!cards.length) {
+    grid.innerHTML = '<div class="empty-state">No betting picks. Run daily update and ensure Odds API key is set.</div>';
+  } else {
+    grid.innerHTML = cards.join('');
+  }
+
+  // Parlay section
+  if (bp.parlay && (bp.parlay.legs||[]).length >= 2) {
+    const p     = bp.parlay;
+    const combo = ((p.combined_prob || 0) * 100).toFixed(1);
+    const payout = p.bet_10_wins !== undefined ? `+$${p.bet_10_wins.toFixed(2)}` : '';
+    parl.innerHTML = `
+      <hr class="divider">
+      <div class="section-title">Parlay</div>
+      <div class="bet-card parlay" style="max-width:480px">
+        <div class="bet-type">PARLAY · ${p.legs.length} LEGS</div>
+        <div class="bet-pick">Combined probability: ${combo}%</div>
+        ${payout ? `<div class="bet-payout"><span class="risk">Bet $10 →</span><span class="win">${payout}</span></div>` : ''}
+        ${p.true_odds ? `<div class="bet-meta"><span>Odds: ${p.true_odds}</span></div>` : ''}
+        <div class="parlay-legs">
+          ${(p.legs||[]).map(leg => `
+            <div class="parlay-leg">
+              <div>
+                <span style="font-weight:700;">${leg.pick || ''}</span>
+                <span style="color:var(--text2);font-size:12px;margin-left:6px;">${leg.away||''} @ ${leg.home||''}</span>
+                ${leg.sport ? `<span class="tag" style="margin-left:4px">${leg.sport.toUpperCase()}</span>` : ''}
+              </div>
+              <span class="prob">${leg.pick_prob ? (leg.pick_prob*100).toFixed(0)+'%' : ''}</span>
+            </div>`).join('')}
+        </div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-top:10px">${p.note||''}</div>
+      </div>`;
+  } else {
+    parl.innerHTML = '';
+  }
+}
+
+function renderBetCard(bet, type, label, subtitle) {
+  if (!bet) return '';
+  const pp      = bet.pick_prob ? (bet.pick_prob * 100).toFixed(0) + '%' : '';
+  const ml      = bet.ml_odds !== undefined ? (bet.ml_odds > 0 ? '+' + bet.ml_odds : bet.ml_odds) : null;
+  const payout  = bet.bet_10_wins !== undefined ? `+$${bet.bet_10_wins.toFixed(2)}` : null;
+  const kelly   = bet.kelly_pct !== undefined ? `${bet.kelly_pct}% Kelly` : null;
+  const edge    = bet.edge ? `+${(bet.edge*100).toFixed(1)}% edge` : null;
+  const ev      = bet.ev ? `EV +${(bet.ev*100).toFixed(1)}%` : null;
+  const sport   = bet.sport ? bet.sport.toUpperCase() : '';
+
+  return `<div class="bet-card ${type}">
+    <div class="bet-type">${label} · ${subtitle}</div>
+    <div class="bet-matchup">${bet.away||''} @ ${bet.home||''} ${sport ? `<span class="tag">${sport}</span>` : ''}</div>
+    <div class="bet-pick">${bet.pick || ''}</div>
+    ${payout ? `<div class="bet-payout"><span class="risk">Bet $10 →</span><span class="win">${payout}</span></div>` : ''}
+    <div class="bet-meta">
+      ${pp ? `<span>${pp} confidence</span>` : ''}
+      ${ml ? `<span class="ml">ML ${ml}</span>` : ''}
+      ${kelly ? `<span class="kelly">${kelly}</span>` : ''}
+      ${edge ? `<span class="edge">${edge}</span>` : ''}
+      ${ev ? `<span class="ev">${ev}</span>` : ''}
+    </div>
+    <div style="margin-top:8px">
+      ${(bet.signals||[]).slice(0,5).map(s=>`<span class="tag">${s}</span>`).join('')}
+    </div>
+  </div>`;
+}
+
+function renderCbs() {
+  const cbs  = DATA.cbs_picks || {};
+  const div  = document.getElementById('cbsContent');
+  const asgn = cbs.assignment || [];
+
+  if (!asgn.length) {
+    div.innerHTML = '<div class="empty-state">No CBS picks generated yet. Click ⚡ Generate Picks above.</div>';
+    return;
+  }
+
+  const maxPts  = cbs.max_possible_points || 0;
+  const expPts  = typeof cbs.expected_points === 'number' ? cbs.expected_points.toFixed(1) : (cbs.expected_points || '—');
+  const ilpUsed = cbs.ilp_used ? 'ILP' : 'Greedy';
+  const phase   = cbs.season_phase || '';
+  const genAt   = cbs.generated_at
+    ? new Date(cbs.generated_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})
+    : '';
+  const hv      = cbs.historical_validation || {};
+  const hvHtml  = hv.weeks_analyzed > 0
+    ? `<div class="cbs-stat"><span class="val">+${(hv.ilp_improvement_pct||0).toFixed(1)}%</span><span class="lbl">vs Greedy (${hv.weeks_analyzed}wk)</span></div>`
+    : '';
+
+  div.innerHTML = `
+    <div class="cbs-summary">
+      <div class="cbs-stat"><span class="val">${expPts}</span><span class="lbl">Expected Pts</span></div>
+      <div class="cbs-stat"><span class="val">${maxPts}</span><span class="lbl">Max Possible</span></div>
+      <div class="cbs-stat"><span class="val">Wk ${cbs.week_number||'?'}</span><span class="lbl">NFL Week${phase?' · '+phase:''}</span></div>
+      <div class="cbs-stat"><span class="val">${ilpUsed}</span><span class="lbl">Optimizer</span></div>
+      ${hvHtml}
+    </div>
+    ${genAt ? `<div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-bottom:12px;">Generated ${genAt}</div>` : ''}
+    <table class="data-table">
+      <thead><tr>
+        <th>Pts</th><th>Matchup</th><th>Pick</th><th>Win Prob</th><th>Signals</th><th>Reasoning</th>
+      </tr></thead>
+      <tbody>
+        ${asgn.map(a => {
+          const pts      = a.points || a.point_value || 0;
+          const ptsClass = pts >= 12 ? 'high' : pts <= 4 ? 'low' : '';
+          const rawProb  = a.win_probability || 0;
+          const adjProb  = a.uncertainty_adjusted_prob || rawProb;
+          const pp       = (adjProb * 100).toFixed(0) + '%';
+          const cs       = a.confidence_score || 1;
+          const confCls  = cs >= 1.1 ? 'strong' : cs <= 0.85 ? 'tossup' : 'medium';
+          const vClass   = a.variance_class || '';
+          const tags     = [
+            a.sharp_signal   ? `sharp:${a.sharp_signal}` : null,
+            a.lineup_signal  ? `lineup` : null,
+            vClass && vClass !== 'medium' ? `var:${vClass}` : null,
+            a.cbs_modifier   ? (a.cbs_modifier > 0 ? 'blowout↑' : 'close↓') : null,
+          ].filter(Boolean);
+          const home     = a.home_team || a.home || '';
+          const away     = a.away_team || a.away || '';
+          const pickName = (a.pick === 'home') ? home : (a.pick === 'away' ? away : (a.pick || ''));
+          const reason   = (a.reasoning || '').slice(0, 80) + ((a.reasoning||'').length > 80 ? '…' : '');
+          return `<tr>
+            <td><span class="cbs-pts ${ptsClass}">${pts}</span></td>
+            <td style="font-size:14px;">${away} @ ${home}</td>
+            <td style="font-weight:700;color:var(--accent)">${pickName}</td>
+            <td style="font-family:'Space Mono',monospace;font-size:12px;">
+              ${pp} <span class="badge badge-${confCls}" style="margin-left:4px">${cs.toFixed(2)}×</span>
+            </td>
+            <td>${tags.map(s=>`<span class="tag">${s}</span>`).join('')}</td>
+            <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);max-width:180px;">${reason}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MARCH MADNESS — updated for new march.py team_probabilities format
+// ═══════════════════════════════════════════════════════════════
+function renderMarch() {
+  renderMarchGender('mens');
+  renderMarchGender('womens');
+}
+
+function renderMarchGender(gender) {
+  const key      = gender === 'mens' ? 'march_mens' : 'march_womens';
+  const m        = DATA[key] || {};
+  const target   = document.getElementById('march' + (gender.charAt(0).toUpperCase() + gender.slice(1)));
+  const teamProbs= m.team_probabilities || {};
+  const hasNew   = Object.keys(teamProbs).length > 0;
+  const oldBrkt  = m.recommended_bracket || [];
+
+  if (!hasNew && !oldBrkt.length) {
+    target.innerHTML = '<div class="empty-state">No bracket generated yet. Click ⚡ Generate Brackets above.<br><span style="margin-top:8px;display:block">Available after Selection Sunday.</span></div>';
+    return;
+  }
+
+  const champName = m.projected_champion
+    || (oldBrkt.length ? oldBrkt.reduce((b,e)=>(!b||(e.expected_pts||0)>(b.expected_pts||0))?e:b,null)?.pick : null)
+    || 'TBD';
+  const champProb = m.champion_probability
+    ? ((m.champion_probability)*100).toFixed(1)+'%'
+    : (teamProbs[champName]?.Champion?.mean != null ? ((teamProbs[champName].Champion.mean)*100).toFixed(1)+'%' : '');
+  const sims  = (m.simulations_run || 0).toLocaleString();
+  const genAt = m.generated_at
+    ? new Date(m.generated_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})
+    : '';
+
+  const upsets = m.accuracy_upsets || m.upset_alerts || [];
+  const fades  = m.accuracy_fades  || [];
+
+  const upsetHtml = upsets.length ? `
+    <div style="margin-bottom:20px;">
+      <div class="section-title">⚡ Accuracy Upset Picks</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        ${upsets.slice(0,6).map(u=>`
+          <div style="background:var(--surface);border:1px solid rgba(255,77,109,0.3);border-radius:6px;padding:10px 14px;min-width:180px;">
+            <span class="upset-badge">⚡ UPSET</span>
+            <div style="font-size:15px;font-weight:700;margin-top:6px;">${u.team||u.pick||''} ${u.seed?`<span style="color:var(--text2);font-size:12px;">#${u.seed}</span>`:''}</div>
+            <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-top:3px;">
+              ${u.blended_prob?((u.blended_prob*100).toFixed(0)+'% win prob'):(u.reason||'')}
+            </div>
+            <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);margin-top:2px;">${(u.reasoning||'').slice(0,70)}</div>
+          </div>`).join('')}
+      </div>
+    </div>` : '';
+
+  const fadeHtml = fades.length ? `
+    <div style="margin-bottom:20px;">
+      <div class="section-title" style="color:var(--accent2)">📉 Fades</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        ${fades.slice(0,4).map(f=>`
+          <div style="background:var(--surface);border:1px solid rgba(255,77,109,0.15);border-radius:6px;padding:8px 12px;">
+            <div style="font-size:13px;font-weight:700;">${f.team} <span style="color:var(--text2)">#${f.seed}</span></div>
+            <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);">AdjEM rank #${f.adjEM_rank||'?'}</div>
+          </div>`).join('')}
+      </div>
+    </div>` : '';
+
+  let roundsHtml = '';
+  if (hasNew) {
+    const RLABELS = {R64:'Round of 64',R32:'Round of 32',S16:'Sweet 16',E8:'Elite 8',F4:'Final Four',Championship:'Championship',Champion:'Champion'};
+    ['Champion','Championship','F4','E8','S16'].forEach(rKey => {
+      const label = RLABELS[rKey] || rKey;
+      const teams = Object.entries(teamProbs)
+        .map(([team,probs])=>({team, prob:probs[rKey]?.mean||0, cert:probs[rKey]?.certainty||'medium', seed:probs[rKey]?.seed||''}))
+        .filter(t=>t.prob>0.005)
+        .sort((a,b)=>b.prob-a.prob)
+        .slice(0, rKey==='Champion'?8:rKey==='Championship'?10:12);
+      if (!teams.length) return;
+      roundsHtml += `<div class="round-section">
+        <div class="round-title">${label}</div>
+        <table class="data-table">
+          <thead><tr><th>Team</th><th>Seed</th><th>Probability</th><th>Certainty</th></tr></thead>
+          <tbody>
+            ${teams.map((t,i)=>{
+              const isChamp = t.team === champName;
+              const bar = Math.max(3,Math.round(t.prob*180));
+              return `<tr ${isChamp?'style="background:rgba(99,102,241,0.06)"':''}>
+                <td style="font-weight:${isChamp?700:400};font-size:14px;">${isChamp?'🏆 ':''}${t.team}</td>
+                <td style="font-family:'Space Mono',monospace;font-size:12px;color:var(--text2)">#${t.seed||'?'}</td>
+                <td><div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:${bar}px;height:6px;background:var(--accent);border-radius:2px;opacity:.7;"></div>
+                  <span style="font-family:'Space Mono',monospace;font-size:12px;">${(t.prob*100).toFixed(1)}%</span>
+                </div></td>
+                <td><span class="badge badge-${t.cert}">${t.cert}</span></td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>`;
+    });
+  } else {
+    const rounds = {};
+    oldBrkt.forEach(e=>{ const r=e.round||e.round_name||'Round'; if(!rounds[r])rounds[r]=[]; rounds[r].push(e); });
+    const ORDER = ['Round of 64','Round of 32','Sweet 16','Elite 8','Final Four','Championship'];
+    Object.keys(rounds).sort((a,b)=>(ORDER.indexOf(a)===-1?99:ORDER.indexOf(a))-(ORDER.indexOf(b)===-1?99:ORDER.indexOf(b))).forEach(rName=>{
+      roundsHtml += `<div class="round-section"><div class="round-title">${rName}</div>
+        <table class="data-table"><thead><tr><th>Pick</th><th>Opponent</th><th>Win Prob</th><th>Pts</th></tr></thead><tbody>
+          ${rounds[rName].map(g=>{
+            const wp = g.win_prob?(g.win_prob*100).toFixed(0)+'%':'—';
+            const up = upsets.some(u=>u.pick===g.pick||u.team===g.pick);
+            return `<tr><td style="font-weight:700;font-size:15px;">${up?'<span class="upset-badge" style="margin-right:6px;">⚡</span>':''}${g.pick||'?'}</td>
+              <td style="color:var(--text2)">${g.opponent||''}</td>
+              <td style="font-family:'Space Mono',monospace;font-size:12px;">${wp}</td>
+              <td style="font-family:'Space Mono',monospace;font-size:12px;color:var(--accent3)">${g.expected_pts?g.expected_pts.toFixed(1):'—'}</td></tr>`;
+          }).join('')}
+        </tbody></table></div>`;
+    });
+  }
+
+  target.innerHTML = `
+    <div class="champion-card">
+      <span class="trophy">🏆</span>
+      <div>
+        <div class="champion-label">Predicted Champion</div>
+        <div class="champion-name">${champName}</div>
+        ${champProb?`<div class="champion-prob">${champProb} win probability</div>`:''}
+      </div>
+      <div style="margin-left:auto;text-align:right">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);">${sims} sims</div>
+        ${genAt?`<div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);">${genAt}</div>`:''}
+      </div>
+    </div>
+    ${upsetHtml}${fadeHtml}${roundsHtml}`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PLAYOFFS
+// ═══════════════════════════════════════════════════════════════
+function renderPlayoffs() {
+  const div    = document.getElementById('playoffsContent');
+  const pl     = DATA.playoffs || {};
+  const sports = ['nfl','nba','mlb','nhl'];
+  const icons  = {nfl:'🏈',nba:'🏀',mlb:'⚾',nhl:'🏒'};
+  const labels = {nfl:'NFL',nba:'NBA',mlb:'MLB',nhl:'NHL'};
+
+  const active = sports.filter(s => pl[s]?.active && Object.keys(pl[s].champion_probs||{}).length > 0);
+
+  if (!active.length) {
+    div.innerHTML = '<div class="empty-state">No active playoffs detected. Odds appear automatically when postseason begins.</div>';
+    return;
+  }
+
+  div.innerHTML = active.map(sport => {
+    const pd     = pl[sport];
+    const probs  = pd.champion_probs || {};
+    const sims   = (pd.simulations_run||0).toLocaleString();
+    const upd    = pd.last_updated ? new Date(pd.last_updated).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+    const ranked = Object.entries(probs).sort((a,b)=>(b[1].mean||0)-(a[1].mean||0));
+
+    return `<div style="margin-bottom:32px;">
+      <div class="section-title">${icons[sport]} ${labels[sport]} Playoff Odds</div>
+      <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-bottom:12px;">${sims} sims${upd?' · Updated '+upd:''}</div>
+      <table class="data-table">
+        <thead><tr><th>Team</th><th>Championship %</th><th>95% CI</th><th>Certainty</th></tr></thead>
+        <tbody>
+          ${ranked.map(([team,p],i)=>{
+            const pct  = ((p.mean||0)*100).toFixed(1)+'%';
+            const lo   = ((p.lower_95||0)*100).toFixed(1);
+            const hi   = ((p.upper_95||0)*100).toFixed(1);
+            const cert = p.certainty || 'medium';
+            const bar  = Math.max(3,Math.round((p.mean||0)*200));
+            return `<tr ${i===0?'style="background:rgba(99,102,241,0.06)"':''}>
+              <td style="font-weight:${i===0?700:400}">${i===0?'🏆 ':''}${team}</td>
+              <td><div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:${bar}px;height:6px;background:var(--accent);border-radius:2px;opacity:.7;"></div>
+                <span style="font-family:'Space Mono',monospace;font-size:13px;">${pct}</span>
+              </div></td>
+              <td style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text2)">${lo}%–${hi}%</td>
+              <td><span class="badge badge-${cert}">${cert}</span></td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SYSTEM
+// ═══════════════════════════════════════════════════════════════
+function renderSystem() {
+  const div      = document.getElementById('systemContent');
+  const baseline = DATA.baseline  || {};
+  const audit    = DATA.audit     || {};
+  const explain  = DATA.explain   || {};
+  const stack    = DATA.stack     || {};
+  const trans    = DATA.transformer || {};
+  const graph    = DATA.graph     || {};
+  const tune     = DATA.tune      || {};
+
+  // Model status
+  const models = [
+    {name:'XGBoost',        ready:!!DATA.xgb_trained,          detail:DATA.xgb_trained?'trained':'not trained'},
+    {name:'LSTM (mind)',    ready:!!(DATA.mind?.trained),       detail:DATA.mind?.last_trained?new Date(DATA.mind.last_trained).toLocaleDateString():'not trained'},
+    {name:'Stack',          ready:!!stack.trained,             detail:stack.last_trained?new Date(stack.last_trained).toLocaleDateString():'not trained'},
+    {name:'Transformer',    ready:!!trans.trained,             detail:trans.sports_active?(trans.sports_active.join(', ')):'not trained'},
+    {name:'Graph GNN',      ready:!!graph.trained,             detail:graph.last_trained?new Date(graph.last_trained).toLocaleDateString():'not trained'},
+    {name:'Tune (Optuna)',  ready:!!(tune.last_tuned),         detail:tune.last_tuned?new Date(tune.last_tuned).toLocaleDateString():'never run'},
+    {name:'SHAP (explain)', ready:!!explain.initialized,       detail:explain.total_predictions_explained?(explain.total_predictions_explained+' analyzed'):'not initialized'},
+  ];
+
+  const modelHtml = `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px;">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;margin-bottom:12px;letter-spacing:.06em;">MODEL STATUS</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;">
+        ${models.map(m=>`
+          <div style="background:var(--surface2);border-radius:4px;padding:10px 12px;border-left:3px solid ${m.ready?'var(--accent)':'var(--border)'}">
+            <div style="font-size:13px;font-weight:600;">${m.name}</div>
+            <div style="font-family:'Space Mono',monospace;font-size:10px;color:${m.ready?'var(--accent)':'var(--text2)'};margin-top:2px;">${m.ready?'✓ ':' '}${m.detail}</div>
+          </div>`).join('')}
+      </div>
+    </div>`;
+
+  // Baseline table
+  const sports = ['nfl','nba','mlb','nhl','ncaaf','ncaabm','ncaabw'];
+  const slabels = {nfl:'NFL',nba:'NBA',mlb:'MLB',nhl:'NHL',ncaaf:'NCAAF',ncaabm:'NCAAB♂',ncaabw:'NCAAB♀'};
+  const svb  = baseline.system_vs_baselines || {};
+  const sacc = baseline.system_accuracy     || {};
+  const bacc = baseline.baseline_accuracy   || {};
+
+  const baselineHtml = Object.keys(svb).length ? `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px;">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;margin-bottom:12px;letter-spacing:.06em;">BASELINE ACCURACY</div>
+      <table class="data-table">
+        <thead><tr><th>Sport</th><th>System</th><th>Home</th><th>Fav</th><th>Vegas</th><th>vs Home</th><th>vs Fav</th><th>vs Vegas</th></tr></thead>
+        <tbody>
+          ${sports.filter(s=>svb[s]).map(s=>{
+            const v=svb[s], pct=x=>x!=null?(x*100).toFixed(1)+'%':'—', ck=x=>x?'✓':'✗', cl=x=>x?'color:var(--accent)':'color:var(--accent2)';
+            return `<tr ${v.alarm?'style="background:rgba(255,77,109,0.05)"':''}>
+              <td>${slabels[s]||s}</td>
+              <td style="font-family:'Space Mono',monospace;font-weight:700">${pct(sacc[s])}</td>
+              <td style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text2)">${pct((bacc.always_home||{})[s])}</td>
+              <td style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text2)">${pct((bacc.always_favorite||{})[s])}</td>
+              <td style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text2)">${pct((bacc.vegas_line||{})[s])}</td>
+              <td style="${cl(v.beats_home)}">${ck(v.beats_home)}</td>
+              <td style="${cl(v.beats_favorite)}">${ck(v.beats_favorite)}</td>
+              <td style="${cl(v.beats_vegas)}">${ck(v.beats_vegas)}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+      ${(baseline.alarms||[]).length?`<div style="margin-top:10px;font-family:'Space Mono',monospace;font-size:10px;color:var(--accent2);">⚠ ${baseline.alarms.length} alarm(s): ${baseline.alarms[0]}</div>`:''}
+    </div>` : '';
+
+  // Audit
+  const biases = (audit.significant_biases||[]).slice(0,8);
+  const auditHtml = biases.length ? `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px;">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;margin-bottom:12px;letter-spacing:.06em;">BIAS AUDIT</div>
+      <table class="data-table">
+        <thead><tr><th>Segment</th><th>Sport</th><th>N</th><th>Expected</th><th>Actual</th><th>Bias</th><th>z</th></tr></thead>
+        <tbody>
+          ${biases.map(b=>`<tr>
+            <td style="font-family:'Space Mono',monospace;font-size:11px;">${b.segment}</td>
+            <td>${(b.sport||'').toUpperCase()}</td>
+            <td style="color:var(--text2)">${b.n}</td>
+            <td style="font-family:'Space Mono',monospace;font-size:11px;">${((b.expected_accuracy||0)*100).toFixed(1)}%</td>
+            <td style="font-family:'Space Mono',monospace;font-size:11px;">${((b.actual_accuracy||0)*100).toFixed(1)}%</td>
+            <td style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:${(b.bias||0)<0?'var(--accent2)':'var(--accent)'}">
+              ${(b.bias||0)>0?'+':''}${((b.bias||0)*100).toFixed(1)}%
+            </td>
+            <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2)">${b.z_score}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>` : '';
+
+  // Noise signals
+  const noise = (explain.noise_signals||[]).slice(0,6);
+  const noiseHtml = noise.length ? `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px;">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;margin-bottom:12px;letter-spacing:.06em;">LOW-VALUE SIGNALS (SHAP)</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        ${noise.map(n=>`<div style="background:var(--surface2);border-radius:4px;padding:8px 12px;">
+          <span class="tag" style="background:rgba(255,77,109,0.1);color:var(--accent2);">${n.signal}</span>
+          <span style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-left:6px;">${n.sport} · ${(n.avg_shap*100).toFixed(3)}% avg · n=${n.sample_size}</span>
+        </div>`).join('')}
+      </div>
+    </div>` : '';
+
+  // Tune summary
+  const tuneHtml = tune.last_tuned ? `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px;">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;margin-bottom:8px;letter-spacing:.06em;">HYPERPARAMETER TUNING</div>
+      <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);margin-bottom:8px;">Last tuned: ${new Date(tune.last_tuned).toLocaleString()}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        ${Object.entries(tune.validation_improvements||{}).filter(([,v])=>v&&v.before!=null).map(([sport,v])=>`
+          <div style="background:var(--surface2);border-radius:4px;padding:8px 12px;">
+            <div style="font-size:12px;font-weight:600;">${sport.toUpperCase()}</div>
+            <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);">${((v.before||0)*100).toFixed(1)}% → ${v.after!=null?((v.after)*100).toFixed(1)+'%':'pending'}</div>
+          </div>`).join('')}
+      </div>
+    </div>` : '';
+
+  div.innerHTML = modelHtml + baselineHtml + auditHtml + noiseHtml + tuneHtml;
+  if (!baselineHtml && !auditHtml) {
+    div.innerHTML += '<div style="font-family:\'Space Mono\',monospace;font-size:11px;color:var(--text2);margin-top:8px;">Run a daily update to populate baseline and audit data.</div>';
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ABOUT / TRAINING STATUS
+// ═══════════════════════════════════════════════════════════════
+function renderAbout() {
+  const status = DATA.training_status || 'untrained';
+  const dot    = document.getElementById('aboutStatusDot');
+  dot.className = 'status-dot ' + status;
+  document.getElementById('aboutStatusText').textContent = status.charAt(0).toUpperCase() + status.slice(1);
+
+  const tr = DATA.training_record || {};
+  let detail = '';
+  if (tr.date) detail += `Trained: ${new Date(tr.date).toLocaleString()}\n`;
+  if (tr.duration_seconds) detail += `Duration: ${Math.floor(tr.duration_seconds/60)}m ${tr.duration_seconds%60}s\n`;
+
+  const acc = tr.accuracy || {};
+  const sports = ['nfl','nba','mlb','nhl','ncaaf','ncaabm','ncaabw'];
+  const labels = {nfl:'NFL',nba:'NBA',mlb:'MLB',nhl:'NHL',ncaaf:'NCAAF',ncaabm:'NCAAB♂',ncaabw:'NCAAB♀'};
+  sports.forEach(s => {
+    if (acc[s]) detail += `${labels[s]} holdout: ${(acc[s]*100).toFixed(1)}%\n`;
+  });
+  if (DATA.xgb_trained) detail += `XGBoost: trained\n`;
+
+  document.getElementById('aboutTrainDetail').textContent = detail;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TAB SWITCHING
+// ═══════════════════════════════════════════════════════════════
+function switchTab(name) {
+  const ALL_TABS = ['predictions','cbs','march','betting','playoffs','system','about'];
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    t.classList.toggle('active', ALL_TABS[i] === name);
+  });
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  if (name === 'playoffs') renderPlayoffs();
+  if (name === 'system')   renderSystem();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// WORKFLOW TRIGGERS
+// ═══════════════════════════════════════════════════════════════
+const WORKFLOW_FILES = {
+  train:            'train.yml',
+  train_foundation: 'train_foundation.yml',
+  train_models:     'train_models.yml',
+  train_tune:       'train_tune.yml',
+  update:           'update.yml',
+  cbs:              'cbs.yml',
+  march:            'march.yml',
+};
+
+const STATUS_ELS = {
+  train:            'trainStatus',
+  train_foundation: 'trainFoundationStatus',
+  train_models:     'trainModelsStatus',
+  train_tune:       'trainTuneStatus',
+  update:           'updateStatus',
+  cbs:              'cbsStatus',
+  march:            'marchStatus',
+};
+
+const BTN_ELS = {
+  train:            'btnTrain',
+  train_foundation: 'btnTrainFoundation',
+  train_models:     'btnTrainModels',
+  train_tune:       'btnTrainTune',
+  update:           'btnUpdate',
+  cbs:              'btnCbs',
+  march:            'btnMarch',
+};
+
+let SESSION_TOKEN = '';
+
+function updateSessionToken(val) {
+  SESSION_TOKEN = val.trim();
+  const el = document.getElementById('tokenStatus');
+  if (SESSION_TOKEN) {
+    el.textContent = '✓ Token set';
+    el.style.color = 'var(--accent)';
+  } else {
+    el.textContent = 'Not set';
+    el.style.color = 'var(--text2)';
+  }
+}
+
+async function triggerWorkflow(mode) {
+  const cfg = DATA && DATA.github_config;
+  const token = SESSION_TOKEN || (cfg && cfg.token);
+  if (!token) {
+    setStatus(mode, 'error', '✗ No token. Paste your GitHub token in the bar at the top.');
+    return;
+  }
+  const owner = (cfg && cfg.owner) || 'wiscowelder';
+  const repo  = (cfg && cfg.repo)  || 'edge-predict';
+  const activeCfg = { owner, repo, token };
+
+  const btn = document.getElementById(BTN_ELS[mode]);
+  if (btn) btn.disabled = true;
+  setStatus(mode, 'running', '◌ Triggering...');
+
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${activeCfg.owner}/${activeCfg.repo}/actions/workflows/${WORKFLOW_FILES[mode]}/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${activeCfg.token}`,
+          Accept: 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ref: 'main' })
+      }
+    );
+
+    if (res.status === 204 || res.status === 200) {
+      setStatus(mode, 'running', '⟳ Running...');
+      if (btn) btn.disabled = false;
+      // Poll for data.json timestamp changes
+      if (mode !== 'train') {
+        pollForUpdate(mode);
+      } else {
+        setStatus(mode, 'running', '⟳ Training started (60–90 min). Check GitHub Actions for progress.');
+      }
+    } else {
+      const err = await res.text();
+      setStatus(mode, 'error', `✗ HTTP ${res.status}: ${err.slice(0,80)}`);
+      if (btn) btn.disabled = false;
+    }
+  } catch (e) {
+    setStatus(mode, 'error', '✗ ' + e.message);
+    if (btn) btn.disabled = false;
+  }
+}
+
+function setStatus(mode, type, msg) {
+  const el = document.getElementById(STATUS_ELS[mode]);
+  if (!el) return;
+  el.className = 'trigger-status ' + type;
+  el.textContent = msg;
+}
+
+async function pollForUpdate(mode) {
+  const initTs = DATA && DATA.last_daily_update;
+  const maxTries = 30;
+  let tries = 0;
+  setStatus(mode, 'running', '⟳ Waiting for workflow...');
+
+  const interval = setInterval(async () => {
+    tries++;
+    if (tries > maxTries) {
+      clearInterval(interval);
+      setStatus(mode, 'error', '✗ Timed out. Check GitHub Actions.');
+      return;
+    }
+    try {
+      const r = await fetch('data.json?t=' + Date.now());
+      if (!r.ok) return;
+      const d = await r.json();
+      const newTs = d.last_daily_update || d.last_trained || d.cbs_picks?.generated_at || d.march_mens?.generated_at || d.stack?.last_trained || d.graph?.last_trained || d.transformer?.last_trained;
+      if (newTs !== initTs) {
+        clearInterval(interval);
+        DATA = d;
+        // Re-merge github_config
+        try {
+          const r2 = await fetch('config.json?t=' + Date.now());
+          if (r2.ok) { const c = await r2.json(); if (c.github_config) DATA.github_config = c.github_config; }
+        } catch (_) {}
+        render();
+        setStatus(mode, 'done', '✓ Complete');
+      }
+    } catch (_) {}
+  }, 20000);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════
+loadData();
+</script>
+</body>
+</html>
