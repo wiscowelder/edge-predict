@@ -1,0 +1,65 @@
+name: Manual Run
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Which brain.py mode to run'
+        required: true
+        type: choice
+        options:
+          - update          # Refresh predictions and signals (same as daily update)
+          - cbs             # Regenerate CBS confidence pool picks
+          - march           # Regenerate March Madness bracket
+          - train           # Full foundation retrain (slow — use only off-season)
+          - train_models    # Advanced model retrain (transformer/graph/stack)
+          - audit           # Run bias audit on resolved predictions
+          - baseline        # Run baseline accuracy comparison
+          - portfolio       # Run betting portfolio optimizer
+      reason:
+        description: 'Optional note for the commit message'
+        required: false
+        default: 'manual trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  manual_run:
+    runs-on: ubuntu-latest
+    # Train modes need full time — all others are fast
+    timeout-minutes: ${{ inputs.mode == 'train' && 360 || inputs.mode == 'train_models' && 240 || 30 }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run brain.py --mode ${{ inputs.mode }}
+        env:
+          ODDS_API_KEY:    ${{ secrets.ODDS_API_KEY }}
+          OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+          BALLDONTLIE_KEY: ${{ secrets.BALLDONTLIE_KEY }}
+        run: python brain.py --mode ${{ inputs.mode }}
+
+      - name: Save results
+        run: |
+          git config user.name  "EDGE Predict Bot"
+          git config user.email "bot@edge-predict"
+          git add data.json
+          for f in models.pkl mind_models.pkl games_cache.pkl \
+                   transformer_models.pkl graph_models.pkl \
+                   stack_models.pkl simulate_models.pkl explain_models.pkl; do
+            [ -f "$f" ] && git add -f "$f" || true
+          done
+          git diff --staged --quiet || git commit -m "Manual ${{ inputs.mode }}: ${{ inputs.reason }} $(date -u +%Y-%m-%d)"
+          git push

@@ -1,0 +1,29 @@
+name: Dependency Review
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'requirements.txt'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          # Fail the PR if any dependency has a known vulnerability
+          fail-on-severity: moderate
+          # These are the packages that matter most for this codebase —
+          # vulnerabilities in these could corrupt model training or leak secrets
+          deny-packages: ''
+          comment-summary-in-pr: always

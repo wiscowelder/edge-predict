@@ -1,0 +1,40 @@
+name: CodeQL Security Scan
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.py'
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Runs every Monday at 7 AM UTC — weekly check even without code changes
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+jobs:
+  codeql:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: python
+          # These queries cover the most relevant threat class for this codebase:
+          # external API data flowing into JSON parsing into model training.
+          # 'security-extended' adds injection, path traversal, and data-flow checks.
+          queries: security-extended
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: '/language:python'
