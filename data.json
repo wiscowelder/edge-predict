@@ -1,408 +1,383 @@
 {
   "version": "1.0",
   "last_trained": "2026-03-14T21:28:48.266005",
-  "last_daily_update": "2026-07-01T13:39:54.002097",
+  "last_daily_update": "2026-07-02T13:03:36.895541",
   "training_status": "trained",
   "training_log": [
     {
-      "time": "2026-07-01T13:36:49.485306",
+      "time": "2026-07-02T13:01:40.731567",
       "level": "INFO",
-      "message": "[13:36:49] INFO: EDGE Predict v1.0 starting in mode: update"
+      "message": "[13:01:40] INFO: EDGE Predict v1.0 starting in mode: update"
     },
     {
-      "time": "2026-07-01T13:36:49.485353",
+      "time": "2026-07-02T13:01:40.731608",
       "level": "INFO",
-      "message": "[13:36:49] INFO: BallDontLie key: set"
+      "message": "[13:01:40] INFO: BallDontLie key: set"
     },
     {
-      "time": "2026-07-01T13:36:49.485392",
+      "time": "2026-07-02T13:01:40.731649",
       "level": "INFO",
-      "message": "[13:36:49] INFO: Odds API key:    set"
+      "message": "[13:01:40] INFO: Odds API key:    set"
     },
     {
-      "time": "2026-07-01T13:36:49.485432",
+      "time": "2026-07-02T13:01:40.731684",
       "level": "INFO",
-      "message": "[13:36:49] INFO: OpenWeather key: set"
+      "message": "[13:01:40] INFO: OpenWeather key: set"
     },
     {
-      "time": "2026-07-01T13:36:49.485498",
+      "time": "2026-07-02T13:01:40.731732",
       "level": "INFO",
-      "message": "[13:36:49] INFO: XGBoost:         available"
+      "message": "[13:01:40] INFO: XGBoost:         available"
     },
     {
-      "time": "2026-07-01T13:36:49.541829",
+      "time": "2026-07-02T13:01:40.784934",
       "level": "INFO",
-      "message": "[13:36:49] INFO: XGBoost models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaaf', 'ncaabm', 'ncaabw']"
+      "message": "[13:01:40] INFO: XGBoost models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaaf', 'ncaabm', 'ncaabw']"
     },
     {
-      "time": "2026-07-01T13:36:49.603141",
+      "time": "2026-07-02T13:01:40.841675",
       "level": "INFO",
-      "message": "[13:36:49] INFO: Data loaded (version: 1.0)"
+      "message": "[13:01:40] INFO: Data loaded (version: 1.0)"
     },
     {
-      "time": "2026-07-01T13:36:49.603536",
+      "time": "2026-07-02T13:01:40.842093",
       "level": "INFO",
-      "message": "[13:36:49] INFO: Running daily update..."
+      "message": "[13:01:40] INFO: Running daily update..."
     },
     {
-      "time": "2026-07-01T13:36:50.108138",
+      "time": "2026-07-02T13:01:41.315112",
       "level": "INFO",
-      "message": "[13:36:50] INFO: Expired stale prediction: San Antonio Spurs vs New York Knicks (2026-06-14)"
+      "message": "[13:01:41] INFO: [edge] Fetching market and sentiment signals..."
     },
     {
-      "time": "2026-07-01T13:36:50.108287",
+      "time": "2026-07-02T13:01:41.315207",
       "level": "INFO",
-      "message": "[13:36:50] INFO: [edge] Fetching market and sentiment signals..."
+      "message": "[13:01:41] INFO: [edge] Starting update..."
     },
     {
-      "time": "2026-07-01T13:36:50.108419",
+      "time": "2026-07-02T13:01:41.315386",
       "level": "INFO",
-      "message": "[13:36:50] INFO: [edge] Starting update..."
+      "message": "[13:01:41] INFO: [edge] Adaptive learning updated."
     },
     {
-      "time": "2026-07-01T13:36:50.108601",
+      "time": "2026-07-02T13:01:41.315442",
       "level": "INFO",
-      "message": "[13:36:50] INFO: [edge] Adaptive learning updated."
+      "message": "[13:01:41] INFO: [edge] Fetching odds lines..."
     },
     {
-      "time": "2026-07-01T13:36:50.108677",
+      "time": "2026-07-02T13:01:42.311420",
       "level": "INFO",
-      "message": "[13:36:50] INFO: [edge] Fetching odds lines..."
+      "message": "[13:01:42] INFO: [edge] Fetching Polymarket probabilities..."
     },
     {
-      "time": "2026-07-01T13:36:51.086418",
+      "time": "2026-07-02T13:01:42.393238",
       "level": "INFO",
-      "message": "[13:36:51] INFO: [edge] Fetching Polymarket probabilities..."
+      "message": "[13:01:42] INFO: [edge] Polymarket: matched 0 markets"
     },
     {
-      "time": "2026-07-01T13:36:51.156826",
+      "time": "2026-07-02T13:01:42.393523",
       "level": "INFO",
-      "message": "[13:36:51] INFO: [edge] Polymarket: matched 0 markets"
+      "message": "[13:01:42] INFO: [edge] Gathering sentiment signals..."
     },
     {
-      "time": "2026-07-01T13:36:51.157080",
+      "time": "2026-07-02T13:02:30.707733",
       "level": "INFO",
-      "message": "[13:36:51] INFO: [edge] Gathering sentiment signals..."
+      "message": "[13:02:30] INFO: [edge] Complete. Sharp signals: 59, Sentiment: 8, Prediction markets: 0"
     },
     {
-      "time": "2026-07-01T13:37:23.741514",
+      "time": "2026-07-02T13:02:30.707820",
       "level": "INFO",
-      "message": "[13:37:23] INFO: [edge] Complete. Sharp signals: 58, Sentiment: 8, Prediction markets: 0"
+      "message": "[13:02:30] INFO: [edge] Complete."
     },
     {
-      "time": "2026-07-01T13:37:23.741634",
+      "time": "2026-07-02T13:02:30.707874",
       "level": "INFO",
-      "message": "[13:37:23] INFO: [edge] Complete."
+      "message": "[13:02:30] INFO: [scout] Fetching lineup and official data..."
     },
     {
-      "time": "2026-07-01T13:37:23.741725",
+      "time": "2026-07-02T13:02:30.707949",
       "level": "INFO",
-      "message": "[13:37:23] INFO: [scout] Fetching lineup and official data..."
+      "message": "[13:02:30] INFO: [scout] Starting update..."
     },
     {
-      "time": "2026-07-01T13:37:23.741801",
+      "time": "2026-07-02T13:02:34.792103",
       "level": "INFO",
-      "message": "[13:37:23] INFO: [scout] Starting update..."
+      "message": "[13:02:34] INFO: [scout] Complete. Lineup adjustments: 8, Official assignments: 0"
     },
     {
-      "time": "2026-07-01T13:37:26.634125",
+      "time": "2026-07-02T13:02:34.792154",
       "level": "INFO",
-      "message": "[13:37:26] INFO: [scout] Complete. Lineup adjustments: 8, Official assignments: 0"
+      "message": "[13:02:34] INFO: [scout] Complete."
     },
     {
-      "time": "2026-07-01T13:37:26.634184",
+      "time": "2026-07-02T13:02:34.792192",
       "level": "INFO",
-      "message": "[13:37:26] INFO: [scout] Complete."
+      "message": "[13:02:34] INFO: Fetching standings: nfl"
     },
     {
-      "time": "2026-07-01T13:37:26.634224",
+      "time": "2026-07-02T13:02:34.931140",
       "level": "INFO",
-      "message": "[13:37:26] INFO: Fetching standings: nfl"
+      "message": "[13:02:34] INFO: ESPN standings nfl: 0 teams"
     },
     {
-      "time": "2026-07-01T13:37:26.699308",
+      "time": "2026-07-02T13:02:35.431401",
       "level": "INFO",
-      "message": "[13:37:26] INFO: ESPN standings nfl: 0 teams"
+      "message": "[13:02:35] INFO: Fetching standings: nba"
     },
     {
-      "time": "2026-07-01T13:37:27.199608",
+      "time": "2026-07-02T13:02:35.611634",
       "level": "INFO",
-      "message": "[13:37:27] INFO: Fetching standings: nba"
+      "message": "[13:02:35] INFO: ESPN standings nba: 0 teams"
     },
     {
-      "time": "2026-07-01T13:37:27.273975",
+      "time": "2026-07-02T13:02:36.111924",
       "level": "INFO",
-      "message": "[13:37:27] INFO: ESPN standings nba: 0 teams"
+      "message": "[13:02:36] INFO: Fetching standings: mlb"
     },
     {
-      "time": "2026-07-01T13:37:27.774267",
+      "time": "2026-07-02T13:02:36.362749",
       "level": "INFO",
-      "message": "[13:37:27] INFO: Fetching standings: mlb"
+      "message": "[13:02:36] INFO: ESPN standings mlb: 0 teams"
     },
     {
-      "time": "2026-07-01T13:37:28.072080",
+      "time": "2026-07-02T13:02:36.863013",
       "level": "INFO",
-      "message": "[13:37:28] INFO: ESPN standings mlb: 0 teams"
+      "message": "[13:02:36] INFO: Fetching standings: nhl"
     },
     {
-      "time": "2026-07-01T13:37:28.572388",
+      "time": "2026-07-02T13:02:37.045781",
       "level": "INFO",
-      "message": "[13:37:28] INFO: Fetching standings: nhl"
+      "message": "[13:02:37] INFO: ESPN standings nhl: 0 teams"
     },
     {
-      "time": "2026-07-01T13:37:28.641394",
+      "time": "2026-07-02T13:02:37.546034",
       "level": "INFO",
-      "message": "[13:37:28] INFO: ESPN standings nhl: 0 teams"
+      "message": "[13:02:37] INFO: Fetching standings: ncaaf"
     },
     {
-      "time": "2026-07-01T13:37:29.141695",
+      "time": "2026-07-02T13:02:37.702846",
       "level": "INFO",
-      "message": "[13:37:29] INFO: Fetching standings: ncaaf"
+      "message": "[13:02:37] INFO: ESPN standings ncaaf: 0 teams"
     },
     {
-      "time": "2026-07-01T13:37:29.222377",
+      "time": "2026-07-02T13:02:38.203139",
       "level": "INFO",
-      "message": "[13:37:29] INFO: ESPN standings ncaaf: 0 teams"
+      "message": "[13:02:38] INFO: Fetching standings: ncaabm"
     },
     {
-      "time": "2026-07-01T13:37:29.722676",
+      "time": "2026-07-02T13:02:38.381128",
       "level": "INFO",
-      "message": "[13:37:29] INFO: Fetching standings: ncaabm"
+      "message": "[13:02:38] INFO: ESPN standings ncaabm: 0 teams"
     },
     {
-      "time": "2026-07-01T13:37:29.790788",
+      "time": "2026-07-02T13:02:38.881397",
       "level": "INFO",
-      "message": "[13:37:29] INFO: ESPN standings ncaabm: 0 teams"
+      "message": "[13:02:38] INFO: Fetching standings: ncaabw"
     },
     {
-      "time": "2026-07-01T13:37:30.291086",
+      "time": "2026-07-02T13:02:39.033607",
       "level": "INFO",
-      "message": "[13:37:30] INFO: Fetching standings: ncaabw"
+      "message": "[13:02:39] INFO: ESPN standings ncaabw: 0 teams"
     },
     {
-      "time": "2026-07-01T13:37:30.385484",
+      "time": "2026-07-02T13:02:39.533902",
       "level": "INFO",
-      "message": "[13:37:30] INFO: ESPN standings ncaabw: 0 teams"
+      "message": "[13:02:39] INFO: Generating predictions: nfl"
     },
     {
-      "time": "2026-07-01T13:37:30.885817",
+      "time": "2026-07-02T13:02:39.649390",
       "level": "INFO",
-      "message": "[13:37:30] INFO: Generating predictions: nfl"
+      "message": "[13:02:39] INFO: ESPN scoreboard nfl: 16 games"
     },
     {
-      "time": "2026-07-01T13:37:30.928429",
+      "time": "2026-07-02T13:02:39.649710",
       "level": "INFO",
-      "message": "[13:37:30] INFO: ESPN scoreboard nfl: 16 games"
+      "message": "[13:02:39] INFO:   nfl is out of regular season (09-01–02-15) — skipping predictions"
     },
     {
-      "time": "2026-07-01T13:37:30.928742",
+      "time": "2026-07-02T13:02:39.649750",
       "level": "INFO",
-      "message": "[13:37:30] INFO:   nfl is out of regular season (09-01–02-15) — skipping predictions"
+      "message": "[13:02:39] INFO: Generating predictions: nba"
     },
     {
-      "time": "2026-07-01T13:37:30.928799",
+      "time": "2026-07-02T13:02:39.765221",
       "level": "INFO",
-      "message": "[13:37:30] INFO: Generating predictions: nba"
+      "message": "[13:02:39] INFO: ESPN scoreboard nba: 1 games"
     },
     {
-      "time": "2026-07-01T13:37:30.966235",
+      "time": "2026-07-02T13:02:39.765408",
       "level": "INFO",
-      "message": "[13:37:30] INFO: ESPN scoreboard nba: 1 games"
+      "message": "[13:02:39] INFO:   nba is out of regular season (10-01–06-30) — skipping predictions"
     },
     {
-      "time": "2026-07-01T13:37:30.966350",
+      "time": "2026-07-02T13:02:39.765455",
       "level": "INFO",
-      "message": "[13:37:30] INFO:   nba is out of regular season (10-01–06-30) — skipping predictions"
+      "message": "[13:02:39] INFO: Generating predictions: mlb"
     },
     {
-      "time": "2026-07-01T13:37:30.966419",
+      "time": "2026-07-02T13:02:39.879830",
       "level": "INFO",
-      "message": "[13:37:30] INFO: Generating predictions: mlb"
+      "message": "[13:02:39] INFO: ESPN scoreboard mlb: 14 games"
     },
     {
-      "time": "2026-07-01T13:37:31.008483",
+      "time": "2026-07-02T13:02:40.542590",
       "level": "INFO",
-      "message": "[13:37:31] INFO: ESPN scoreboard mlb: 15 games"
+      "message": "[13:02:40] INFO: [mind] LSTM models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaabm', 'ncaabw']"
     },
     {
-      "time": "2026-07-01T13:37:31.826497",
-      "level": "INFO",
-      "message": "[13:37:31] INFO: [mind] LSTM models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaabm', 'ncaabw']"
-    },
-    {
-      "time": "2026-07-01T13:37:38.314479",
+      "time": "2026-07-02T13:02:45.519156",
       "level": "WARNING",
-      "message": "[13:37:38] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[13:02:45] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-07-01T13:38:20.753086",
+      "time": "2026-07-02T13:02:46.239182",
+      "level": "WARNING",
+      "message": "[13:02:46] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+    },
+    {
+      "time": "2026-07-02T13:03:28.578214",
       "level": "ERROR",
-      "message": "[13:38:20] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
+      "message": "[13:03:28] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
     },
     {
-      "time": "2026-07-01T13:38:20.986853",
+      "time": "2026-07-02T13:03:28.733612",
+      "level": "INFO",
+      "message": "[13:03:28] INFO:   mlb: 14 predictions generated"
+    },
+    {
+      "time": "2026-07-02T13:03:29.033919",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: Generating predictions: nhl"
+    },
+    {
+      "time": "2026-07-02T13:03:29.185986",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: ESPN scoreboard nhl: 5 games"
+    },
+    {
+      "time": "2026-07-02T13:03:29.186126",
+      "level": "INFO",
+      "message": "[13:03:29] INFO:   nhl is out of regular season (10-01–06-30) — skipping predictions"
+    },
+    {
+      "time": "2026-07-02T13:03:29.186167",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: Generating predictions: ncaaf"
+    },
+    {
+      "time": "2026-07-02T13:03:29.341258",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: ESPN scoreboard ncaaf: 99 games"
+    },
+    {
+      "time": "2026-07-02T13:03:29.342122",
+      "level": "INFO",
+      "message": "[13:03:29] INFO:   ncaaf is out of regular season (08-25–01-20) — skipping predictions"
+    },
+    {
+      "time": "2026-07-02T13:03:29.342153",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: Generating predictions: ncaabm"
+    },
+    {
+      "time": "2026-07-02T13:03:29.513157",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: ESPN scoreboard ncaabm: 1 games"
+    },
+    {
+      "time": "2026-07-02T13:03:29.513354",
+      "level": "INFO",
+      "message": "[13:03:29] INFO:   ncaabm is out of regular season (11-01–04-15) — skipping predictions"
+    },
+    {
+      "time": "2026-07-02T13:03:29.513400",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: Generating predictions: ncaabw"
+    },
+    {
+      "time": "2026-07-02T13:03:29.730105",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: ESPN scoreboard ncaabw: 1 games"
+    },
+    {
+      "time": "2026-07-02T13:03:29.730210",
+      "level": "INFO",
+      "message": "[13:03:29] INFO:   ncaabw is out of regular season (11-01–04-15) — skipping predictions"
+    },
+    {
+      "time": "2026-07-02T13:03:29.731474",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: [mind] Updating calibration with resolved predictions..."
+    },
+    {
+      "time": "2026-07-02T13:03:29.731634",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: [mind] Updating calibration..."
+    },
+    {
+      "time": "2026-07-02T13:03:29.731702",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: [mind] Calibration updated: 0 new resolved predictions"
+    },
+    {
+      "time": "2026-07-02T13:03:29.731745",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: [mind] Calibration updated."
+    },
+    {
+      "time": "2026-07-02T13:03:29.731788",
+      "level": "INFO",
+      "message": "[13:03:29] INFO: Refreshing ESPN stats..."
+    },
+    {
+      "time": "2026-07-02T13:03:30.518640",
+      "level": "INFO",
+      "message": "[13:03:30] INFO: ESPN stats nfl: 0 teams"
+    },
+    {
+      "time": "2026-07-02T13:03:30.928325",
+      "level": "INFO",
+      "message": "[13:03:30] INFO: ESPN stats nba: 0 teams"
+    },
+    {
+      "time": "2026-07-02T13:03:33.405055",
+      "level": "INFO",
+      "message": "[13:03:33] INFO: ESPN stats mlb: 0 teams"
+    },
+    {
+      "time": "2026-07-02T13:03:34.536363",
+      "level": "INFO",
+      "message": "[13:03:34] INFO: ESPN stats nhl: 0 teams"
+    },
+    {
+      "time": "2026-07-02T13:03:34.960906",
+      "level": "INFO",
+      "message": "[13:03:34] INFO: ESPN stats ncaaf: 0 teams"
+    },
+    {
+      "time": "2026-07-02T13:03:35.935318",
       "level": "WARNING",
-      "message": "[13:38:20] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[13:03:35] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/men"
     },
     {
-      "time": "2026-07-01T13:39:03.432112",
-      "level": "ERROR",
-      "message": "[13:39:03] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
-    },
-    {
-      "time": "2026-07-01T13:39:03.661591",
+      "time": "2026-07-02T13:03:36.415754",
       "level": "WARNING",
-      "message": "[13:39:03] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[13:03:36] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/wom"
     },
     {
-      "time": "2026-07-01T13:39:03.938487",
+      "time": "2026-07-02T13:03:36.894372",
       "level": "WARNING",
-      "message": "[13:39:03] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[13:03:36] WARNING: Invalid JSON from https://barttorvik.com/trank.php?year=2026&json=1"
     },
     {
-      "time": "2026-07-01T13:39:46.335642",
-      "level": "ERROR",
-      "message": "[13:39:46] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
-    },
-    {
-      "time": "2026-07-01T13:39:46.491570",
-      "level": "INFO",
-      "message": "[13:39:46] INFO:   mlb: 15 predictions generated"
-    },
-    {
-      "time": "2026-07-01T13:39:46.791833",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: Generating predictions: nhl"
-    },
-    {
-      "time": "2026-07-01T13:39:46.829590",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: ESPN scoreboard nhl: 5 games"
-    },
-    {
-      "time": "2026-07-01T13:39:46.829759",
-      "level": "INFO",
-      "message": "[13:39:46] INFO:   nhl is out of regular season (10-01–06-30) — skipping predictions"
-    },
-    {
-      "time": "2026-07-01T13:39:46.829806",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: Generating predictions: ncaaf"
-    },
-    {
-      "time": "2026-07-01T13:39:46.877221",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: ESPN scoreboard ncaaf: 99 games"
-    },
-    {
-      "time": "2026-07-01T13:39:46.878061",
-      "level": "INFO",
-      "message": "[13:39:46] INFO:   ncaaf is out of regular season (08-25–01-20) — skipping predictions"
-    },
-    {
-      "time": "2026-07-01T13:39:46.878102",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: Generating predictions: ncaabm"
-    },
-    {
-      "time": "2026-07-01T13:39:46.913495",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: ESPN scoreboard ncaabm: 1 games"
-    },
-    {
-      "time": "2026-07-01T13:39:46.913664",
-      "level": "INFO",
-      "message": "[13:39:46] INFO:   ncaabm is out of regular season (11-01–04-15) — skipping predictions"
-    },
-    {
-      "time": "2026-07-01T13:39:46.913752",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: Generating predictions: ncaabw"
-    },
-    {
-      "time": "2026-07-01T13:39:46.951215",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: ESPN scoreboard ncaabw: 1 games"
-    },
-    {
-      "time": "2026-07-01T13:39:46.951326",
-      "level": "INFO",
-      "message": "[13:39:46] INFO:   ncaabw is out of regular season (11-01–04-15) — skipping predictions"
-    },
-    {
-      "time": "2026-07-01T13:39:46.954835",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: [mind] Updating calibration with resolved predictions..."
-    },
-    {
-      "time": "2026-07-01T13:39:46.955015",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: [mind] Updating calibration..."
-    },
-    {
-      "time": "2026-07-01T13:39:46.955105",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: [mind] Calibration updated: 0 new resolved predictions"
-    },
-    {
-      "time": "2026-07-01T13:39:46.955154",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: [mind] Calibration updated."
-    },
-    {
-      "time": "2026-07-01T13:39:46.955206",
-      "level": "INFO",
-      "message": "[13:39:46] INFO: Refreshing ESPN stats..."
-    },
-    {
-      "time": "2026-07-01T13:39:47.628491",
-      "level": "INFO",
-      "message": "[13:39:47] INFO: ESPN stats nfl: 0 teams"
-    },
-    {
-      "time": "2026-07-01T13:39:47.938916",
-      "level": "INFO",
-      "message": "[13:39:47] INFO: ESPN stats nba: 0 teams"
-    },
-    {
-      "time": "2026-07-01T13:39:50.056018",
-      "level": "INFO",
-      "message": "[13:39:50] INFO: ESPN stats mlb: 0 teams"
-    },
-    {
-      "time": "2026-07-01T13:39:51.136522",
-      "level": "INFO",
-      "message": "[13:39:51] INFO: ESPN stats nhl: 0 teams"
-    },
-    {
-      "time": "2026-07-01T13:39:51.574925",
-      "level": "INFO",
-      "message": "[13:39:51] INFO: ESPN stats ncaaf: 0 teams"
-    },
-    {
-      "time": "2026-07-01T13:39:53.012591",
-      "level": "INFO",
-      "message": "[13:39:53] INFO: ESPN stats ncaabm: 0 teams"
-    },
-    {
-      "time": "2026-07-01T13:39:53.656328",
+      "time": "2026-07-02T13:03:36.895522",
       "level": "WARNING",
-      "message": "[13:39:53] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/wom"
+      "message": "[13:03:36] WARNING: Barttorvik 2026: unexpected response format"
     },
     {
-      "time": "2026-07-01T13:39:54.001035",
-      "level": "WARNING",
-      "message": "[13:39:54] WARNING: Invalid JSON from https://barttorvik.com/trank.php?year=2026&json=1"
-    },
-    {
-      "time": "2026-07-01T13:39:54.002070",
-      "level": "WARNING",
-      "message": "[13:39:54] WARNING: Barttorvik 2026: unexpected response format"
-    },
-    {
-      "time": "2026-07-01T13:39:54.002130",
+      "time": "2026-07-02T13:03:36.895599",
       "level": "INFO",
-      "message": "[13:39:54] INFO: Daily update complete"
+      "message": "[13:03:36] INFO: Daily update complete"
     }
   ],
   "weights": {
@@ -706,8 +681,8 @@
     "mlb": {
       "0.5": {
         "predicted": 0.5,
-        "correct": 672,
-        "total": 1268
+        "correct": 677,
+        "total": 1282
       }
     },
     "nhl": {
@@ -256281,318 +256256,295 @@
     ],
     "mlb": [
       {
-        "id": "401815964",
+        "id": "401815979",
         "home": "Baltimore Orioles",
         "away": "Chicago White Sox",
-        "date": "2026-06-30",
+        "date": "2026-07-01",
         "venue": "Oriole Park at Camden Yards",
         "pick": "Baltimore Orioles",
-        "home_prob": 0.49997093826532363,
-        "win_probability": 0.49997093826532363,
+        "home_prob": 0.49990892162919043,
+        "win_probability": 0.49990892162919043,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2999709382653236,
-        "confidence_upper": 0.6999709382653236,
-        "momentum_score": 0.4903530025482178,
+        "confidence_lower": 0.2999089216291904,
+        "confidence_upper": 0.6999089216291905,
+        "momentum_score": 0.4882707017660141,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:37:31.871441"
+        "generated_at": "2026-07-02T13:02:40.591916"
       },
       {
-        "id": "401815967",
-        "home": "Philadelphia Phillies",
-        "away": "Pittsburgh Pirates",
-        "date": "2026-06-30",
-        "venue": "Citizens Bank Park",
-        "pick": "Philadelphia Phillies",
-        "home_prob": 0.5000793894529343,
-        "win_probability": 0.5000793894529343,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.3000793894529343,
-        "confidence_upper": 0.7000793894529342,
-        "momentum_score": 0.4919234240055084,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-07-01T13:37:32.553031"
-      },
-      {
-        "id": "401815969",
+        "id": "401815984",
         "home": "Cleveland Guardians",
         "away": "Texas Rangers",
-        "date": "2026-06-30",
+        "date": "2026-07-01",
         "venue": "Progressive Field",
         "pick": "Cleveland Guardians",
-        "home_prob": 0.5000257622301578,
-        "win_probability": 0.5000257622301578,
+        "home_prob": 0.50005560952425,
+        "win_probability": 0.50005560952425,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3000257622301578,
-        "confidence_upper": 0.7000257622301578,
-        "momentum_score": 0.490122361779213,
+        "confidence_lower": 0.30005560952425,
+        "confidence_upper": 0.70005560952425,
+        "momentum_score": 0.49082513511180875,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:37:33.228517"
+        "generated_at": "2026-07-02T13:02:41.106053"
       },
       {
-        "id": "401815965",
+        "id": "401815980",
         "home": "New York Yankees",
         "away": "Detroit Tigers",
-        "date": "2026-06-30",
+        "date": "2026-07-01",
         "venue": "Yankee Stadium",
         "pick": "New York Yankees",
-        "home_prob": 0.4999544524848461,
-        "win_probability": 0.4999544524848461,
+        "home_prob": 0.500014291882515,
+        "win_probability": 0.500014291882515,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2999544524848461,
-        "confidence_upper": 0.6999544524848461,
-        "momentum_score": 0.49173412561416624,
+        "confidence_lower": 0.300014291882515,
+        "confidence_upper": 0.700014291882515,
+        "momentum_score": 0.4915179842710495,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:37:33.892994"
+        "generated_at": "2026-07-02T13:02:41.622713"
       },
       {
-        "id": "401815966",
-        "home": "Toronto Blue Jays",
-        "away": "New York Mets",
-        "date": "2026-06-30",
-        "venue": "Rogers Centre",
-        "pick": "Toronto Blue Jays",
-        "home_prob": 0.5000999980270863,
-        "win_probability": 0.5000999980270863,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.30009999802708626,
-        "confidence_upper": 0.7000999980270863,
-        "momentum_score": 0.4920332258939743,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-07-01T13:37:34.551164"
-      },
-      {
-        "id": "401815970",
+        "id": "401815985",
         "home": "Boston Red Sox",
         "away": "Washington Nationals",
-        "date": "2026-06-30",
+        "date": "2026-07-01",
         "venue": "Fenway Park",
         "pick": "Boston Red Sox",
-        "home_prob": 0.4998314322531223,
-        "win_probability": 0.4998314322531223,
+        "home_prob": 0.5001157753765583,
+        "win_probability": 0.5001157753765583,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2998314322531223,
-        "confidence_upper": 0.6998314322531223,
-        "momentum_score": 0.4893279308080673,
+        "confidence_lower": 0.30011577537655826,
+        "confidence_upper": 0.7001157753765583,
+        "momentum_score": 0.4907988864183426,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:37:35.208338"
+        "generated_at": "2026-07-02T13:02:42.146148"
       },
       {
-        "id": "401815968",
-        "home": "Atlanta Braves",
-        "away": "St. Louis Cardinals",
-        "date": "2026-06-30",
-        "venue": "Truist Park",
-        "pick": "Atlanta Braves",
-        "home_prob": 0.49992829540371897,
-        "win_probability": 0.49992829540371897,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.29992829540371896,
-        "confidence_upper": 0.6999282954037189,
-        "momentum_score": 0.48863117933273315,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-07-01T13:37:35.923362"
-      },
-      {
-        "id": "401815971",
-        "home": "Milwaukee Brewers",
-        "away": "Cincinnati Reds",
-        "date": "2026-06-30",
-        "venue": "American Family Field",
-        "pick": "Milwaukee Brewers",
-        "home_prob": 0.4998661594390869,
-        "win_probability": 0.4998661594390869,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2998661594390869,
-        "confidence_upper": 0.6998661594390869,
-        "momentum_score": 0.4886830621957779,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-07-01T13:37:36.604991"
-      },
-      {
-        "id": "401815974",
-        "home": "Kansas City Royals",
-        "away": "Tampa Bay Rays",
-        "date": "2026-06-30",
-        "venue": "Kauffman Stadium",
-        "pick": "Kansas City Royals",
-        "home_prob": 0.4999424999058247,
-        "win_probability": 0.4999424999058247,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.29994249990582467,
-        "confidence_upper": 0.6999424999058247,
-        "momentum_score": 0.4889737820625305,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-07-01T13:37:37.281461"
-      },
-      {
-        "id": "401815973",
+        "id": "401815988",
         "home": "Chicago Cubs",
         "away": "San Diego Padres",
         "date": "2026-07-01",
         "venue": "Wrigley Field",
         "pick": "Chicago Cubs",
-        "home_prob": 0.5000102998912335,
-        "win_probability": 0.5000102998912335,
+        "home_prob": 0.4999723768830299,
+        "win_probability": 0.4999723768830299,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30001029989123346,
-        "confidence_upper": 0.7000102998912334,
-        "momentum_score": 0.48859432876110076,
+        "confidence_lower": 0.2999723768830299,
+        "confidence_upper": 0.6999723768830299,
+        "momentum_score": 0.4920278114080429,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:37:37.956628"
+        "generated_at": "2026-07-02T13:02:42.674233"
       },
       {
-        "id": "401815972",
+        "id": "401815981",
+        "home": "Toronto Blue Jays",
+        "away": "New York Mets",
+        "date": "2026-07-01",
+        "venue": "Rogers Centre",
+        "pick": "Toronto Blue Jays",
+        "home_prob": 0.5001657594144344,
+        "win_probability": 0.5001657594144344,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3001657594144344,
+        "confidence_upper": 0.7001657594144344,
+        "momentum_score": 0.49289478063583375,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-07-02T13:02:43.223794"
+      },
+      {
+        "id": "401815982",
+        "home": "Philadelphia Phillies",
+        "away": "Pittsburgh Pirates",
+        "date": "2026-07-01",
+        "venue": "Citizens Bank Park",
+        "pick": "Philadelphia Phillies",
+        "home_prob": 0.5001269003152847,
+        "win_probability": 0.5001269003152847,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3001269003152847,
+        "confidence_upper": 0.7001269003152848,
+        "momentum_score": 0.49171103358268736,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-07-02T13:02:43.733074"
+      },
+      {
+        "id": "401815983",
+        "home": "Atlanta Braves",
+        "away": "St. Louis Cardinals",
+        "date": "2026-07-01",
+        "venue": "Truist Park",
+        "pick": "Atlanta Braves",
+        "home_prob": 0.5000379998683929,
+        "win_probability": 0.5000379998683929,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3000379998683929,
+        "confidence_upper": 0.700037999868393,
+        "momentum_score": 0.4920208299160004,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-07-02T13:02:44.250461"
+      },
+      {
+        "id": "401815989",
+        "home": "Kansas City Royals",
+        "away": "Tampa Bay Rays",
+        "date": "2026-07-01",
+        "venue": "Kauffman Stadium",
+        "pick": "Kansas City Royals",
+        "home_prob": 0.5001195759177208,
+        "win_probability": 0.5001195759177208,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3001195759177208,
+        "confidence_upper": 0.7001195759177208,
+        "momentum_score": 0.49255352914333345,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-07-02T13:02:44.769819"
+      },
+      {
+        "id": "401815986",
+        "home": "Milwaukee Brewers",
+        "away": "Cincinnati Reds",
+        "date": "2026-07-02",
+        "venue": "American Family Field",
+        "pick": "Milwaukee Brewers",
+        "home_prob": 0.49986335828900336,
+        "win_probability": 0.49986335828900336,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.29986335828900335,
+        "confidence_upper": 0.6998633582890034,
+        "momentum_score": 0.49044834554195404,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-07-02T13:02:45.297250"
+      },
+      {
+        "id": "401815987",
         "home": "Houston Astros",
         "away": "Minnesota Twins",
-        "date": "2026-07-01",
+        "date": "2026-07-02",
         "venue": "Daikin Park",
         "pick": "Houston Astros",
-        "home_prob": 0.5000398074388503,
-        "win_probability": 0.5000398074388503,
+        "home_prob": 0.5000604912936687,
+        "win_probability": 0.5000604912936687,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30003980743885034,
-        "confidence_upper": 0.7000398074388503,
-        "momentum_score": 0.49077990889549256,
+        "confidence_lower": 0.3000604912936687,
+        "confidence_upper": 0.7000604912936688,
+        "momentum_score": 0.49066204130649566,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:37:38.369231"
+        "generated_at": "2026-07-02T13:02:45.573218"
       },
       {
-        "id": "401815975",
+        "id": "401815990",
         "home": "Colorado Rockies",
         "away": "Miami Marlins",
-        "date": "2026-07-01",
+        "date": "2026-07-02",
         "venue": "Coors Field",
         "pick": "Colorado Rockies",
-        "home_prob": 0.4998537658751011,
-        "win_probability": 0.4998537658751011,
+        "home_prob": 0.49993209436535835,
+        "win_probability": 0.49993209436535835,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2998537658751011,
-        "confidence_upper": 0.6998537658751012,
-        "momentum_score": 0.49016574025154114,
+        "confidence_lower": 0.29993209436535834,
+        "confidence_upper": 0.6999320943653584,
+        "momentum_score": 0.4898593783378601,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:38:21.039823"
+        "generated_at": "2026-07-02T13:02:46.096658"
       },
       {
-        "id": "401815976",
-        "home": "Seattle Mariners",
-        "away": "Los Angeles Angels",
-        "date": "2026-07-01",
-        "venue": "T-Mobile Park",
-        "pick": "Seattle Mariners",
-        "home_prob": 0.5000208573043347,
-        "win_probability": 0.5000208573043347,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.30002085730433464,
-        "confidence_upper": 0.7000208573043347,
-        "momentum_score": 0.48965389966964723,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-07-01T13:39:03.711101"
-      },
-      {
-        "id": "401815977",
+        "id": "401815991",
         "home": "Athletics",
         "away": "Los Angeles Dodgers",
-        "date": "2026-07-01",
+        "date": "2026-07-02",
         "venue": "Sutter Health Park",
         "pick": "Athletics",
-        "home_prob": 0.5005753710269928,
-        "win_probability": 0.5005753710269928,
+        "home_prob": 0.5003490109145642,
+        "win_probability": 0.5003490109145642,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3005753710269928,
-        "confidence_upper": 0.7005753710269929,
+        "confidence_lower": 0.3003490109145642,
+        "confidence_upper": 0.7003490109145643,
         "momentum_score": 0.5,
         "is_guess": false,
         "signals": [
@@ -256600,30 +256552,30 @@
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:39:03.967669"
+        "generated_at": "2026-07-02T13:02:46.268202"
       },
       {
-        "id": "401815978",
+        "id": "401815992",
         "home": "Arizona Diamondbacks",
         "away": "San Francisco Giants",
-        "date": "2026-07-01",
+        "date": "2026-07-02",
         "venue": "Chase Field",
         "pick": "Arizona Diamondbacks",
-        "home_prob": 0.5002535086870193,
-        "win_probability": 0.5002535086870193,
+        "home_prob": 0.5001111993193627,
+        "win_probability": 0.5001111993193627,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30025350868701933,
-        "confidence_upper": 0.7002535086870194,
-        "momentum_score": 0.49366255402565,
+        "confidence_lower": 0.30011119931936264,
+        "confidence_upper": 0.7001111993193627,
+        "momentum_score": 0.4913599681854248,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-07-01T13:39:46.491460"
+        "generated_at": "2026-07-02T13:03:28.733485"
       }
     ],
     "nhl": [
@@ -256819,7 +256771,7 @@
     "upset_alerts": []
   },
   "betting_picks": {
-    "generated_at": "2026-07-01T13:39:46.954775",
+    "generated_at": "2026-07-02T13:03:29.731411",
     "safe_bet": null,
     "value_bet": null,
     "longshot": null,
@@ -256835,8 +256787,8 @@
       "losses": 61
     },
     "mlb": {
-      "wins": 672,
-      "losses": 596
+      "wins": 677,
+      "losses": 605
     },
     "nhl": {
       "wins": 108,
@@ -258496,8 +258448,27 @@
   },
   "edge": {
     "version": "1.0",
-    "last_updated": "2026-07-01T13:37:23.741390",
-    "line_history": {},
+    "last_updated": "2026-07-02T13:02:30.707620",
+    "line_history": {
+      "401815976": {
+        "sport": "mlb",
+        "home_team": "seattle mariners",
+        "away_team": "los angeles angels",
+        "game_date": "2026-07-01",
+        "snapshots": [
+          {
+            "timestamp": "2026-07-02T13:01:41.765052",
+            "spread": -1.5,
+            "total": null,
+            "home_ml": -213.44444444444446
+          }
+        ],
+        "opening_spread": -1.5,
+        "current_spread": -1.5,
+        "opening_ml": -213.44444444444446,
+        "total_movement": 0.0
+      }
+    },
     "sharp_signals": {
       "401856598": {
         "game_id": "401856598",
@@ -259194,6 +259165,18 @@
           "Consensus line: 9 books agree"
         ],
         "total_movement": 0.0
+      },
+      "401815976": {
+        "game_id": "401815976",
+        "sport": "mlb",
+        "signal_type": "consensus",
+        "prob_delta": 0.0,
+        "confidence": 0.75,
+        "toward_home": false,
+        "notes": [
+          "Consensus line: 9 books agree"
+        ],
+        "total_movement": 0.0
       }
     },
     "sentiment": {
@@ -259214,45 +259197,26 @@
         "confidence": 0.56,
         "key_signals": [],
         "prob_adjustment": -0.0139,
-        "fetched_at": "2026-07-01T13:37:15.621364"
-      },
-      "401815854": {
-        "game_id": "401815854",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": -0.1425,
-        "sentiment_delta": 0.1425,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": -0.475,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 1,
-        "confidence": 0.48,
-        "key_signals": [],
-        "prob_adjustment": 0.0057,
-        "fetched_at": "2026-06-24T13:27:09.520338"
+        "fetched_at": "2026-07-02T13:02:22.559073"
       },
       "401879412": {
         "game_id": "401879412",
-        "home_team_sentiment": -0.285,
-        "away_team_sentiment": -0.095,
-        "sentiment_delta": -0.19,
+        "home_team_sentiment": -0.1425,
+        "away_team_sentiment": -0.19,
+        "sentiment_delta": 0.0475,
         "home_injury_score": 0.0,
         "away_injury_score": 0.0,
         "home_morale_score": 0.0,
-        "away_morale_score": -0.475,
-        "home_reporter_score": -0.95,
+        "away_morale_score": -0.95,
+        "home_reporter_score": -0.475,
         "away_reporter_score": 0.0,
         "home_social_score": 0.0,
         "away_social_score": 0.0,
         "sources_counted": 2,
         "confidence": 0.56,
         "key_signals": [],
-        "prob_adjustment": -0.0094,
-        "fetched_at": "2026-07-01T13:37:19.681548"
+        "prob_adjustment": 0.0024,
+        "fetched_at": "2026-07-02T13:02:26.627244"
       },
       "401815895": {
         "game_id": "401815895",
@@ -259290,7 +259254,7 @@
         "confidence": 0.56,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-07-01T13:37:23.741281"
+        "fetched_at": "2026-07-02T13:02:30.707504"
       },
       "401815904": {
         "game_id": "401815904",
@@ -259313,41 +259277,60 @@
       },
       "401881922": {
         "game_id": "401881922",
-        "home_team_sentiment": -0.1425,
+        "home_team_sentiment": -0.095,
         "away_team_sentiment": 0.0,
-        "sentiment_delta": -0.1425,
+        "sentiment_delta": -0.095,
         "home_injury_score": 0.0,
         "away_injury_score": 0.0,
         "home_morale_score": 0.0,
         "away_morale_score": 0.0,
-        "home_reporter_score": -0.475,
+        "home_reporter_score": -0.3167,
         "away_reporter_score": 0.0,
         "home_social_score": 0.0,
         "away_social_score": 0.0,
         "sources_counted": 2,
         "confidence": 0.56,
         "key_signals": [],
-        "prob_adjustment": -0.0071,
-        "fetched_at": "2026-07-01T13:37:07.481993"
+        "prob_adjustment": -0.0047,
+        "fetched_at": "2026-07-02T13:02:14.413155"
       },
       "401881923": {
         "game_id": "401881923",
         "home_team_sentiment": 0.0,
-        "away_team_sentiment": -0.1425,
-        "sentiment_delta": 0.1425,
+        "away_team_sentiment": -0.095,
+        "sentiment_delta": 0.095,
         "home_injury_score": 0.0,
         "away_injury_score": 0.0,
         "home_morale_score": 0.0,
         "away_morale_score": 0.0,
         "home_reporter_score": 0.0,
-        "away_reporter_score": -0.475,
+        "away_reporter_score": -0.3167,
         "home_social_score": 0.0,
         "away_social_score": 0.0,
         "sources_counted": 2,
         "confidence": 0.56,
         "key_signals": [],
-        "prob_adjustment": 0.0071,
-        "fetched_at": "2026-07-01T13:37:11.551367"
+        "prob_adjustment": 0.0047,
+        "fetched_at": "2026-07-02T13:02:18.496318"
+      },
+      "401815976": {
+        "game_id": "401815976",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": -0.0488,
+        "sentiment_delta": 0.0488,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": -0.1625,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 2,
+        "confidence": 0.56,
+        "key_signals": [],
+        "prob_adjustment": 0.0019,
+        "fetched_at": "2026-07-02T13:02:10.288578"
       }
     },
     "reporter_accounts": {
@@ -259426,21 +259409,21 @@
         ]
       },
       "espn_rss_nhl": {
-        "fetched_at": "2026-07-01T13:36:53.235122",
+        "fetched_at": "2026-07-02T13:01:48.732847",
         "items": [
-          "NHL free agency rankings: Who are the best players... From All-Stars and award winners down to diamonds in the rough, here's who will be available this summer.",
-          "Live free agency tracker: Contract details for all... Get up to speed on all the latest veteran additions teams are making.",
-          "Source: Blue Jackets' Werenski vetoes Stars deal Blue Jackets star defenseman Zach Werenski has vetoed a trade to the Stars, an NHL source confirmed to ESPN.",
-          "Source: Panthers acquire G Markstrom from NJ The Panthers have acquired goaltender Jacob Markstrom from the Devils as part of a five-player deal, the team announced Tuesday.",
-          "Knights acquire Pens' Wotherspoon, free up $3M+ The Golden Knights acquired Parker Wotherspoon Tuesday from the Penguins in exchange for Kaedan Korczak, creating over $3 million in cap space in the process.",
-          "Source: Ducks sign Greer to 4-year, $17M deal The Ducks signed forward AJ Greer to a four-year contract, adding some Stanley Cup experience to the burgeoning contender.",
-          "Sabres hire former antagonist Lucic as pro scout Former NHL player Milan Lucic has gone from being a one-time Buffalo Sabres' antagonist to landing a job as a pro scout, the team announced as part of a series of hirings and promotions on Tuesday.",
-          "Gallagher parts with Habs, traded to Canucks Brendan Gallagher was traded to Vancouver on Monday in exchange for future considerations.",
-          "Devils sign RFA Arseny Gritsyuk to a 3-year deal The Devils signed restricted free agent winger Arseny Gritsyuk to a new 3-year contract, locking up one of last season's top rookies.",
-          "Sabres re-sign Malenstyn to 6-yr, $17.5 M pact The Buffalo Sabres re-signed checking-line forward Beck Malenstyn to a six-year, $17.5 million contract on Monday, two days before free agency opens.",
+          "NHL free agency 2026: Grades, fits for Andersen, B... With free agency underway, we're handing out marks for all of the big deals around the league.",
+          "Live NHL free agency tracker: Contract details for... Get up to speed on all the latest veteran additions teams are making beginning on June 30.",
+          "GM: Caps have cap room, roster spot for Ovechkin Capitals general manager Chris Patrick told ESPN that his club has room in its lineup and under the salary cap to bring back captain Alex Ovechkin, despite adding several high-profile names through trades and free agency.",
+          "Lightning add D Carlson after Werenski reports The Lightning signed coveted free agent John Carlson to a two-year deal to fill the need on the right side of their defense corps.",
+          "Cup champ Andersen, Oilers agree on one-year deal Veteran goaltender Frederik Andersen, 36, who helped the Carolina Hurricanes win three playoff series before giving the starter's net up to Brandon Bussi in the Stanley Cup Final last month, agreed to a one-year deal with the Edmonton Oilers on Wednesday.",
+          "Werenski 'aligned' with Jackets GM, wants to stay Zach Werenski, who just won the Norris Trophy as the NHL's top defenseman, ended all drama surrounding his name and trade talks Wednesday, vowing his commitment to the Blue Jackets in a statement, adding \"I want to win and I want to do that in Columbus.\"",
+          "Sources: Bobrovsky inks 3-year Toronto deal Veteran goalie Sergei Bobrovsky signed a three-year deal with the Toronto Maple Leafs, the team announced Wednesday.",
+          "Sources: Oilers set to deal Nurse, 31, to Sharks The Edmonton Oilers traded defenseman Darnell Nurse to the San Jose Sharks on Wednesday afternoon, keeping the 31-year-old veteran in the Western Conference. In exchange, his former club acquired defensemen Shakir Mukhamadullin and Zack Sharp.",
+          "Busy Kings add Haula up front, re-sign Laughton After adding Mats Zuccarello and Corey Perry on one-year deals early on in free agency Wednesday, the Kings continued to build in the afternoon, signing Erik Haula to a two-year contract, and re-signing Scott Laughton to a three-year contract extension.",
+          "Sources: Rangers to send Trocheck over to Mammoth Looking to build off a Western Conference playoff appearance last season, the Utah Mammoth went summer shopping in New York Wednesday, acquiring New York Rangers center Vincent Trocheck before adding New York Islanders captain Anders Lee in free agency.",
           "🏒 Who makes the Hockey Hall of Fame in 2027? With the 2026 class just announced, let's look ahead to next year.",
-          "Ranking the remaining NHL trade candidates this of... With a handful of blockbusters already in the books, which difference-makers could be swapping franchises this summer?",
-          "Offseason NHL trade grades: Report cards for Marks... The summer trade season is officially on fire! Find grades for each GM involved in all the big swaps here.",
+          "Offseason NHL trade grades: Report cards for Bourq... The summer trade season is officially on fire! Find grades for each GM involved in all the big swaps here.",
+          "Ranking the remaining trade candidates this offsea... With a handful of deals already in the books, which difference-makers could be swapping franchises this summer?",
           "Report cards for every GM after the 2026 NHL draft... Which teams added the most value this weekend? Who whiffed badly? We grade all 32 here.",
           "Winners (Sabres!), losers (Golden Knights!) and su... Now that all the selections have been made, what stands out the most?",
           "NHL free agency 2026: Which players improved their... What are the fantasy hockey implications of every big move in the NHL this offseason? Find out here.",
@@ -259448,27 +259431,27 @@
         ]
       },
       "espn_rss_mlb": {
-        "fetched_at": "2026-06-26T13:16:00.955666",
+        "fetched_at": "2026-07-02T13:01:44.576824",
         "items": [
-          "MLB wants max 5 years for FAs changing teams As part of the next CBA with players, MLB wants a maximum contract length of 5 years for free agents who are switching teams, while organizations will have the ability to keep their own players for up to 6 years, calling it a Cornerstone Player Provision.",
-          "MLBPA proposes ban on prop betting, source says As part of ongoing CBA talks with MLB, the MLBPA has proposed a ban on prop betting on individual players to help combat harassment from disgruntled gamblers, a union source told ESPN.",
-          "Hoyer: Urgency for Peterson trade amid injuries The Cubs acquired veteran left-hander David Peterson from the Mets for a simple reason: They need healthy starting pitchers.",
-          "D-backs activate Kepler after 80-game PED ban The Diamondbacks activated outfielder Max Kepler from the restricted list Thursday following his completion of an 80-game suspension for testing positive for a performance-enhancing drug.",
-          "Rays' combined no-hitter broken up in 9th vs. KC Three Rays pitchers lost their combined no-hitter against the Royals when Carter Jensen hit a two-run homer off Craig Kimbrel in the ninth inning Thursday.",
-          "Seager rejoins Rangers after concussion IL stint Rangers shortstop Corey Seager was activated from the concussion list Thursday, while Cody Freeman was placed on the 10-day injured list with a herniated disk.",
-          "⚾ Biggest strengths for top playoff contenders For clubs currently leading the postseason hunt, here's the one thing driving their success so far.",
-          "Swanson vs. Bregman? A high school catcher over Re... We break down some of the biggest decisions teams had to make at the No. 1 pick -- and whether they were the right choice.",
+          "MLB Power Rankings: Rays, Marlins bring Florida he... Tampa Bay knocks New York out of the AL's top spot and Miami cracks the top 10 in Week 14.",
+          "One player every MLB team should trade or trade fo... null",
+          "Rays' Caminero homers in sixth straight game Rays third baseman Junior Caminero, 22, has become the youngest player since at least 1900 to homer in six straight games.",
+          "Swanson stays hot with 3 HRs, 8 RBIs in 23-3 win Dansby Swanson's historic day included a grand slam and the most RBIs by a Cubs player since Sammy Sosa had nine in 2002.",
+          "Yanks drop 7th straight, longest skid in 3 years The Yankees' losing streak reached seven games - its longest in three years - with a 6-2 loss to the Tigers on Wednesday",
+          "Skenes lit up by Phils, laments lack of execution Pirates ace Paul Skenes lasted only four innings against the Phillies on Wednesday night and allowed a season-high seven earned runs in a 10-6 loss.",
+          "Cavalli: No ill will meant with Contreras remark Nationals pitcher Cade Cavalli has apologized for shouting \"sit down, boy\" at Red Sox first baseman Willson Contreras while instigating a benches-clearing scrum.",
+          "Mets' Cohen on firing Stearns: 'Not gonna do it' Mets owner Steve Cohen said Wednesday that he is not considering dismissing president of baseball operations David Stearns, who is in the third year of a five-year contract, despite a second straight disappointing season.",
+          "A's Rooker to have season-ending knee surgery Two-time All-Star Brent Rooker, who was discovered to have a cartilage tear in his left knee Tuesday, will undergo season-ending surgery.",
+          "MLBPA labor offer eyes roster, demotion changes The Major League Baseball Players Association's latest labor proposal includes increased roster sizes and protection against the number of demotions during the season.",
+          "⚾ The best all-time draft debates with No. 1 pick We break down some of the biggest decisions teams had to make at the No. 1 pick -- and whether they were the right choice.",
+          "All of the special MLB July 4 uniforms and caps During all MLB games on July 4, teams will don newly designed uniforms with special stars-and-stripes themes.",
+          "Red, white and Bobby bobblehead tops MLB's 4th of ... null",
+          "From surging Marlins to slumping Braves: MLB winne... We break down who ruled the past month and what will rock the weeks ahead as baseball enters its most jam-packed month.",
+          "The most important stat in baseball: Why WAR rules... We go deep on the past, present and future of a statistic that is as polarizing as it is powerful.",
+          "How do the top 2026 draft prospects compare to rec... From college arms to prep position players to depth, Kiley McDaniel breaks down how this year's draft class stacks up against previous ones.",
           "2026 MLB All-Star Weekend: Everything you need to ... We have your go-to guide for the summer's biggest event as the Midsummer Classic heads to Philly on July 14.",
-          "MLB Power Rankings: A No. 2 debut and a powerhouse... As we hit the official midway point of the 2026 season with teams playing their 81st games this week, our top 10 sees a bit of a shake-up.",
-          "Olney: How ABS has helped propel a left-handed-hit... Left-handers are crushing the ball in 2026 -- and MLB's new automated ball-strike challenge system might be part of the reason why.",
-          "'If you can't beat the weather, wear it': Dunedin ... The Single-A affiliate of the Toronto Blue Jays faced 24 weather delays, 10 postponements and six cancellations in 2025.",
-          "Jeff Passan hands out unexpected MLB awards before... Who has caught our attention with the most amazing -- or embarrassing moments this season? We hand out hardware, with a twist.",
-          "Ranking the top 100 MLB trade deadline candidates ... Skubal to the ...? All-Star outfielders and shortstops available? Here are the big names your team could be targeting.",
-          "Is an MLB trade deadline overhaul ahead for strugg... It has been a bumpy ride in San Francisco so far this season. Here's what it means for the Giants' deadline direction.",
-          "What to know about MLB's draft proposal: No more h... The league offered up a plan that would add an international draft and shake up the domestic version.",
-          "MLB mock draft: Who every team should take with it... null",
-          "Caglianone hits 40 homers? Contreras brothers hit ... Eric Karabell looks into the crystal ball to tell fantasy baseball managers what might come to pass in the not-too-distant future.",
-          "Seager returns to Rangers lineup and other news fo... All of the important fantasy spin and actionable takeaways resulting from the latest baseball news."
+          "Why you should trade for Guerrero Jr., Tucker or J... There's three fantasy stars who's slumps are lasting longer than normal -- and we shouldn't worry.",
+          "Every team's odds to win the 2026 World Series: Do... Every MLB team's odds to win the 2026 World Series, led by the Dodgers. Phillies, Brewers coming on strong."
         ]
       }
     },
@@ -259476,20 +259459,6 @@
     "prediction_markets": {},
     "signal_accuracy": {
       "_processed_ids": [
-        "401815379",
-        "401815381",
-        "401815382",
-        "401815384",
-        "401815385",
-        "401815383",
-        "401815386",
-        "401815389",
-        "401815387",
-        "401815388",
-        "401871410",
-        "401815390",
-        "401815391",
-        "401815392",
         "401815393",
         "401815394",
         "401815395",
@@ -259975,7 +259944,21 @@
         "401815960",
         "401815961",
         "401815962",
-        "401815963"
+        "401815963",
+        "401815964",
+        "401815967",
+        "401815969",
+        "401815965",
+        "401815966",
+        "401815970",
+        "401815968",
+        "401815971",
+        "401815974",
+        "401815973",
+        "401815972",
+        "401815975",
+        "401815977",
+        "401815978"
       ],
       "mlb": {
         "sentiment": {
@@ -259988,7 +259971,7 @@
   },
   "scout": {
     "version": "1.0",
-    "last_updated": "2026-07-01T13:37:26.634013",
+    "last_updated": "2026-07-02T13:02:34.791992",
     "players": {},
     "officials": {
       "nfl": {},
@@ -260009,17 +259992,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-07-01T13:37:25.480014"
-      },
-      "401815854": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-06-24T13:27:18.307541"
+        "updated_at": "2026-07-02T13:02:33.389351"
       },
       "401879412": {
         "home_adjustment": 0.0,
@@ -260029,7 +260002,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-07-01T13:37:26.058849"
+        "updated_at": "2026-07-02T13:02:34.036589"
       },
       "401815895": {
         "home_adjustment": 0.0,
@@ -260049,7 +260022,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-07-01T13:37:26.633468"
+        "updated_at": "2026-07-02T13:02:34.791694"
       },
       "401815904": {
         "home_adjustment": 0.0,
@@ -260069,7 +260042,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-07-01T13:37:24.315667"
+        "updated_at": "2026-07-02T13:02:31.937623"
       },
       "401881923": {
         "home_adjustment": 0.0,
@@ -260079,7 +260052,17 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-07-01T13:37:24.888194"
+        "updated_at": "2026-07-02T13:02:32.706610"
+      },
+      "401815976": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-07-02T13:02:31.248187"
       }
     },
     "official_assignments": {},
@@ -260087,7 +260070,7 @@
     "cache": {},
     "error_log": []
   },
-  "last_saved": "2026-07-01T13:39:54.003193",
+  "last_saved": "2026-07-02T13:03:36.896139",
   "transformer": {
     "trained": true,
     "sports_active": [
@@ -260181,14 +260164,14 @@
     "nba_possession_available": false
   },
   "audit": {
-    "last_run": "2026-07-01T13:39:54.003143",
+    "last_run": "2026-07-02T13:03:36.896085",
     "significant_biases": [],
     "clean_segments": [],
     "total_predictions_analyzed": 0,
     "last_significant_finding": null
   },
   "baseline": {
-    "last_evaluated": "2026-07-01T13:39:54.003159",
+    "last_evaluated": "2026-07-02T13:03:36.896103",
     "system_accuracy": {},
     "baseline_accuracy": {
       "always_home": {},
@@ -260201,7 +260184,7 @@
     "alarm_count": 0
   },
   "portfolio": {
-    "last_updated": "2026-07-01T13:39:54.003189",
+    "last_updated": "2026-07-02T13:03:36.896134",
     "recommended_bets": [],
     "total_at_risk": 0.0,
     "bankroll_units": 100.0
