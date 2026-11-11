@@ -1,453 +1,478 @@
 {
   "version": "1.0",
   "last_trained": "2026-03-14T21:28:48.266005",
-  "last_daily_update": "2026-11-10T18:40:04.111071",
+  "last_daily_update": "2026-11-11T18:38:19.877451",
   "training_status": "trained",
   "training_log": [
     {
-      "time": "2026-11-10T18:34:01.720121",
+      "time": "2026-11-11T18:31:21.336311",
       "level": "INFO",
-      "message": "[18:34:01] INFO: EDGE Predict v1.0 starting in mode: update"
+      "message": "[18:31:21] INFO: EDGE Predict v1.0 starting in mode: update"
     },
     {
-      "time": "2026-11-10T18:34:01.720161",
+      "time": "2026-11-11T18:31:21.336346",
       "level": "INFO",
-      "message": "[18:34:01] INFO: BallDontLie key: set"
+      "message": "[18:31:21] INFO: BallDontLie key: set"
     },
     {
-      "time": "2026-11-10T18:34:01.720205",
+      "time": "2026-11-11T18:31:21.336367",
       "level": "INFO",
-      "message": "[18:34:01] INFO: Odds API key:    set"
+      "message": "[18:31:21] INFO: Odds API key:    set"
     },
     {
-      "time": "2026-11-10T18:34:01.720241",
+      "time": "2026-11-11T18:31:21.336383",
       "level": "INFO",
-      "message": "[18:34:01] INFO: OpenWeather key: set"
+      "message": "[18:31:21] INFO: OpenWeather key: set"
     },
     {
-      "time": "2026-11-10T18:34:01.720289",
+      "time": "2026-11-11T18:31:21.336405",
       "level": "INFO",
-      "message": "[18:34:01] INFO: XGBoost:         available"
+      "message": "[18:31:21] INFO: XGBoost:         available"
     },
     {
-      "time": "2026-11-10T18:34:01.774372",
+      "time": "2026-11-11T18:31:21.379910",
       "level": "INFO",
-      "message": "[18:34:01] INFO: XGBoost models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaaf', 'ncaabm', 'ncaabw']"
+      "message": "[18:31:21] INFO: XGBoost models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaaf', 'ncaabm', 'ncaabw']"
     },
     {
-      "time": "2026-11-10T18:34:01.841696",
+      "time": "2026-11-11T18:31:21.436273",
       "level": "INFO",
-      "message": "[18:34:01] INFO: Data loaded (version: 1.0)"
+      "message": "[18:31:21] INFO: Data loaded (version: 1.0)"
     },
     {
-      "time": "2026-11-10T18:34:01.842804",
+      "time": "2026-11-11T18:31:21.437101",
       "level": "INFO",
-      "message": "[18:34:01] INFO: Running daily update..."
+      "message": "[18:31:21] INFO: Running daily update..."
     },
     {
-      "time": "2026-11-10T18:34:03.099008",
+      "time": "2026-11-11T18:31:22.832921",
       "level": "INFO",
-      "message": "[18:34:03] INFO: [edge] Fetching market and sentiment signals..."
+      "message": "[18:31:22] INFO: [edge] Fetching market and sentiment signals..."
     },
     {
-      "time": "2026-11-10T18:34:03.099147",
+      "time": "2026-11-11T18:31:22.833015",
       "level": "INFO",
-      "message": "[18:34:03] INFO: [edge] Starting update..."
+      "message": "[18:31:22] INFO: [edge] Starting update..."
     },
     {
-      "time": "2026-11-10T18:34:03.099326",
+      "time": "2026-11-11T18:31:22.833150",
       "level": "INFO",
-      "message": "[18:34:03] INFO: [edge] Adaptive learning updated."
+      "message": "[18:31:22] INFO: [edge] Adaptive learning updated."
     },
     {
-      "time": "2026-11-10T18:34:03.099401",
+      "time": "2026-11-11T18:31:22.833215",
       "level": "INFO",
-      "message": "[18:34:03] INFO: [edge] Fetching odds lines..."
+      "message": "[18:31:22] INFO: [edge] Fetching odds lines..."
     },
     {
-      "time": "2026-11-10T18:34:03.908426",
+      "time": "2026-11-11T18:31:24.051425",
       "level": "INFO",
-      "message": "[18:34:03] INFO: [edge] Fetching Polymarket probabilities..."
+      "message": "[18:31:24] INFO: [edge] Fetching Polymarket probabilities..."
     },
     {
-      "time": "2026-11-10T18:34:04.153736",
+      "time": "2026-11-11T18:31:24.168738",
       "level": "INFO",
-      "message": "[18:34:04] INFO: [edge] Polymarket: matched 1 markets"
+      "message": "[18:31:24] INFO: [edge] Polymarket: matched 1 markets"
     },
     {
-      "time": "2026-11-10T18:34:04.154066",
+      "time": "2026-11-11T18:31:24.168996",
       "level": "INFO",
-      "message": "[18:34:04] INFO: [edge] Gathering sentiment signals..."
+      "message": "[18:31:24] INFO: [edge] Gathering sentiment signals..."
     },
     {
-      "time": "2026-11-10T18:37:21.142138",
+      "time": "2026-11-11T18:34:43.308641",
       "level": "INFO",
-      "message": "[18:37:21] INFO: [edge] Complete. Sharp signals: 316, Sentiment: 248, Prediction markets: 3"
+      "message": "[18:34:43] INFO: [edge] Complete. Sharp signals: 316, Sentiment: 240, Prediction markets: 3"
     },
     {
-      "time": "2026-11-10T18:37:21.142225",
+      "time": "2026-11-11T18:34:43.308694",
       "level": "INFO",
-      "message": "[18:37:21] INFO: [edge] Complete."
+      "message": "[18:34:43] INFO: [edge] Complete."
     },
     {
-      "time": "2026-11-10T18:37:21.142272",
+      "time": "2026-11-11T18:34:43.308717",
       "level": "INFO",
-      "message": "[18:37:21] INFO: [scout] Fetching lineup and official data..."
+      "message": "[18:34:43] INFO: [scout] Fetching lineup and official data..."
     },
     {
-      "time": "2026-11-10T18:37:21.142345",
+      "time": "2026-11-11T18:34:43.308762",
       "level": "INFO",
-      "message": "[18:37:21] INFO: [scout] Starting update..."
+      "message": "[18:34:43] INFO: [scout] Starting update..."
     },
     {
-      "time": "2026-11-10T18:37:29.927397",
+      "time": "2026-11-11T18:34:53.532596",
       "level": "INFO",
-      "message": "[18:37:29] INFO: [scout] Complete. Lineup adjustments: 248, Official assignments: 0"
+      "message": "[18:34:53] INFO: [scout] Complete. Lineup adjustments: 240, Official assignments: 0"
     },
     {
-      "time": "2026-11-10T18:37:29.927444",
+      "time": "2026-11-11T18:34:53.532634",
       "level": "INFO",
-      "message": "[18:37:29] INFO: [scout] Complete."
+      "message": "[18:34:53] INFO: [scout] Complete."
     },
     {
-      "time": "2026-11-10T18:37:29.927472",
+      "time": "2026-11-11T18:34:53.532651",
       "level": "INFO",
-      "message": "[18:37:29] INFO: Fetching standings: nfl"
+      "message": "[18:34:53] INFO: Fetching standings: nfl"
     },
     {
-      "time": "2026-11-10T18:37:30.047224",
+      "time": "2026-11-11T18:34:53.734098",
       "level": "WARNING",
-      "message": "[18:37:30] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/football/nfl/s"
+      "message": "[18:34:53] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/football/nfl/s"
     },
     {
-      "time": "2026-11-10T18:37:30.549152",
+      "time": "2026-11-11T18:34:54.235874",
       "level": "INFO",
-      "message": "[18:37:30] INFO: Fetching standings: nba"
+      "message": "[18:34:54] INFO: Fetching standings: nba"
     },
     {
-      "time": "2026-11-10T18:37:30.653416",
+      "time": "2026-11-11T18:34:54.480373",
       "level": "WARNING",
-      "message": "[18:37:30] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
+      "message": "[18:34:54] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
     },
     {
-      "time": "2026-11-10T18:37:31.154933",
+      "time": "2026-11-11T18:34:54.981689",
       "level": "INFO",
-      "message": "[18:37:31] INFO: Fetching standings: mlb"
+      "message": "[18:34:54] INFO: Fetching standings: mlb"
     },
     {
-      "time": "2026-11-10T18:37:31.268495",
+      "time": "2026-11-11T18:34:55.127658",
       "level": "WARNING",
-      "message": "[18:37:31] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/s"
+      "message": "[18:34:55] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/s"
     },
     {
-      "time": "2026-11-10T18:37:31.769945",
+      "time": "2026-11-11T18:34:55.629164",
       "level": "INFO",
-      "message": "[18:37:31] INFO: Fetching standings: nhl"
+      "message": "[18:34:55] INFO: Fetching standings: nhl"
     },
     {
-      "time": "2026-11-10T18:37:31.888369",
+      "time": "2026-11-11T18:34:55.764056",
       "level": "WARNING",
-      "message": "[18:37:31] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/sta"
+      "message": "[18:34:55] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/sta"
     },
     {
-      "time": "2026-11-10T18:37:32.389563",
+      "time": "2026-11-11T18:34:56.265250",
       "level": "INFO",
-      "message": "[18:37:32] INFO: Fetching standings: ncaaf"
+      "message": "[18:34:56] INFO: Fetching standings: ncaaf"
     },
     {
-      "time": "2026-11-10T18:37:32.501602",
+      "time": "2026-11-11T18:34:56.381027",
       "level": "WARNING",
-      "message": "[18:37:32] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/football/colle"
+      "message": "[18:34:56] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/football/colle"
     },
     {
-      "time": "2026-11-10T18:37:33.002762",
+      "time": "2026-11-11T18:34:56.882838",
       "level": "INFO",
-      "message": "[18:37:33] INFO: Fetching standings: ncaabm"
+      "message": "[18:34:56] INFO: Fetching standings: ncaabm"
     },
     {
-      "time": "2026-11-10T18:37:33.150707",
+      "time": "2026-11-11T18:34:57.025277",
       "level": "WARNING",
-      "message": "[18:37:33] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/men"
+      "message": "[18:34:57] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/men"
     },
     {
-      "time": "2026-11-10T18:37:33.652256",
+      "time": "2026-11-11T18:34:57.527087",
       "level": "INFO",
-      "message": "[18:37:33] INFO: Fetching standings: ncaabw"
+      "message": "[18:34:57] INFO: Fetching standings: ncaabw"
     },
     {
-      "time": "2026-11-10T18:37:33.841229",
+      "time": "2026-11-11T18:34:57.692085",
       "level": "WARNING",
-      "message": "[18:37:33] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/wom"
+      "message": "[18:34:57] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/wom"
     },
     {
-      "time": "2026-11-10T18:37:34.343109",
+      "time": "2026-11-11T18:34:58.193944",
       "level": "INFO",
-      "message": "[18:37:34] INFO: Generating predictions: nfl"
+      "message": "[18:34:58] INFO: Generating predictions: nfl"
     },
     {
-      "time": "2026-11-10T18:37:34.429393",
+      "time": "2026-11-11T18:34:58.267447",
       "level": "INFO",
-      "message": "[18:37:34] INFO: ESPN scoreboard nfl: 15 games"
+      "message": "[18:34:58] INFO: ESPN scoreboard nfl: 14 games"
     },
     {
-      "time": "2026-11-10T18:37:34.948487",
-      "level": "INFO",
-      "message": "[18:37:34] INFO: [mind] LSTM models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaabm', 'ncaabw']"
-    },
-    {
-      "time": "2026-11-10T18:37:35.339201",
+      "time": "2026-11-11T18:34:58.417974",
       "level": "WARNING",
-      "message": "[18:37:35] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:34:58] WARNING: HTTP 401 from https://api.the-odds-api.com/v4/sports/americanfootball_nfl/"
     },
     {
-      "time": "2026-11-10T18:37:39.874737",
+      "time": "2026-11-11T18:34:58.962602",
       "level": "INFO",
-      "message": "[18:37:39] INFO:   nfl: 15 predictions generated"
+      "message": "[18:34:58] INFO: [mind] LSTM models loaded: ['nfl', 'nba', 'mlb', 'nhl', 'ncaabm', 'ncaabw']"
     },
     {
-      "time": "2026-11-10T18:37:40.175171",
-      "level": "INFO",
-      "message": "[18:37:40] INFO: Generating predictions: nba"
+      "time": "2026-11-11T18:34:59.213813",
+      "level": "WARNING",
+      "message": "[18:34:59] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:37:40.276683",
-      "level": "INFO",
-      "message": "[18:37:40] INFO: ESPN scoreboard nba: 6 games"
-    },
-    {
-      "time": "2026-11-10T18:37:40.680458",
-      "level": "INFO",
-      "message": "[18:37:40] INFO:   nba: 6 predictions generated"
-    },
-    {
-      "time": "2026-11-10T18:37:40.980685",
-      "level": "INFO",
-      "message": "[18:37:40] INFO: Generating predictions: mlb"
-    },
-    {
-      "time": "2026-11-10T18:37:41.085934",
-      "level": "INFO",
-      "message": "[18:37:41] INFO: ESPN scoreboard mlb: 1 games"
-    },
-    {
-      "time": "2026-11-10T18:37:41.086086",
-      "level": "INFO",
-      "message": "[18:37:41] INFO:   mlb is out of regular season (03-20–10-31) — skipping predictions"
-    },
-    {
-      "time": "2026-11-10T18:37:41.086128",
-      "level": "INFO",
-      "message": "[18:37:41] INFO: Generating predictions: nhl"
-    },
-    {
-      "time": "2026-11-10T18:37:41.195315",
-      "level": "INFO",
-      "message": "[18:37:41] INFO: ESPN scoreboard nhl: 7 games"
-    },
-    {
-      "time": "2026-11-10T18:37:41.725939",
-      "level": "INFO",
-      "message": "[18:37:41] INFO:   nhl: 7 predictions generated"
-    },
-    {
-      "time": "2026-11-10T18:37:42.026353",
-      "level": "INFO",
-      "message": "[18:37:42] INFO: Generating predictions: ncaaf"
-    },
-    {
-      "time": "2026-11-10T18:37:42.179345",
-      "level": "INFO",
-      "message": "[18:37:42] INFO: ESPN scoreboard ncaaf: 20 games"
-    },
-    {
-      "time": "2026-11-10T18:38:24.713383",
+      "time": "2026-11-11T18:35:48.766154",
       "level": "ERROR",
-      "message": "[18:38:24] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
+      "message": "[18:35:48] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
     },
     {
-      "time": "2026-11-10T18:38:24.900693",
+      "time": "2026-11-11T18:35:48.955189",
       "level": "WARNING",
-      "message": "[18:38:24] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:35:48] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:07.260967",
+      "time": "2026-11-11T18:36:55.694071",
       "level": "ERROR",
-      "message": "[18:39:07] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
+      "message": "[18:36:55] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
     },
     {
-      "time": "2026-11-10T18:39:49.491297",
-      "level": "ERROR",
-      "message": "[18:39:49] ERROR: Timeout after 2 attempts: https://api.open-meteo.com/v1/forecast"
-    },
-    {
-      "time": "2026-11-10T18:39:50.024124",
+      "time": "2026-11-11T18:36:55.875931",
       "level": "WARNING",
-      "message": "[18:39:50] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:36:55] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:50.196566",
+      "time": "2026-11-11T18:36:55.906792",
+      "level": "INFO",
+      "message": "[18:36:55] INFO:   nfl: 14 predictions generated"
+    },
+    {
+      "time": "2026-11-11T18:36:56.207064",
+      "level": "INFO",
+      "message": "[18:36:56] INFO: Generating predictions: nba"
+    },
+    {
+      "time": "2026-11-11T18:36:56.309291",
+      "level": "INFO",
+      "message": "[18:36:56] INFO: ESPN scoreboard nba: 10 games"
+    },
+    {
+      "time": "2026-11-11T18:36:56.476528",
       "level": "WARNING",
-      "message": "[18:39:50] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:36:56] WARNING: HTTP 401 from https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
     },
     {
-      "time": "2026-11-10T18:39:51.021584",
+      "time": "2026-11-11T18:36:56.822381",
+      "level": "INFO",
+      "message": "[18:36:56] INFO:   nba: 10 predictions generated"
+    },
+    {
+      "time": "2026-11-11T18:36:57.122763",
+      "level": "INFO",
+      "message": "[18:36:57] INFO: Generating predictions: mlb"
+    },
+    {
+      "time": "2026-11-11T18:36:57.216100",
+      "level": "INFO",
+      "message": "[18:36:57] INFO: ESPN scoreboard mlb: 1 games"
+    },
+    {
+      "time": "2026-11-11T18:36:57.216238",
+      "level": "INFO",
+      "message": "[18:36:57] INFO:   mlb is out of regular season (03-20–10-31) — skipping predictions"
+    },
+    {
+      "time": "2026-11-11T18:36:57.216264",
+      "level": "INFO",
+      "message": "[18:36:57] INFO: Generating predictions: nhl"
+    },
+    {
+      "time": "2026-11-11T18:36:57.342908",
+      "level": "INFO",
+      "message": "[18:36:57] INFO: ESPN scoreboard nhl: 6 games"
+    },
+    {
+      "time": "2026-11-11T18:36:57.494543",
       "level": "WARNING",
-      "message": "[18:39:51] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:36:57] WARNING: HTTP 401 from https://api.the-odds-api.com/v4/sports/icehockey_nhl/odds"
     },
     {
-      "time": "2026-11-10T18:39:51.197759",
+      "time": "2026-11-11T18:36:57.683342",
+      "level": "INFO",
+      "message": "[18:36:57] INFO:   nhl: 6 predictions generated"
+    },
+    {
+      "time": "2026-11-11T18:36:57.983595",
+      "level": "INFO",
+      "message": "[18:36:57] INFO: Generating predictions: ncaaf"
+    },
+    {
+      "time": "2026-11-11T18:36:58.113685",
+      "level": "INFO",
+      "message": "[18:36:58] INFO: ESPN scoreboard ncaaf: 20 games"
+    },
+    {
+      "time": "2026-11-11T18:36:58.283466",
       "level": "WARNING",
-      "message": "[18:39:51] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:36:58] WARNING: HTTP 401 from https://api.the-odds-api.com/v4/sports/americanfootball_ncaa"
     },
     {
-      "time": "2026-11-10T18:39:51.911190",
+      "time": "2026-11-11T18:37:43.454380",
       "level": "WARNING",
-      "message": "[18:39:51] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:37:43] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:52.091350",
+      "time": "2026-11-11T18:38:06.335076",
       "level": "WARNING",
-      "message": "[18:39:52] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:38:06] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:52.389360",
+      "time": "2026-11-11T18:38:07.335830",
       "level": "WARNING",
-      "message": "[18:39:52] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:38:07] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:52.572498",
+      "time": "2026-11-11T18:38:07.561771",
       "level": "WARNING",
-      "message": "[18:39:52] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:38:07] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:52.765619",
+      "time": "2026-11-11T18:38:08.117470",
       "level": "WARNING",
-      "message": "[18:39:52] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:38:08] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:52.944912",
+      "time": "2026-11-11T18:38:08.338560",
       "level": "WARNING",
-      "message": "[18:39:52] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:38:08] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:53.120880",
+      "time": "2026-11-11T18:38:08.703542",
       "level": "WARNING",
-      "message": "[18:39:53] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
+      "message": "[18:38:08] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:53.123832",
-      "level": "INFO",
-      "message": "[18:39:53] INFO:   ncaaf: 20 predictions generated"
-    },
-    {
-      "time": "2026-11-10T18:39:53.424136",
-      "level": "INFO",
-      "message": "[18:39:53] INFO: Generating predictions: ncaabm"
-    },
-    {
-      "time": "2026-11-10T18:39:53.596848",
-      "level": "INFO",
-      "message": "[18:39:53] INFO: ESPN scoreboard ncaabm: 8 games"
-    },
-    {
-      "time": "2026-11-10T18:39:54.238430",
-      "level": "INFO",
-      "message": "[18:39:54] INFO:   ncaabm: 8 predictions generated"
-    },
-    {
-      "time": "2026-11-10T18:39:54.538685",
-      "level": "INFO",
-      "message": "[18:39:54] INFO: Generating predictions: ncaabw"
-    },
-    {
-      "time": "2026-11-10T18:39:54.674585",
-      "level": "INFO",
-      "message": "[18:39:54] INFO: ESPN scoreboard ncaabw: 8 games"
-    },
-    {
-      "time": "2026-11-10T18:39:54.767376",
+      "time": "2026-11-11T18:38:08.932158",
       "level": "WARNING",
-      "message": "[18:39:54] WARNING: HTTP 404 from https://api.the-odds-api.com/v4/sports/basketball_ncaawb/odd"
+      "message": "[18:38:08] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:39:55.149878",
-      "level": "INFO",
-      "message": "[18:39:55] INFO:   ncaabw: 8 predictions generated"
-    },
-    {
-      "time": "2026-11-10T18:39:55.456636",
-      "level": "INFO",
-      "message": "[18:39:55] INFO: [mind] Updating calibration with resolved predictions..."
-    },
-    {
-      "time": "2026-11-10T18:39:55.456781",
-      "level": "INFO",
-      "message": "[18:39:55] INFO: [mind] Updating calibration..."
-    },
-    {
-      "time": "2026-11-10T18:39:55.456867",
-      "level": "INFO",
-      "message": "[18:39:55] INFO: [mind] Calibration updated: 0 new resolved predictions"
-    },
-    {
-      "time": "2026-11-10T18:39:55.456913",
-      "level": "INFO",
-      "message": "[18:39:55] INFO: [mind] Calibration updated."
-    },
-    {
-      "time": "2026-11-10T18:39:55.456948",
-      "level": "INFO",
-      "message": "[18:39:55] INFO: Refreshing ESPN stats..."
-    },
-    {
-      "time": "2026-11-10T18:39:56.231544",
-      "level": "INFO",
-      "message": "[18:39:56] INFO: ESPN stats nfl: 0 teams"
-    },
-    {
-      "time": "2026-11-10T18:39:56.611153",
-      "level": "INFO",
-      "message": "[18:39:56] INFO: ESPN stats nba: 0 teams"
-    },
-    {
-      "time": "2026-11-10T18:39:59.234273",
-      "level": "INFO",
-      "message": "[18:39:59] INFO: ESPN stats mlb: 0 teams"
-    },
-    {
-      "time": "2026-11-10T18:40:00.035704",
-      "level": "INFO",
-      "message": "[18:40:00] INFO: ESPN stats nhl: 0 teams"
-    },
-    {
-      "time": "2026-11-10T18:40:01.787180",
-      "level": "INFO",
-      "message": "[18:40:01] INFO: ESPN stats ncaaf: 0 teams"
-    },
-    {
-      "time": "2026-11-10T18:40:03.353280",
-      "level": "INFO",
-      "message": "[18:40:03] INFO: ESPN stats ncaabm: 0 teams"
-    },
-    {
-      "time": "2026-11-10T18:40:03.804360",
+      "time": "2026-11-11T18:38:09.144253",
       "level": "WARNING",
-      "message": "[18:40:03] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/wom"
+      "message": "[18:38:09] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:40:04.110239",
+      "time": "2026-11-11T18:38:09.349949",
       "level": "WARNING",
-      "message": "[18:40:04] WARNING: HTTP 403 from https://barttorvik.com/trank.php?year=2026&json=1"
+      "message": "[18:38:09] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:40:04.111056",
+      "time": "2026-11-11T18:38:09.572655",
       "level": "WARNING",
-      "message": "[18:40:04] WARNING: Barttorvik 2026: unexpected response format"
+      "message": "[18:38:09] WARNING: HTTP 404 from https://api.openweathermap.org/data/2.5/forecast"
     },
     {
-      "time": "2026-11-10T18:40:04.111116",
+      "time": "2026-11-11T18:38:09.575382",
       "level": "INFO",
-      "message": "[18:40:04] INFO: Daily update complete"
+      "message": "[18:38:09] INFO:   ncaaf: 20 predictions generated"
+    },
+    {
+      "time": "2026-11-11T18:38:09.875670",
+      "level": "INFO",
+      "message": "[18:38:09] INFO: Generating predictions: ncaabm"
+    },
+    {
+      "time": "2026-11-11T18:38:10.043010",
+      "level": "INFO",
+      "message": "[18:38:10] INFO: ESPN scoreboard ncaabm: 7 games"
+    },
+    {
+      "time": "2026-11-11T18:38:10.190321",
+      "level": "WARNING",
+      "message": "[18:38:10] WARNING: HTTP 401 from https://api.the-odds-api.com/v4/sports/basketball_ncaab/odds"
+    },
+    {
+      "time": "2026-11-11T18:38:10.413767",
+      "level": "INFO",
+      "message": "[18:38:10] INFO:   ncaabm: 7 predictions generated"
+    },
+    {
+      "time": "2026-11-11T18:38:10.714058",
+      "level": "INFO",
+      "message": "[18:38:10] INFO: Generating predictions: ncaabw"
+    },
+    {
+      "time": "2026-11-11T18:38:10.839161",
+      "level": "INFO",
+      "message": "[18:38:10] INFO: ESPN scoreboard ncaabw: 5 games"
+    },
+    {
+      "time": "2026-11-11T18:38:10.958231",
+      "level": "WARNING",
+      "message": "[18:38:10] WARNING: HTTP 404 from https://api.the-odds-api.com/v4/sports/basketball_ncaawb/odd"
+    },
+    {
+      "time": "2026-11-11T18:38:11.111147",
+      "level": "INFO",
+      "message": "[18:38:11] INFO:   ncaabw: 5 predictions generated"
+    },
+    {
+      "time": "2026-11-11T18:38:11.411786",
+      "level": "INFO",
+      "message": "[18:38:11] INFO: [mind] Updating calibration with resolved predictions..."
+    },
+    {
+      "time": "2026-11-11T18:38:11.411976",
+      "level": "INFO",
+      "message": "[18:38:11] INFO: [mind] Updating calibration..."
+    },
+    {
+      "time": "2026-11-11T18:38:11.412038",
+      "level": "INFO",
+      "message": "[18:38:11] INFO: [mind] Calibration updated: 0 new resolved predictions"
+    },
+    {
+      "time": "2026-11-11T18:38:11.412063",
+      "level": "INFO",
+      "message": "[18:38:11] INFO: [mind] Calibration updated."
+    },
+    {
+      "time": "2026-11-11T18:38:11.412083",
+      "level": "INFO",
+      "message": "[18:38:11] INFO: Refreshing ESPN stats..."
+    },
+    {
+      "time": "2026-11-11T18:38:12.098971",
+      "level": "INFO",
+      "message": "[18:38:12] INFO: ESPN stats nfl: 0 teams"
+    },
+    {
+      "time": "2026-11-11T18:38:12.463983",
+      "level": "INFO",
+      "message": "[18:38:12] INFO: ESPN stats nba: 0 teams"
+    },
+    {
+      "time": "2026-11-11T18:38:15.160081",
+      "level": "INFO",
+      "message": "[18:38:15] INFO: ESPN stats mlb: 0 teams"
+    },
+    {
+      "time": "2026-11-11T18:38:16.154535",
+      "level": "INFO",
+      "message": "[18:38:16] INFO: ESPN stats nhl: 0 teams"
+    },
+    {
+      "time": "2026-11-11T18:38:17.804783",
+      "level": "INFO",
+      "message": "[18:38:17] INFO: ESPN stats ncaaf: 0 teams"
+    },
+    {
+      "time": "2026-11-11T18:38:19.059486",
+      "level": "INFO",
+      "message": "[18:38:19] INFO: ESPN stats ncaabm: 0 teams"
+    },
+    {
+      "time": "2026-11-11T18:38:19.521255",
+      "level": "WARNING",
+      "message": "[18:38:19] WARNING: HTTP 404 from https://site.api.espn.com/apis/site/v2/sports/basketball/wom"
+    },
+    {
+      "time": "2026-11-11T18:38:19.876493",
+      "level": "WARNING",
+      "message": "[18:38:19] WARNING: HTTP 403 from https://barttorvik.com/trank.php?year=2026&json=1"
+    },
+    {
+      "time": "2026-11-11T18:38:19.877437",
+      "level": "WARNING",
+      "message": "[18:38:19] WARNING: Barttorvik 2026: unexpected response format"
+    },
+    {
+      "time": "2026-11-11T18:38:19.877491",
+      "level": "INFO",
+      "message": "[18:38:19] INFO: Daily update complete"
     }
   ],
   "weights": {
@@ -743,8 +768,8 @@
     "nfl": {
       "0.5": {
         "predicted": 0.5,
-        "correct": 137,
-        "total": 299
+        "correct": 141,
+        "total": 311
       }
     },
     "nba": {
@@ -779,14 +804,14 @@
       "0.5": {
         "predicted": 0.5,
         "correct": 50,
-        "total": 68
+        "total": 69
       }
     },
     "ncaabw": {
       "0.5": {
         "predicted": 0.5,
-        "correct": 84,
-        "total": 103
+        "correct": 85,
+        "total": 104
       }
     }
   },
@@ -256312,489 +256337,558 @@
   "predictions": {
     "nfl": [
       {
-        "id": "401873037",
-        "home": "Baltimore Ravens",
-        "away": "Jacksonville Jaguars",
-        "date": "2026-11-06",
-        "venue": "M&T Bank Stadium",
-        "pick": "Baltimore Ravens",
-        "home_prob": 0.5005325126171112,
-        "win_probability": 0.5005325126171112,
+        "id": "401873052",
+        "home": "New York Giants",
+        "away": "Washington Commanders",
+        "date": "2026-11-13",
+        "venue": "MetLife Stadium",
+        "pick": "New York Giants",
+        "home_prob": 0.49875479358434677,
+        "win_probability": 0.49875479358434677,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30053251261711117,
-        "confidence_upper": 0.7005325126171111,
-        "momentum_score": 0.5532624804973603,
+        "confidence_lower": 0.29875479358434676,
+        "confidence_upper": 0.6987547935843468,
+        "momentum_score": 0.5349850809574127,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:34.989325"
+        "generated_at": "2026-11-11T18:34:58.988024"
       },
       {
-        "id": "401873038",
+        "id": "401873053",
+        "home": "Detroit Lions",
+        "away": "New England Patriots",
+        "date": "2026-11-15",
+        "venue": "FC Bayern Munich Stadium",
+        "pick": "Detroit Lions",
+        "home_prob": 0.5004971429347992,
+        "win_probability": 0.5004971429347992,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3004971429347992,
+        "confidence_upper": 0.7004971429347993,
+        "momentum_score": 0.5545740008354187,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:34:59.244366"
+      },
+      {
+        "id": "401873058",
         "home": "Atlanta Falcons",
-        "away": "Cincinnati Bengals",
-        "date": "2026-11-08",
-        "venue": "Santiago Bernabéu",
+        "away": "Kansas City Chiefs",
+        "date": "2026-11-15",
+        "venue": "Mercedes-Benz Stadium",
         "pick": "Atlanta Falcons",
-        "home_prob": 0.45961925578117374,
-        "win_probability": 0.45961925578117374,
+        "home_prob": 0.49982374181747435,
+        "win_probability": 0.49982374181747435,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.25961925578117373,
-        "confidence_upper": 0.6596192557811738,
-        "momentum_score": 0.5474565064907074,
+        "confidence_lower": 0.29982374181747434,
+        "confidence_upper": 0.6998237418174744,
+        "momentum_score": 0.5479047429561615,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:35.390100"
+        "generated_at": "2026-11-11T18:34:59.437447"
       },
       {
-        "id": "401873040",
+        "id": "401873056",
+        "home": "Cleveland Browns",
+        "away": "Houston Texans",
+        "date": "2026-11-15",
+        "venue": "Huntington Bank Field",
+        "pick": "Cleveland Browns",
+        "home_prob": 0.49957024052143095,
+        "win_probability": 0.49957024052143095,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.29957024052143094,
+        "confidence_upper": 0.699570240521431,
+        "momentum_score": 0.5397781705856324,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:35:00.109962"
+      },
+      {
+        "id": "401873060",
+        "home": "Green Bay Packers",
+        "away": "Minnesota Vikings",
+        "date": "2026-11-15",
+        "venue": "Lambeau Field",
+        "pick": "Green Bay Packers",
+        "home_prob": 0.49986670479774475,
+        "win_probability": 0.49986670479774475,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.29986670479774474,
+        "confidence_upper": 0.6998667047977447,
+        "momentum_score": 0.5511518013477326,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:35:00.681915"
+      },
+      {
+        "id": "401873057",
+        "home": "Tennessee Titans",
+        "away": "Jacksonville Jaguars",
+        "date": "2026-11-15",
+        "venue": "Nissan Stadium",
+        "pick": "Tennessee Titans",
+        "home_prob": 0.4997230529785156,
+        "win_probability": 0.4997230529785156,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.2997230529785156,
+        "confidence_upper": 0.6997230529785157,
+        "momentum_score": 0.5355746585130692,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:35:01.209129"
+      },
+      {
+        "id": "401873059",
         "home": "Indianapolis Colts",
-        "away": "Dallas Cowboys",
-        "date": "2026-11-08",
+        "away": "Miami Dolphins",
+        "date": "2026-11-15",
         "venue": "Lucas Oil Stadium",
         "pick": "Indianapolis Colts",
-        "home_prob": 0.5801662109851837,
-        "win_probability": 0.5801662109851837,
+        "home_prob": 0.4997325116634369,
+        "win_probability": 0.4997325116634369,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3801662109851837,
-        "confidence_upper": 0.7801662109851837,
-        "momentum_score": 0.5466615295410157,
+        "confidence_lower": 0.2997325116634369,
+        "confidence_upper": 0.699732511663437,
+        "momentum_score": 0.545667976140976,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:35.661730"
+        "generated_at": "2026-11-11T18:35:01.520238"
       },
       {
-        "id": "401873045",
-        "home": "Kansas City Chiefs",
-        "away": "New York Jets",
-        "date": "2026-11-08",
-        "venue": "Arrowhead Stadium",
-        "pick": "Kansas City Chiefs",
-        "home_prob": 0.4206365981698036,
-        "win_probability": 0.4206365981698036,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.22063659816980358,
-        "confidence_upper": 0.6206365981698037,
-        "momentum_score": 0.5522587192058563,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:35.835709"
-      },
-      {
-        "id": "401873042",
-        "home": "Miami Dolphins",
-        "away": "Detroit Lions",
-        "date": "2026-11-08",
-        "venue": "Hard Rock Stadium",
-        "pick": "Miami Dolphins",
-        "home_prob": 0.5000800326824189,
-        "win_probability": 0.5000800326824189,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.30008003268241884,
-        "confidence_upper": 0.7000800326824188,
-        "momentum_score": 0.5538861572742462,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:36.407247"
-      },
-      {
-        "id": "401873039",
+        "id": "401873055",
         "home": "New Orleans Saints",
-        "away": "Cleveland Browns",
-        "date": "2026-11-08",
+        "away": "Carolina Panthers",
+        "date": "2026-11-15",
         "venue": "Caesars Superdome",
         "pick": "New Orleans Saints",
-        "home_prob": 0.500394189453125,
-        "win_probability": 0.500394189453125,
+        "home_prob": 0.4999208425760269,
+        "win_probability": 0.4999208425760269,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30039418945312496,
-        "confidence_upper": 0.7003941894531249,
-        "momentum_score": 0.540344955921173,
+        "confidence_lower": 0.2999208425760269,
+        "confidence_upper": 0.6999208425760269,
+        "momentum_score": 0.5448515570163727,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:36.898048"
+        "generated_at": "2026-11-11T18:35:06.162872"
       },
       {
-        "id": "401873044",
-        "home": "Philadelphia Eagles",
-        "away": "New York Giants",
-        "date": "2026-11-08",
-        "venue": "Lincoln Financial Field",
-        "pick": "Philadelphia Eagles",
-        "home_prob": 0.5415444572925568,
-        "win_probability": 0.5415444572925568,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.34154445729255684,
-        "confidence_upper": 0.7415444572925569,
-        "momentum_score": 0.5570717799663544,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:37.355287"
-      },
-      {
-        "id": "401873043",
-        "home": "Washington Commanders",
-        "away": "Los Angeles Rams",
-        "date": "2026-11-08",
-        "venue": "Northwest Stadium",
-        "pick": "Washington Commanders",
-        "home_prob": 0.4998073837041855,
-        "win_probability": 0.4998073837041855,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.29980738370418547,
-        "confidence_upper": 0.6998073837041855,
-        "momentum_score": 0.5533370685577392,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:37.811643"
-      },
-      {
-        "id": "401873041",
-        "home": "Carolina Panthers",
-        "away": "Denver Broncos",
-        "date": "2026-11-08",
-        "venue": "Bank of America Stadium",
-        "pick": "Carolina Panthers",
-        "home_prob": 0.4996651885390282,
-        "win_probability": 0.4996651885390282,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2996651885390282,
-        "confidence_upper": 0.6996651885390281,
-        "momentum_score": 0.5463034921884536,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:38.304253"
-      },
-      {
-        "id": "401873046",
-        "home": "Los Angeles Chargers",
-        "away": "Houston Texans",
-        "date": "2026-11-08",
-        "venue": "SoFi Stadium",
-        "pick": "Los Angeles Chargers",
-        "home_prob": 0.4999043351173401,
-        "win_probability": 0.4999043351173401,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2999043351173401,
-        "confidence_upper": 0.6999043351173402,
-        "momentum_score": 0.5498183751106263,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:38.759720"
-      },
-      {
-        "id": "401873049",
-        "home": "New England Patriots",
-        "away": "Green Bay Packers",
-        "date": "2026-11-08",
-        "venue": "Gillette Stadium",
-        "pick": "New England Patriots",
-        "home_prob": 0.4796292593479156,
-        "win_probability": 0.4796292593479156,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2796292593479156,
-        "confidence_upper": 0.6796292593479156,
-        "momentum_score": 0.5445839881896972,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:38.926095"
-      },
-      {
-        "id": "401873047",
-        "home": "San Francisco 49ers",
-        "away": "Las Vegas Raiders",
-        "date": "2026-11-08",
-        "venue": "Levi's Stadium",
-        "pick": "San Francisco 49ers",
-        "home_prob": 0.49996773974895475,
-        "win_probability": 0.49996773974895475,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.29996773974895474,
-        "confidence_upper": 0.6999677397489548,
-        "momentum_score": 0.5417582619190217,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:39.092852"
-      },
-      {
-        "id": "401873048",
-        "home": "Seattle Seahawks",
-        "away": "Arizona Cardinals",
-        "date": "2026-11-08",
-        "venue": "Lumen Field",
-        "pick": "Seattle Seahawks",
-        "home_prob": 0.5002510986804962,
-        "win_probability": 0.5002510986804962,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.3002510986804962,
-        "confidence_upper": 0.7002510986804962,
-        "momentum_score": 0.5560577297210694,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:39.254802"
-      },
-      {
-        "id": "401873050",
-        "home": "Chicago Bears",
-        "away": "Tampa Bay Buccaneers",
-        "date": "2026-11-09",
-        "venue": "Soldier Field",
-        "pick": "Chicago Bears",
-        "home_prob": 0.4986723611831665,
-        "win_probability": 0.4986723611831665,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2986723611831665,
-        "confidence_upper": 0.6986723611831664,
-        "momentum_score": 0.5322427821159362,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:39.420030"
-      },
-      {
-        "id": "401873051",
-        "home": "Minnesota Vikings",
+        "id": "401873054",
+        "home": "New York Jets",
         "away": "Buffalo Bills",
-        "date": "2026-11-10",
-        "venue": "U.S. Bank Stadium",
-        "pick": "Minnesota Vikings",
-        "home_prob": 0.49966427025794985,
-        "win_probability": 0.49966427025794985,
+        "date": "2026-11-15",
+        "venue": "MetLife Stadium",
+        "pick": "New York Jets",
+        "home_prob": 0.49997842273712156,
+        "win_probability": 0.49997842273712156,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.29966427025794984,
-        "confidence_upper": 0.6996642702579499,
-        "momentum_score": 0.5471722304821014,
+        "confidence_lower": 0.29997842273712155,
+        "confidence_upper": 0.6999784227371215,
+        "momentum_score": 0.5477822816371918,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:39.874631"
+        "generated_at": "2026-11-11T18:35:48.983983"
+      },
+      {
+        "id": "401873062",
+        "home": "Las Vegas Raiders",
+        "away": "Seattle Seahawks",
+        "date": "2026-11-15",
+        "venue": "Allegiant Stadium",
+        "pick": "Las Vegas Raiders",
+        "home_prob": 0.49921821886301043,
+        "win_probability": 0.49921821886301043,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.2992182188630104,
+        "confidence_upper": 0.6992182188630105,
+        "momentum_score": 0.539910895228386,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:11.699687"
+      },
+      {
+        "id": "401873061",
+        "home": "Arizona Cardinals",
+        "away": "Los Angeles Rams",
+        "date": "2026-11-15",
+        "venue": "State Farm Stadium",
+        "pick": "Arizona Cardinals",
+        "home_prob": 0.4998273852586746,
+        "win_probability": 0.4998273852586746,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.2998273852586746,
+        "confidence_upper": 0.6998273852586746,
+        "momentum_score": 0.5519507467746735,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:12.218950"
+      },
+      {
+        "id": "401873063",
+        "home": "Dallas Cowboys",
+        "away": "San Francisco 49ers",
+        "date": "2026-11-15",
+        "venue": "AT&T Stadium",
+        "pick": "Dallas Cowboys",
+        "home_prob": 0.4996518721580505,
+        "win_probability": 0.4996518721580505,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.2996518721580505,
+        "confidence_upper": 0.6996518721580505,
+        "momentum_score": 0.5409827172756195,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:12.757271"
+      },
+      {
+        "id": "401873064",
+        "home": "Cincinnati Bengals",
+        "away": "Pittsburgh Steelers",
+        "date": "2026-11-16",
+        "venue": "Paycor Stadium",
+        "pick": "Cincinnati Bengals",
+        "home_prob": 0.5003504297494888,
+        "win_probability": 0.5003504297494888,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.30035042974948883,
+        "confidence_upper": 0.7003504297494889,
+        "momentum_score": 0.5513607776165008,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:13.464027"
+      },
+      {
+        "id": "401873065",
+        "home": "Baltimore Ravens",
+        "away": "Los Angeles Chargers",
+        "date": "2026-11-17",
+        "venue": "M&T Bank Stadium",
+        "pick": "Baltimore Ravens",
+        "home_prob": 0.5001743576765061,
+        "win_probability": 0.5001743576765061,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3001743576765061,
+        "confidence_upper": 0.700174357676506,
+        "momentum_score": 0.5538248205184937,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:55.906674"
       }
     ],
     "nba": [
       {
-        "id": "401909960",
+        "id": "401909966",
+        "home": "Indiana Pacers",
+        "away": "Washington Wizards",
+        "date": "2026-11-12",
+        "venue": "Gainbridge Fieldhouse",
+        "pick": "Indiana Pacers",
+        "home_prob": 0.5002250800907612,
+        "win_probability": 0.5002250800907612,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.30022508009076115,
+        "confidence_upper": 0.7002250800907612,
+        "momentum_score": 0.5368388134241104,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": " (actual 58% - historically higher)",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:56.507852"
+      },
+      {
+        "id": "401909967",
         "home": "New York Knicks",
-        "away": "Milwaukee Bucks",
-        "date": "2026-11-11",
+        "away": "Cleveland Cavaliers",
+        "date": "2026-11-12",
         "venue": "Madison Square Garden",
         "pick": "New York Knicks",
-        "home_prob": 0.5000581594109536,
-        "win_probability": 0.5000581594109536,
+        "home_prob": 0.49991277381181715,
+        "win_probability": 0.49991277381181715,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30005815941095354,
-        "confidence_upper": 0.7000581594109536,
-        "momentum_score": 0.5396952140331268,
+        "confidence_lower": 0.29991277381181713,
+        "confidence_upper": 0.6999127738118172,
+        "momentum_score": 0.5374200093746185,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 58% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:40.431848"
+        "generated_at": "2026-11-11T18:36:56.540077"
       },
       {
-        "id": "401909961",
-        "home": "Philadelphia 76ers",
+        "id": "401909968",
+        "home": "Toronto Raptors",
         "away": "Boston Celtics",
-        "date": "2026-11-11",
-        "venue": "Xfinity Mobile Arena",
-        "pick": "Philadelphia 76ers",
-        "home_prob": 0.49966532855033874,
-        "win_probability": 0.49966532855033874,
+        "date": "2026-11-12",
+        "venue": "Scotiabank Arena",
+        "pick": "Toronto Raptors",
+        "home_prob": 0.499600537109375,
+        "win_probability": 0.499600537109375,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2996653285503387,
-        "confidence_upper": 0.6996653285503387,
-        "momentum_score": 0.5364075690507889,
+        "confidence_lower": 0.299600537109375,
+        "confidence_upper": 0.699600537109375,
+        "momentum_score": 0.5366152131557465,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 58% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:40.483513"
+        "generated_at": "2026-11-11T18:36:56.575016"
       },
       {
-        "id": "401909962",
-        "home": "Phoenix Suns",
-        "away": "LA Clippers",
-        "date": "2026-11-11",
-        "venue": "Mortgage Matchup Center",
-        "pick": "Phoenix Suns",
-        "home_prob": 0.499650685352087,
-        "win_probability": 0.499650685352087,
+        "id": "401909969",
+        "home": "Chicago Bulls",
+        "away": "San Antonio Spurs",
+        "date": "2026-11-12",
+        "venue": "United Center",
+        "pick": "Chicago Bulls",
+        "home_prob": 0.4996403742432594,
+        "win_probability": 0.4996403742432594,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.299650685352087,
-        "confidence_upper": 0.699650685352087,
-        "momentum_score": 0.535540052652359,
+        "confidence_lower": 0.2996403742432594,
+        "confidence_upper": 0.6996403742432594,
+        "momentum_score": 0.5323905146121979,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 58% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:40.529308"
+        "generated_at": "2026-11-11T18:36:56.609907"
       },
       {
-        "id": "401909963",
+        "id": "401909970",
+        "home": "Memphis Grizzlies",
+        "away": "Denver Nuggets",
+        "date": "2026-11-12",
+        "venue": "FedExForum",
+        "pick": "Memphis Grizzlies",
+        "home_prob": 0.5004105225503445,
+        "win_probability": 0.5004105225503445,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.30041052255034445,
+        "confidence_upper": 0.7004105225503445,
+        "momentum_score": 0.5369168972969055,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": " (actual 58% - historically higher)",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:56.644837"
+      },
+      {
+        "id": "401909971",
+        "home": "Milwaukee Bucks",
+        "away": "Los Angeles Lakers",
+        "date": "2026-11-12",
+        "venue": "Fiserv Forum",
+        "pick": "Milwaukee Bucks",
+        "home_prob": 0.4994616781294346,
+        "win_probability": 0.4994616781294346,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.2994616781294346,
+        "confidence_upper": 0.6994616781294346,
+        "momentum_score": 0.532931472659111,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": " (actual 58% - historically higher)",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:56.680267"
+      },
+      {
+        "id": "401909972",
+        "home": "New Orleans Pelicans",
+        "away": "Brooklyn Nets",
+        "date": "2026-11-12",
+        "venue": "Smoothie King Center",
+        "pick": "New Orleans Pelicans",
+        "home_prob": 0.4995761681675911,
+        "win_probability": 0.4995761681675911,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.2995761681675911,
+        "confidence_upper": 0.6995761681675912,
+        "momentum_score": 0.5339301770925522,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": " (actual 58% - historically higher)",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:56.715876"
+      },
+      {
+        "id": "401909973",
         "home": "Utah Jazz",
-        "away": "Miami Heat",
-        "date": "2026-11-11",
+        "away": "Orlando Magic",
+        "date": "2026-11-12",
         "venue": "Delta Center",
         "pick": "Utah Jazz",
-        "home_prob": 0.4987270908176899,
-        "win_probability": 0.4987270908176899,
+        "home_prob": 0.4989266856312752,
+        "win_probability": 0.4989266856312752,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2987270908176899,
-        "confidence_upper": 0.6987270908176899,
-        "momentum_score": 0.5229601436853408,
+        "confidence_lower": 0.29892668563127517,
+        "confidence_upper": 0.6989266856312752,
+        "momentum_score": 0.5257830971479416,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 58% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:40.578361"
+        "generated_at": "2026-11-11T18:36:56.750947"
       },
       {
-        "id": "401909964",
-        "home": "Sacramento Kings",
-        "away": "Orlando Magic",
-        "date": "2026-11-11",
-        "venue": "Golden 1 Center",
-        "pick": "Sacramento Kings",
-        "home_prob": 0.4999445865273476,
-        "win_probability": 0.4999445865273476,
+        "id": "401909974",
+        "home": "Houston Rockets",
+        "away": "Golden State Warriors",
+        "date": "2026-11-12",
+        "venue": "Toyota Center (Houston)",
+        "pick": "Houston Rockets",
+        "home_prob": 0.5000269224047661,
+        "win_probability": 0.5000269224047661,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.29994458652734757,
-        "confidence_upper": 0.6999445865273476,
-        "momentum_score": 0.5397173857688904,
+        "confidence_lower": 0.3000269224047661,
+        "confidence_upper": 0.7000269224047662,
+        "momentum_score": 0.5353421497344971,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 58% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:40.631164"
+        "generated_at": "2026-11-11T18:36:56.786450"
       },
       {
-        "id": "401909965",
+        "id": "401909975",
         "home": "Portland Trail Blazers",
         "away": "Oklahoma City Thunder",
-        "date": "2026-11-11",
+        "date": "2026-11-12",
         "venue": "Moda Center",
         "pick": "Portland Trail Blazers",
-        "home_prob": 0.5002655584871769,
-        "win_probability": 0.5002655584871769,
+        "home_prob": 0.5001685848295688,
+        "win_probability": 0.5001685848295688,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3002655584871769,
-        "confidence_upper": 0.7002655584871769,
-        "momentum_score": 0.5431908458471298,
+        "confidence_lower": 0.3001685848295688,
+        "confidence_upper": 0.7001685848295689,
+        "momentum_score": 0.5407711285352707,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 58% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:40.680350"
+        "generated_at": "2026-11-11T18:36:56.822248"
       }
     ],
     "mlb": [
@@ -256824,165 +256918,142 @@
     ],
     "nhl": [
       {
-        "id": "401892683",
-        "home": "Toronto Maple Leafs",
-        "away": "Colorado Avalanche",
-        "date": "2026-11-11",
-        "venue": "Scotiabank Arena",
-        "pick": "Toronto Maple Leafs",
-        "home_prob": 0.49979552807211874,
-        "win_probability": 0.49979552807211874,
+        "id": "401892690",
+        "home": "Buffalo Sabres",
+        "away": "Tampa Bay Lightning",
+        "date": "2026-11-12",
+        "venue": "KeyBank Center",
+        "pick": "Buffalo Sabres",
+        "home_prob": 0.49943951195478437,
+        "win_probability": 0.49943951195478437,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.29979552807211873,
-        "confidence_upper": 0.6997955280721188,
-        "momentum_score": 0.43116161704063416,
+        "confidence_lower": 0.29943951195478435,
+        "confidence_upper": 0.6994395119547844,
+        "momentum_score": 0.42711898148059846,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:41.434392"
+        "generated_at": "2026-11-11T18:36:57.525614"
       },
       {
-        "id": "401892684",
-        "home": "Montreal Canadiens",
-        "away": "Minnesota Wild",
-        "date": "2026-11-11",
-        "venue": "Bell Centre",
-        "pick": "Montreal Canadiens",
-        "home_prob": 0.5011163093030453,
-        "win_probability": 0.5011163093030453,
+        "id": "401892691",
+        "home": "Calgary Flames",
+        "away": "New York Rangers",
+        "date": "2026-11-12",
+        "venue": "Scotiabank Saddledome",
+        "pick": "Calgary Flames",
+        "home_prob": 0.5001441164493561,
+        "win_probability": 0.5001441164493561,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3011163093030453,
-        "confidence_upper": 0.7011163093030452,
-        "momentum_score": 0.42964359521865847,
+        "confidence_lower": 0.30014411644935607,
+        "confidence_upper": 0.700144116449356,
+        "momentum_score": 0.4230371695756912,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:41.484046"
+        "generated_at": "2026-11-11T18:36:57.558303"
       },
       {
-        "id": "401892685",
-        "home": "Ottawa Senators",
-        "away": "Washington Capitals",
-        "date": "2026-11-11",
-        "venue": "Canadian Tire Centre",
-        "pick": "Ottawa Senators",
-        "home_prob": 0.49929876908063886,
-        "win_probability": 0.49929876908063886,
+        "id": "401892692",
+        "home": "Edmonton Oilers",
+        "away": "Philadelphia Flyers",
+        "date": "2026-11-12",
+        "venue": "Rogers Place",
+        "pick": "Edmonton Oilers",
+        "home_prob": 0.5011780201196671,
+        "win_probability": 0.5011780201196671,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.29929876908063885,
-        "confidence_upper": 0.6992987690806389,
-        "momentum_score": 0.4266613191366196,
+        "confidence_lower": 0.30117802011966704,
+        "confidence_upper": 0.7011780201196671,
+        "momentum_score": 0.4366306984424591,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:41.529009"
+        "generated_at": "2026-11-11T18:36:57.593102"
       },
       {
-        "id": "401892688",
-        "home": "Winnipeg Jets",
-        "away": "New Jersey Devils",
-        "date": "2026-11-11",
-        "venue": "Canada Life Centre",
-        "pick": "Winnipeg Jets",
-        "home_prob": 0.5000404691755772,
-        "win_probability": 0.5000404691755772,
+        "id": "401892693",
+        "home": "Vegas Golden Knights",
+        "away": "Utah Mammoth",
+        "date": "2026-11-12",
+        "venue": "T-Mobile Arena",
+        "pick": "Vegas Golden Knights",
+        "home_prob": 0.4953651684105396,
+        "win_probability": 0.4953651684105396,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3000404691755772,
-        "confidence_upper": 0.7000404691755773,
-        "momentum_score": 0.4261316072940826,
+        "confidence_lower": 0.2953651684105396,
+        "confidence_upper": 0.6953651684105396,
+        "momentum_score": 0.4337881201505661,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:41.577705"
+        "generated_at": "2026-11-11T18:36:57.615388"
       },
       {
-        "id": "401892686",
-        "home": "Columbus Blue Jackets",
-        "away": "Florida Panthers",
-        "date": "2026-11-11",
-        "venue": "Nationwide Arena",
-        "pick": "Columbus Blue Jackets",
-        "home_prob": 0.5007795220971107,
-        "win_probability": 0.5007795220971107,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.30077952209711073,
-        "confidence_upper": 0.7007795220971107,
-        "momentum_score": 0.4307211053371429,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:41.631029"
-      },
-      {
-        "id": "401892687",
-        "home": "St. Louis Blues",
-        "away": "Detroit Red Wings",
-        "date": "2026-11-11",
-        "venue": "Enterprise Center",
-        "pick": "St. Louis Blues",
-        "home_prob": 0.4988405148088932,
-        "win_probability": 0.4988405148088932,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2988405148088932,
-        "confidence_upper": 0.6988405148088932,
-        "momentum_score": 0.419500270485878,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": "",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:37:41.680080"
-      },
-      {
-        "id": "401892689",
-        "home": "Los Angeles Kings",
+        "id": "401892694",
+        "home": "Anaheim Ducks",
         "away": "Nashville Predators",
-        "date": "2026-11-11",
-        "venue": "crypto.com Arena",
-        "pick": "Los Angeles Kings",
-        "home_prob": 0.5002859682023525,
-        "win_probability": 0.5002859682023525,
+        "date": "2026-11-12",
+        "venue": "Honda Center",
+        "pick": "Anaheim Ducks",
+        "home_prob": 0.5009437362194061,
+        "win_probability": 0.5009437362194061,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3002859682023525,
-        "confidence_upper": 0.7002859682023526,
-        "momentum_score": 0.4315416175127029,
+        "confidence_lower": 0.3009437362194061,
+        "confidence_upper": 0.7009437362194062,
+        "momentum_score": 0.4363364797830582,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": "",
         "status": "pending",
-        "generated_at": "2026-11-10T18:37:41.725841"
+        "generated_at": "2026-11-11T18:36:57.647983"
+      },
+      {
+        "id": "401892695",
+        "home": "San Jose Sharks",
+        "away": "Pittsburgh Penguins",
+        "date": "2026-11-12",
+        "venue": "SAP Center at San Jose",
+        "pick": "San Jose Sharks",
+        "home_prob": 0.5004914013087749,
+        "win_probability": 0.5004914013087749,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3004914013087749,
+        "confidence_upper": 0.7004914013087749,
+        "momentum_score": 0.4361883282661438,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": "",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:36:57.683212"
       }
     ],
     "ncaaf": [
@@ -257007,7 +257078,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:38:24.905748"
+        "generated_at": "2026-11-11T18:37:20.570926"
       },
       {
         "id": "401856860",
@@ -257030,7 +257101,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:07.371463"
+        "generated_at": "2026-11-11T18:37:42.937369"
       },
       {
         "id": "401858296",
@@ -257053,30 +257124,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:49.604617"
-      },
-      {
-        "id": "401858522",
-        "home": "Ohio State Buckeyes",
-        "away": "Northwestern Wildcats",
-        "date": "2026-11-14",
-        "venue": "Ohio Stadium",
-        "pick": "Ohio State Buckeyes",
-        "home_prob": 0.4626,
-        "win_probability": 0.4626,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2626,
-        "confidence_upper": 0.6626000000000001,
-        "momentum_score": 0.5,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": " (actual 70% - historically higher)",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:39:49.857726"
+        "generated_at": "2026-11-11T18:37:43.275259"
       },
       {
         "id": "401858301",
@@ -257099,7 +257147,30 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:50.026836"
+        "generated_at": "2026-11-11T18:37:43.456928"
+      },
+      {
+        "id": "401858522",
+        "home": "Ohio State Buckeyes",
+        "away": "Northwestern Wildcats",
+        "date": "2026-11-14",
+        "venue": "Ohio Stadium",
+        "pick": "Ohio State Buckeyes",
+        "home_prob": 0.4625,
+        "win_probability": 0.4625,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.2625,
+        "confidence_upper": 0.6625000000000001,
+        "momentum_score": 0.5,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": " (actual 70% - historically higher)",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:38:06.136894"
       },
       {
         "id": "401856889",
@@ -257122,7 +257193,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:50.199312"
+        "generated_at": "2026-11-11T18:38:06.337291"
       },
       {
         "id": "401856888",
@@ -257145,7 +257216,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:50.719666"
+        "generated_at": "2026-11-11T18:38:06.468680"
       },
       {
         "id": "401856883",
@@ -257168,53 +257239,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:50.842685"
-      },
-      {
-        "id": "401858518",
-        "home": "Indiana Hoosiers",
-        "away": "USC Trojans",
-        "date": "2026-11-14",
-        "venue": "Memorial Stadium (Bloomington, IN)",
-        "pick": "Indiana Hoosiers",
-        "home_prob": 0.5,
-        "win_probability": 0.5,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.3,
-        "confidence_upper": 0.7,
-        "momentum_score": 0.5,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": " (actual 70% - historically higher)",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:39:51.024452"
-      },
-      {
-        "id": "401856858",
-        "home": "BYU Cougars",
-        "away": "Baylor Bears",
-        "date": "2026-11-14",
-        "venue": "LaVell Edwards Stadium",
-        "pick": "BYU Cougars",
-        "home_prob": 0.5,
-        "win_probability": 0.5,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.3,
-        "confidence_upper": 0.7,
-        "momentum_score": 0.5,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": " (actual 70% - historically higher)",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:39:51.200280"
+        "generated_at": "2026-11-11T18:38:06.968838"
       },
       {
         "id": "401858294",
@@ -257237,7 +257262,53 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:51.616392"
+        "generated_at": "2026-11-11T18:38:07.105532"
+      },
+      {
+        "id": "401858518",
+        "home": "Indiana Hoosiers",
+        "away": "USC Trojans",
+        "date": "2026-11-14",
+        "venue": "Memorial Stadium (Bloomington, IN)",
+        "pick": "Indiana Hoosiers",
+        "home_prob": 0.5,
+        "win_probability": 0.5,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3,
+        "confidence_upper": 0.7,
+        "momentum_score": 0.5,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": " (actual 70% - historically higher)",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:38:07.338344"
+      },
+      {
+        "id": "401856858",
+        "home": "BYU Cougars",
+        "away": "Baylor Bears",
+        "date": "2026-11-14",
+        "venue": "LaVell Edwards Stadium",
+        "pick": "BYU Cougars",
+        "home_prob": 0.5,
+        "win_probability": 0.5,
+        "raw_win_probability": 0.5,
+        "pick_prob": 0.5,
+        "confidence": "coinflip",
+        "confidence_lower": 0.3,
+        "confidence_upper": 0.7,
+        "momentum_score": 0.5,
+        "is_guess": false,
+        "signals": [
+          "xgboost"
+        ],
+        "cal_note": " (actual 70% - historically higher)",
+        "status": "pending",
+        "generated_at": "2026-11-11T18:38:07.564211"
       },
       {
         "id": "401858523",
@@ -257260,7 +257331,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:51.736440"
+        "generated_at": "2026-11-11T18:38:07.885909"
       },
       {
         "id": "401856887",
@@ -257283,7 +257354,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:51.913950"
+        "generated_at": "2026-11-11T18:38:08.119949"
       },
       {
         "id": "401860914",
@@ -257306,7 +257377,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:52.094221"
+        "generated_at": "2026-11-11T18:38:08.343302"
       },
       {
         "id": "401856884",
@@ -257329,7 +257400,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:52.215940"
+        "generated_at": "2026-11-11T18:38:08.488740"
       },
       {
         "id": "401856864",
@@ -257352,7 +257423,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:52.392252"
+        "generated_at": "2026-11-11T18:38:08.706357"
       },
       {
         "id": "401856885",
@@ -257375,7 +257446,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:52.575324"
+        "generated_at": "2026-11-11T18:38:08.934876"
       },
       {
         "id": "401858519",
@@ -257398,7 +257469,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:52.768442"
+        "generated_at": "2026-11-11T18:38:09.147032"
       },
       {
         "id": "401856882",
@@ -257421,7 +257492,7 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:52.947815"
+        "generated_at": "2026-11-11T18:38:09.352213"
       },
       {
         "id": "401856863",
@@ -257444,379 +257515,287 @@
         ],
         "cal_note": " (actual 70% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:53.123724"
+        "generated_at": "2026-11-11T18:38:09.575269"
       }
     ],
     "ncaabm": [
       {
-        "id": "401906771",
-        "home": "Florida State Seminoles",
-        "away": "Florida Gators",
-        "date": "2026-11-10",
-        "venue": "Tucker Center",
-        "pick": "Florida State Seminoles",
-        "home_prob": 0.4996350061416626,
-        "win_probability": 0.4996350061416626,
+        "id": "401920680",
+        "home": "St. John's Red Storm",
+        "away": "Colgate Raiders",
+        "date": "2026-11-12",
+        "venue": "Carnesecca Arena",
+        "pick": "St. John's Red Storm",
+        "home_prob": 0.5012471517562866,
+        "win_probability": 0.5012471517562866,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2996350061416626,
-        "confidence_upper": 0.6996350061416626,
-        "momentum_score": 0.6769796657562256,
+        "confidence_lower": 0.30124715175628664,
+        "confidence_upper": 0.7012471517562866,
+        "momentum_score": 0.6993320560455323,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
-        "cal_note": " (actual 74% - historically higher)",
+        "cal_note": " (actual 72% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:53.906338"
+        "generated_at": "2026-11-11T18:38:10.223137"
       },
       {
-        "id": "401909564",
-        "home": "Duke Blue Devils",
-        "away": "Michigan State Spartans",
-        "date": "2026-11-11",
-        "venue": "United Center",
-        "pick": "Duke Blue Devils",
-        "home_prob": 0.4996474799156189,
-        "win_probability": 0.4996474799156189,
+        "id": "401909524",
+        "home": "Michigan Wolverines",
+        "away": "Marquette Golden Eagles",
+        "date": "2026-11-12",
+        "venue": "Crisler Center",
+        "pick": "Michigan Wolverines",
+        "home_prob": 0.5009695170402527,
+        "win_probability": 0.5009695170402527,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2996474799156189,
-        "confidence_upper": 0.6996474799156189,
-        "momentum_score": 0.6932181453704834,
+        "confidence_lower": 0.3009695170402527,
+        "confidence_upper": 0.7009695170402528,
+        "momentum_score": 0.6990457642078399,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
-        "cal_note": " (actual 74% - historically higher)",
+        "cal_note": " (actual 72% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:53.953446"
+        "generated_at": "2026-11-11T18:38:10.255097"
       },
       {
-        "id": "401918987",
-        "home": "Vanderbilt Commodores",
-        "away": "Memphis Tigers",
-        "date": "2026-11-11",
-        "venue": "Memorial Gymnasium (TN)",
-        "pick": "Vanderbilt Commodores",
-        "home_prob": 0.5002427540779114,
-        "win_probability": 0.5002427540779114,
+        "id": "401925702",
+        "home": "Houston Cougars",
+        "away": "Jacksonville State Gamecocks",
+        "date": "2026-11-12",
+        "venue": "Fertitta Center",
+        "pick": "Houston Cougars",
+        "home_prob": 0.5001406211853028,
+        "win_probability": 0.5001406211853028,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3002427540779114,
-        "confidence_upper": 0.7002427540779115,
-        "momentum_score": 0.6852239108085633,
+        "confidence_lower": 0.30014062118530277,
+        "confidence_upper": 0.7001406211853027,
+        "momentum_score": 0.6888276803493499,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
-        "cal_note": " (actual 74% - historically higher)",
+        "cal_note": " (actual 72% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.001572"
+        "generated_at": "2026-11-11T18:38:10.289639"
       },
       {
-        "id": "401913527",
-        "home": "Texas Tech Red Raiders",
-        "away": "Illinois Fighting Illini",
-        "date": "2026-11-11",
-        "venue": "United Supermarkets Arena",
-        "pick": "Texas Tech Red Raiders",
-        "home_prob": 0.4993566020011902,
-        "win_probability": 0.4993566020011902,
+        "id": "401928824",
+        "home": "Arkansas Razorbacks",
+        "away": "Robert Morris Colonials",
+        "date": "2026-11-12",
+        "venue": "Bud Walton Arena",
+        "pick": "Arkansas Razorbacks",
+        "home_prob": 0.5004754206657409,
+        "win_probability": 0.5004754206657409,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2993566020011902,
-        "confidence_upper": 0.6993566020011902,
-        "momentum_score": 0.674962375164032,
+        "confidence_lower": 0.3004754206657409,
+        "confidence_upper": 0.7004754206657409,
+        "momentum_score": 0.6978631806373596,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
-        "cal_note": " (actual 74% - historically higher)",
+        "cal_note": " (actual 72% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.049190"
+        "generated_at": "2026-11-11T18:38:10.320592"
       },
       {
-        "id": "401920425",
-        "home": "Virginia Cavaliers",
-        "away": "Bucknell Bison",
-        "date": "2026-11-11",
-        "venue": "John Paul Jones Arena",
-        "pick": "Virginia Cavaliers",
-        "home_prob": 0.5004228222846985,
-        "win_probability": 0.5004228222846985,
+        "id": "401930177",
+        "home": "UCLA Bruins",
+        "away": "Arkansas-Pine Bluff Golden Lions",
+        "date": "2026-11-12",
+        "venue": "Pauley Pavilion",
+        "pick": "UCLA Bruins",
+        "home_prob": 0.5003119959831238,
+        "win_probability": 0.5003119959831238,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30042282228469847,
-        "confidence_upper": 0.7004228222846984,
-        "momentum_score": 0.6862003517150879,
+        "confidence_lower": 0.3003119959831238,
+        "confidence_upper": 0.7003119959831239,
+        "momentum_score": 0.6824783277511597,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
-        "cal_note": " (actual 74% - historically higher)",
+        "cal_note": " (actual 72% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.096377"
+        "generated_at": "2026-11-11T18:38:10.351138"
       },
       {
-        "id": "401909740",
-        "home": "Arizona Wildcats",
-        "away": "Northern Arizona Lumberjacks",
-        "date": "2026-11-11",
-        "venue": "McKale Center at ALKEME Arena",
-        "pick": "Arizona Wildcats",
-        "home_prob": 0.498444851398468,
-        "win_probability": 0.498444851398468,
+        "id": "401926062",
+        "home": "Nebraska Cornhuskers",
+        "away": "Lindenwood Lions",
+        "date": "2026-11-12",
+        "venue": "Pinnacle Bank Arena",
+        "pick": "Nebraska Cornhuskers",
+        "home_prob": 0.501949045753479,
+        "win_probability": 0.501949045753479,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.298444851398468,
-        "confidence_upper": 0.698444851398468,
-        "momentum_score": 0.6711507606506347,
+        "confidence_lower": 0.301949045753479,
+        "confidence_upper": 0.7019490457534789,
+        "momentum_score": 0.7039446890354156,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
-        "cal_note": " (actual 74% - historically higher)",
+        "cal_note": " (actual 72% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.143224"
+        "generated_at": "2026-11-11T18:38:10.382567"
       },
       {
-        "id": "401921740",
-        "home": "BYU Cougars",
-        "away": "Queens University Royals",
-        "date": "2026-11-11",
-        "venue": "Marriott Center",
-        "pick": "BYU Cougars",
-        "home_prob": 0.4994799556732178,
-        "win_probability": 0.4994799556732178,
+        "id": "401918054",
+        "home": "California Golden Bears",
+        "away": "USC Trojans",
+        "date": "2026-11-12",
+        "venue": "Haas Pavilion",
+        "pick": "California Golden Bears",
+        "home_prob": 0.4997368362426758,
+        "win_probability": 0.4997368362426758,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.2994799556732178,
-        "confidence_upper": 0.6994799556732179,
-        "momentum_score": 0.6769479417800903,
+        "confidence_lower": 0.2997368362426758,
+        "confidence_upper": 0.6997368362426758,
+        "momentum_score": 0.6755445849895477,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
-        "cal_note": " (actual 74% - historically higher)",
+        "cal_note": " (actual 72% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.190617"
-      },
-      {
-        "id": "401909786",
-        "home": "Kentucky Wildcats",
-        "away": "Kansas Jayhawks",
-        "date": "2026-11-11",
-        "venue": "United Center",
-        "pick": "Kentucky Wildcats",
-        "home_prob": 0.5003868988990784,
-        "win_probability": 0.5003868988990784,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.3003868988990784,
-        "confidence_upper": 0.7003868988990785,
-        "momentum_score": 0.6859164404869079,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": " (actual 74% - historically higher)",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.238323"
+        "generated_at": "2026-11-11T18:38:10.413627"
       }
     ],
     "ncaabw": [
       {
-        "id": "401915666",
-        "home": "TCU Horned Frogs",
-        "away": "Iona Gaels",
-        "date": "2026-11-10",
-        "venue": "Schollmaier Arena",
-        "pick": "TCU Horned Frogs",
-        "home_prob": 0.5014872541427612,
-        "win_probability": 0.5014872541427612,
+        "id": "401919680",
+        "home": "Kentucky Wildcats",
+        "away": "Evansville Purple Aces",
+        "date": "2026-11-11",
+        "venue": "Memorial Coliseum (KY)",
+        "pick": "Kentucky Wildcats",
+        "home_prob": 0.5016136403083802,
+        "win_probability": 0.5016136403083802,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3014872541427612,
-        "confidence_upper": 0.7014872541427613,
-        "momentum_score": 0.8144702053070069,
+        "confidence_lower": 0.30161364030838017,
+        "confidence_upper": 0.7016136403083801,
+        "momentum_score": 0.8258296728134156,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 82% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.813916"
+        "generated_at": "2026-11-11T18:38:10.986862"
       },
       {
-        "id": "401906077",
-        "home": "Louisville Cardinals",
-        "away": "Lindenwood Lions",
-        "date": "2026-11-11",
-        "venue": "KFC Yum! Center",
-        "pick": "Louisville Cardinals",
-        "home_prob": 0.5010372136116028,
-        "win_probability": 0.5010372136116028,
+        "id": "401918842",
+        "home": "Texas Longhorns",
+        "away": "South Dakota State Jackrabbits",
+        "date": "2026-11-12",
+        "venue": "Moody Center",
+        "pick": "Texas Longhorns",
+        "home_prob": 0.500136494731903,
+        "win_probability": 0.500136494731903,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3010372136116028,
-        "confidence_upper": 0.7010372136116028,
-        "momentum_score": 0.8142323231697083,
+        "confidence_lower": 0.300136494731903,
+        "confidence_upper": 0.7001364947319031,
+        "momentum_score": 0.8151908612251282,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 82% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.861904"
+        "generated_at": "2026-11-11T18:38:11.018386"
       },
       {
-        "id": "401923182",
-        "home": "Notre Dame Fighting Irish",
-        "away": "Detroit Mercy Titans",
-        "date": "2026-11-11",
-        "venue": "Purcell Pavilion",
-        "pick": "Notre Dame Fighting Irish",
-        "home_prob": 0.5013405759811401,
-        "win_probability": 0.5013405759811401,
+        "id": "401913800",
+        "home": "Ole Miss Rebels",
+        "away": "UAlbany Great Danes",
+        "date": "2026-11-12",
+        "venue": "The Sandy and John Black Pavilion at Ole Miss",
+        "pick": "Ole Miss Rebels",
+        "home_prob": 0.5010162675857543,
+        "win_probability": 0.5010162675857543,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.3013405759811401,
-        "confidence_upper": 0.7013405759811402,
-        "momentum_score": 0.8176273548603058,
+        "confidence_lower": 0.30101626758575434,
+        "confidence_upper": 0.7010162675857543,
+        "momentum_score": 0.826130222082138,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 82% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.910049"
+        "generated_at": "2026-11-11T18:38:11.049254"
       },
       {
-        "id": "401929062",
-        "home": "Oklahoma Sooners",
-        "away": "San José State Spartans",
-        "date": "2026-11-11",
-        "venue": "Lloyd Noble Center",
-        "pick": "Oklahoma Sooners",
-        "home_prob": 0.5008925743103028,
-        "win_probability": 0.5008925743103028,
+        "id": "401906090",
+        "home": "North Carolina Tar Heels",
+        "away": "North Carolina Central Eagles",
+        "date": "2026-11-12",
+        "venue": "Carmichael Arena",
+        "pick": "North Carolina Tar Heels",
+        "home_prob": 0.49975448656082155,
+        "win_probability": 0.49975448656082155,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30089257431030275,
-        "confidence_upper": 0.7008925743103027,
-        "momentum_score": 0.813274393081665,
+        "confidence_lower": 0.29975448656082154,
+        "confidence_upper": 0.6997544865608216,
+        "momentum_score": 0.802241872549057,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 82% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:54.962054"
+        "generated_at": "2026-11-11T18:38:11.080315"
       },
       {
-        "id": "401912966",
-        "home": "LSU Tigers",
-        "away": "McNeese Cowgirls",
-        "date": "2026-11-11",
-        "venue": "Pete Maravich Assembly Center",
-        "pick": "LSU Tigers",
-        "home_prob": 0.5021564483642578,
-        "win_probability": 0.5021564483642578,
+        "id": "401918829",
+        "home": "Vanderbilt Commodores",
+        "away": "Western Kentucky Lady Toppers",
+        "date": "2026-11-12",
+        "venue": "Memorial Gymnasium (TN)",
+        "pick": "Vanderbilt Commodores",
+        "home_prob": 0.499908514213562,
+        "win_probability": 0.499908514213562,
         "raw_win_probability": 0.5,
         "pick_prob": 0.5,
         "confidence": "coinflip",
-        "confidence_lower": 0.30215644836425776,
-        "confidence_upper": 0.7021564483642577,
-        "momentum_score": 0.8238589906692505,
+        "confidence_lower": 0.299908514213562,
+        "confidence_upper": 0.699908514213562,
+        "momentum_score": 0.8043856751918793,
         "is_guess": false,
         "signals": [
           "xgboost"
         ],
         "cal_note": " (actual 82% - historically higher)",
         "status": "pending",
-        "generated_at": "2026-11-10T18:39:55.009697"
-      },
-      {
-        "id": "401918910",
-        "home": "Minnesota Golden Gophers",
-        "away": "Southern Jaguars",
-        "date": "2026-11-11",
-        "venue": "The Barn by Blue Cross and Blue Shield of Minnesota",
-        "pick": "Minnesota Golden Gophers",
-        "home_prob": 0.5014938707351685,
-        "win_probability": 0.5014938707351685,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.3014938707351685,
-        "confidence_upper": 0.7014938707351686,
-        "momentum_score": 0.8302277088165283,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": " (actual 82% - historically higher)",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:39:55.053551"
-      },
-      {
-        "id": "401921436",
-        "home": "Nebraska Cornhuskers",
-        "away": "North Carolina A&T Aggies",
-        "date": "2026-11-11",
-        "venue": "Pinnacle Bank Arena",
-        "pick": "Nebraska Cornhuskers",
-        "home_prob": 0.4994377957344055,
-        "win_probability": 0.4994377957344055,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.2994377957344055,
-        "confidence_upper": 0.6994377957344056,
-        "momentum_score": 0.7998375737667084,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": " (actual 82% - historically higher)",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:39:55.101643"
-      },
-      {
-        "id": "401927107",
-        "home": "USC Trojans",
-        "away": "Charleston Cougars",
-        "date": "2026-11-11",
-        "venue": "Galen Center",
-        "pick": "USC Trojans",
-        "home_prob": 0.5008267772674561,
-        "win_probability": 0.5008267772674561,
-        "raw_win_probability": 0.5,
-        "pick_prob": 0.5,
-        "confidence": "coinflip",
-        "confidence_lower": 0.30082677726745605,
-        "confidence_upper": 0.7008267772674561,
-        "momentum_score": 0.8126399385929107,
-        "is_guess": false,
-        "signals": [
-          "xgboost"
-        ],
-        "cal_note": " (actual 82% - historically higher)",
-        "status": "pending",
-        "generated_at": "2026-11-10T18:39:55.149768"
+        "generated_at": "2026-11-11T18:38:11.111013"
       }
     ]
   },
@@ -257841,7 +257820,7 @@
     "upset_alerts": []
   },
   "betting_picks": {
-    "generated_at": "2026-11-10T18:39:55.456503",
+    "generated_at": "2026-11-11T18:38:11.411604",
     "safe_bet": null,
     "value_bet": null,
     "longshot": null,
@@ -257849,8 +257828,8 @@
   },
   "running_record": {
     "nfl": {
-      "wins": 137,
-      "losses": 162
+      "wins": 141,
+      "losses": 170
     },
     "nba": {
       "wins": 138,
@@ -257870,10 +257849,10 @@
     },
     "ncaabm": {
       "wins": 50,
-      "losses": 18
+      "losses": 19
     },
     "ncaabw": {
-      "wins": 84,
+      "wins": 85,
       "losses": 19
     }
   },
@@ -259527,50 +259506,8 @@
   },
   "edge": {
     "version": "1.0",
-    "last_updated": "2026-11-10T18:37:21.141978",
+    "last_updated": "2026-11-11T18:34:43.308476",
     "line_history": {
-      "401873036": {
-        "sport": "nfl",
-        "home_team": "seattle seahawks",
-        "away_team": "chicago bears",
-        "game_date": "2026-11-03",
-        "snapshots": [
-          {
-            "timestamp": "2026-11-01T17:04:40.926569",
-            "spread": -3.0,
-            "total": null,
-            "home_ml": -170.88888888888889
-          },
-          {
-            "timestamp": "2026-11-02T20:42:57.745006",
-            "spread": -3.2222222222222223,
-            "total": null,
-            "home_ml": -178.55555555555554
-          }
-        ],
-        "opening_spread": -3.0,
-        "current_spread": -3.2222222222222223,
-        "opening_ml": -170.88888888888889,
-        "total_movement": -0.22222222222222232
-      },
-      "401909907": {
-        "sport": "nba",
-        "home_team": "cleveland cavaliers",
-        "away_team": "oklahoma city thunder",
-        "game_date": "2026-11-03",
-        "snapshots": [
-          {
-            "timestamp": "2026-11-03T18:20:50.471619",
-            "spread": -2.5,
-            "total": null,
-            "home_ml": -138.66666666666666
-          }
-        ],
-        "opening_spread": -2.5,
-        "current_spread": -2.5,
-        "opening_ml": -138.66666666666666,
-        "total_movement": 0.0
-      },
       "401864533": {
         "sport": "ncaaf",
         "home_team": "nevada wolf pack",
@@ -265275,367 +265212,6 @@
         "prob_adjustment": 0.0,
         "fetched_at": "2026-11-04T18:35:58.151896"
       },
-      "401909907": {
-        "game_id": "401909907",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:22:53.241305"
-      },
-      "401909908": {
-        "game_id": "401909908",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:22:57.403321"
-      },
-      "401909909": {
-        "game_id": "401909909",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:01.605258"
-      },
-      "401909910": {
-        "game_id": "401909910",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:05.784172"
-      },
-      "401909911": {
-        "game_id": "401909911",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:09.942007"
-      },
-      "401909912": {
-        "game_id": "401909912",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:14.101708"
-      },
-      "401909913": {
-        "game_id": "401909913",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:18.278440"
-      },
-      "401909914": {
-        "game_id": "401909914",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:22.454533"
-      },
-      "401909915": {
-        "game_id": "401909915",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:26.649955"
-      },
-      "401909916": {
-        "game_id": "401909916",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:30.825295"
-      },
-      "401909917": {
-        "game_id": "401909917",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:34.987867"
-      },
-      "401909918": {
-        "game_id": "401909918",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:39.231194"
-      },
-      "401909919": {
-        "game_id": "401909919",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:43.410356"
-      },
-      "401909920": {
-        "game_id": "401909920",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:47.571944"
-      },
-      "401909921": {
-        "game_id": "401909921",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:23:51.728725"
-      },
-      "401892629": {
-        "game_id": "401892629",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:00.074713"
-      },
-      "401892630": {
-        "game_id": "401892630",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:04.268652"
-      },
-      "401892631": {
-        "game_id": "401892631",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:08.465814"
-      },
-      "401892632": {
-        "game_id": "401892632",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:12.643161"
-      },
       "401864533": {
         "game_id": "401864533",
         "home_team_sentiment": 0.0,
@@ -265958,310 +265534,6 @@
         "key_signals": [],
         "prob_adjustment": 0.0,
         "fetched_at": "2026-11-09T21:25:49.053979"
-      },
-      "401924856": {
-        "game_id": "401924856",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.874706"
-      },
-      "401909771": {
-        "game_id": "401909771",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.874750"
-      },
-      "401921036": {
-        "game_id": "401921036",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.874793"
-      },
-      "401921104": {
-        "game_id": "401921104",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.874837"
-      },
-      "401921704": {
-        "game_id": "401921704",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.874882"
-      },
-      "401913525": {
-        "game_id": "401913525",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.874926"
-      },
-      "401909784": {
-        "game_id": "401909784",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.874969"
-      },
-      "401911390": {
-        "game_id": "401911390",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875011"
-      },
-      "401906863": {
-        "game_id": "401906863",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875054"
-      },
-      "401925811": {
-        "game_id": "401925811",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875097"
-      },
-      "401918947": {
-        "game_id": "401918947",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875140"
-      },
-      "401916313": {
-        "game_id": "401916313",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875182"
-      },
-      "401909738": {
-        "game_id": "401909738",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875224"
-      },
-      "401926771": {
-        "game_id": "401926771",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875265"
-      },
-      "401912964": {
-        "game_id": "401912964",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875323"
-      },
-      "401921404": {
-        "game_id": "401921404",
-        "home_team_sentiment": 0.0,
-        "away_team_sentiment": 0.0,
-        "sentiment_delta": 0.0,
-        "home_injury_score": 0.0,
-        "away_injury_score": 0.0,
-        "home_morale_score": 0.0,
-        "away_morale_score": 0.0,
-        "home_reporter_score": 0.0,
-        "away_reporter_score": 0.0,
-        "home_social_score": 0.0,
-        "away_social_score": 0.0,
-        "sources_counted": 0,
-        "confidence": 0.4,
-        "key_signals": [],
-        "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-03T18:24:41.875366"
       },
       "401909922": {
         "game_id": "401909922",
@@ -266888,7 +266160,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:35:24.675679"
+        "fetched_at": "2026-11-11T18:32:42.810634"
       },
       "401873038": {
         "game_id": "401873038",
@@ -267135,7 +266407,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:35:28.842831"
+        "fetched_at": "2026-11-11T18:32:46.980611"
       },
       "401873051": {
         "game_id": "401873051",
@@ -267154,7 +266426,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:35:20.500324"
+        "fetched_at": "2026-11-11T18:32:51.146302"
       },
       "401892644": {
         "game_id": "401892644",
@@ -269434,7 +268706,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:18.727895"
+        "fetched_at": "2026-11-11T18:33:49.388296"
       },
       "401856860": {
         "game_id": "401856860",
@@ -269453,7 +268725,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:22.905857"
+        "fetched_at": "2026-11-11T18:33:53.563541"
       },
       "401858296": {
         "game_id": "401858296",
@@ -269472,7 +268744,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:27.053797"
+        "fetched_at": "2026-11-11T18:33:57.707400"
       },
       "401858522": {
         "game_id": "401858522",
@@ -269491,7 +268763,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:31.233904"
+        "fetched_at": "2026-11-11T18:34:01.834819"
       },
       "401858301": {
         "game_id": "401858301",
@@ -269510,7 +268782,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:35.397824"
+        "fetched_at": "2026-11-11T18:34:05.973664"
       },
       "401856889": {
         "game_id": "401856889",
@@ -269529,7 +268801,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:39.580103"
+        "fetched_at": "2026-11-11T18:34:10.118235"
       },
       "401856888": {
         "game_id": "401856888",
@@ -269548,7 +268820,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:43.745675"
+        "fetched_at": "2026-11-11T18:34:14.277979"
       },
       "401856883": {
         "game_id": "401856883",
@@ -269567,7 +268839,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:47.897080"
+        "fetched_at": "2026-11-11T18:34:18.428516"
       },
       "401858518": {
         "game_id": "401858518",
@@ -269586,7 +268858,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:52.043987"
+        "fetched_at": "2026-11-11T18:34:22.574501"
       },
       "401856858": {
         "game_id": "401856858",
@@ -269605,7 +268877,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:36:56.206729"
+        "fetched_at": "2026-11-11T18:34:26.699514"
       },
       "401858294": {
         "game_id": "401858294",
@@ -269624,7 +268896,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:00.357550"
+        "fetched_at": "2026-11-11T18:34:30.848697"
       },
       "401858523": {
         "game_id": "401858523",
@@ -269643,7 +268915,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:04.520634"
+        "fetched_at": "2026-11-11T18:34:35.000148"
       },
       "401856887": {
         "game_id": "401856887",
@@ -269662,7 +268934,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:08.667435"
+        "fetched_at": "2026-11-11T18:34:39.126161"
       },
       "401860914": {
         "game_id": "401860914",
@@ -269681,7 +268953,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:12.838261"
+        "fetched_at": "2026-11-11T18:34:43.307201"
       },
       "401856884": {
         "game_id": "401856884",
@@ -269700,7 +268972,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:16.991272"
+        "fetched_at": "2026-11-11T18:34:43.307280"
       },
       "401856864": {
         "game_id": "401856864",
@@ -269719,7 +268991,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:21.140548"
+        "fetched_at": "2026-11-11T18:34:43.307307"
       },
       "401856885": {
         "game_id": "401856885",
@@ -269738,7 +269010,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:21.140766"
+        "fetched_at": "2026-11-11T18:34:43.307332"
       },
       "401858519": {
         "game_id": "401858519",
@@ -269757,7 +269029,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:21.140933"
+        "fetched_at": "2026-11-11T18:34:43.307357"
       },
       "401856882": {
         "game_id": "401856882",
@@ -269776,7 +269048,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:21.141042"
+        "fetched_at": "2026-11-11T18:34:43.307381"
       },
       "401856863": {
         "game_id": "401856863",
@@ -269795,7 +269067,7 @@
         "confidence": 0.4,
         "key_signals": [],
         "prob_adjustment": 0.0,
-        "fetched_at": "2026-11-10T18:37:21.141084"
+        "fetched_at": "2026-11-11T18:34:43.307404"
       },
       "401920686": {
         "game_id": "401920686",
@@ -269910,6 +269182,519 @@
         "key_signals": [],
         "prob_adjustment": 0.0,
         "fetched_at": "2026-11-10T18:37:21.141320"
+      },
+      "401909960": {
+        "game_id": "401909960",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:32:55.316257"
+      },
+      "401909961": {
+        "game_id": "401909961",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:32:59.456187"
+      },
+      "401909962": {
+        "game_id": "401909962",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:03.618238"
+      },
+      "401909963": {
+        "game_id": "401909963",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:07.776315"
+      },
+      "401909964": {
+        "game_id": "401909964",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:11.939088"
+      },
+      "401909965": {
+        "game_id": "401909965",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:16.102867"
+      },
+      "401892683": {
+        "game_id": "401892683",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:20.243407"
+      },
+      "401892684": {
+        "game_id": "401892684",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:24.402889"
+      },
+      "401892685": {
+        "game_id": "401892685",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:28.549524"
+      },
+      "401892688": {
+        "game_id": "401892688",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:32.730224"
+      },
+      "401892686": {
+        "game_id": "401892686",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:36.873355"
+      },
+      "401892687": {
+        "game_id": "401892687",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:41.071605"
+      },
+      "401892689": {
+        "game_id": "401892689",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:33:45.236718"
+      },
+      "401909564": {
+        "game_id": "401909564",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307428"
+      },
+      "401918987": {
+        "game_id": "401918987",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307452"
+      },
+      "401913527": {
+        "game_id": "401913527",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307476"
+      },
+      "401920425": {
+        "game_id": "401920425",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307499"
+      },
+      "401909740": {
+        "game_id": "401909740",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307521"
+      },
+      "401921740": {
+        "game_id": "401921740",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307544"
+      },
+      "401909786": {
+        "game_id": "401909786",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307566"
+      },
+      "401906077": {
+        "game_id": "401906077",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307606"
+      },
+      "401923182": {
+        "game_id": "401923182",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307629"
+      },
+      "401929062": {
+        "game_id": "401929062",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307651"
+      },
+      "401912966": {
+        "game_id": "401912966",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307673"
+      },
+      "401918910": {
+        "game_id": "401918910",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307695"
+      },
+      "401921436": {
+        "game_id": "401921436",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307718"
+      },
+      "401927107": {
+        "game_id": "401927107",
+        "home_team_sentiment": 0.0,
+        "away_team_sentiment": 0.0,
+        "sentiment_delta": 0.0,
+        "home_injury_score": 0.0,
+        "away_injury_score": 0.0,
+        "home_morale_score": 0.0,
+        "away_morale_score": 0.0,
+        "home_reporter_score": 0.0,
+        "away_reporter_score": 0.0,
+        "home_social_score": 0.0,
+        "away_social_score": 0.0,
+        "sources_counted": 0,
+        "confidence": 0.4,
+        "key_signals": [],
+        "prob_adjustment": 0.0,
+        "fetched_at": "2026-11-11T18:34:43.307739"
       }
     },
     "reporter_accounts": {
@@ -270056,19 +269841,17 @@
         "fetched_at": "2026-11-06T17:53:40.953844"
       },
       "401858522": {
-        "home_prob": 0.0155,
-        "away_prob": 0.9845,
-        "prob_adjustment": -0.0374,
+        "home_prob": 0.0145,
+        "away_prob": 0.9855,
+        "prob_adjustment": -0.0375,
         "market_title": "Xi Jinping out before 2027?",
-        "liquidity": 277976.48,
+        "liquidity": 260973.31,
         "source": "polymarket",
-        "fetched_at": "2026-11-10T18:34:04.130544"
+        "fetched_at": "2026-11-11T18:31:24.149199"
       }
     },
     "signal_accuracy": {
       "_processed_ids": [
-        "401817034",
-        "401817030",
         "401817037",
         "401817038",
         "401817051",
@@ -270566,7 +270349,9 @@
         "401927414",
         "401906076",
         "401906089",
-        "401907048"
+        "401907048",
+        "401906771",
+        "401915666"
       ],
       "mlb": {
         "sentiment": {
@@ -270596,7 +270381,7 @@
   },
   "scout": {
     "version": "1.0",
-    "last_updated": "2026-11-10T18:37:29.927282",
+    "last_updated": "2026-11-11T18:34:53.532453",
     "players": {},
     "officials": {
       "nfl": {},
@@ -270648,196 +270433,6 @@
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
         "updated_at": "2026-11-04T18:36:59.728011"
-      },
-      "401909907": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:45.358409"
-      },
-      "401909908": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:46.018089"
-      },
-      "401909909": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:46.645875"
-      },
-      "401909910": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:47.294120"
-      },
-      "401909911": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:47.960217"
-      },
-      "401909912": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:48.584578"
-      },
-      "401909913": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:49.264166"
-      },
-      "401909914": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:49.907552"
-      },
-      "401909915": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:50.535314"
-      },
-      "401909916": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:51.212107"
-      },
-      "401909917": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:51.905461"
-      },
-      "401909918": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:52.619707"
-      },
-      "401909919": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:53.244143"
-      },
-      "401909920": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:53.878268"
-      },
-      "401909921": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:54.504409"
-      },
-      "401892629": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:55.176473"
-      },
-      "401892630": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:55.836766"
-      },
-      "401892631": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:56.579487"
-      },
-      "401892632": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432672"
       },
       "401864533": {
         "home_adjustment": 0.0,
@@ -271008,166 +270603,6 @@
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
         "updated_at": "2026-11-09T21:26:16.878755"
-      },
-      "401924856": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432875"
-      },
-      "401909771": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432885"
-      },
-      "401921036": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432894"
-      },
-      "401921104": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432904"
-      },
-      "401921704": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432913"
-      },
-      "401913525": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432922"
-      },
-      "401909784": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432932"
-      },
-      "401911390": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432941"
-      },
-      "401906863": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432951"
-      },
-      "401925811": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432960"
-      },
-      "401918947": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432970"
-      },
-      "401916313": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432980"
-      },
-      "401909738": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432989"
-      },
-      "401926771": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.432998"
-      },
-      "401912964": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.433008"
-      },
-      "401921404": {
-        "home_adjustment": 0.0,
-        "away_adjustment": 0.0,
-        "home_missing_players": [],
-        "away_missing_players": [],
-        "home_pwi_loss": 0.0,
-        "away_pwi_loss": 0.0,
-        "confidence": 0.5,
-        "updated_at": "2026-11-03T18:24:57.433017"
       },
       "401909922": {
         "home_adjustment": 0.0,
@@ -271497,7 +270932,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:22.461431"
+        "updated_at": "2026-11-11T18:34:44.012460"
       },
       "401873038": {
         "home_adjustment": 0.0,
@@ -271627,7 +271062,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:23.072843"
+        "updated_at": "2026-11-11T18:34:44.671991"
       },
       "401873051": {
         "home_adjustment": 0.0,
@@ -271637,7 +271072,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:21.849920"
+        "updated_at": "2026-11-11T18:34:45.301001"
       },
       "401892644": {
         "home_adjustment": 0.0,
@@ -272837,7 +272272,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926551"
+        "updated_at": "2026-11-11T18:34:53.531819"
       },
       "401856860": {
         "home_adjustment": 0.0,
@@ -272847,7 +272282,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926561"
+        "updated_at": "2026-11-11T18:34:53.531826"
       },
       "401858296": {
         "home_adjustment": 0.0,
@@ -272857,7 +272292,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926571"
+        "updated_at": "2026-11-11T18:34:53.531832"
       },
       "401858522": {
         "home_adjustment": 0.0,
@@ -272867,7 +272302,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926580"
+        "updated_at": "2026-11-11T18:34:53.531838"
       },
       "401858301": {
         "home_adjustment": 0.0,
@@ -272877,7 +272312,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926590"
+        "updated_at": "2026-11-11T18:34:53.531843"
       },
       "401856889": {
         "home_adjustment": 0.0,
@@ -272887,7 +272322,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926599"
+        "updated_at": "2026-11-11T18:34:53.531848"
       },
       "401856888": {
         "home_adjustment": 0.0,
@@ -272897,7 +272332,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926608"
+        "updated_at": "2026-11-11T18:34:53.531854"
       },
       "401856883": {
         "home_adjustment": 0.0,
@@ -272907,7 +272342,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926616"
+        "updated_at": "2026-11-11T18:34:53.531859"
       },
       "401858518": {
         "home_adjustment": 0.0,
@@ -272917,7 +272352,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926624"
+        "updated_at": "2026-11-11T18:34:53.531864"
       },
       "401856858": {
         "home_adjustment": 0.0,
@@ -272927,7 +272362,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926633"
+        "updated_at": "2026-11-11T18:34:53.531869"
       },
       "401858294": {
         "home_adjustment": 0.0,
@@ -272937,7 +272372,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926642"
+        "updated_at": "2026-11-11T18:34:53.531873"
       },
       "401858523": {
         "home_adjustment": 0.0,
@@ -272947,7 +272382,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926650"
+        "updated_at": "2026-11-11T18:34:53.531880"
       },
       "401856887": {
         "home_adjustment": 0.0,
@@ -272957,7 +272392,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926659"
+        "updated_at": "2026-11-11T18:34:53.531885"
       },
       "401860914": {
         "home_adjustment": 0.0,
@@ -272967,7 +272402,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926667"
+        "updated_at": "2026-11-11T18:34:53.531890"
       },
       "401856884": {
         "home_adjustment": 0.0,
@@ -272977,7 +272412,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926676"
+        "updated_at": "2026-11-11T18:34:53.531895"
       },
       "401856864": {
         "home_adjustment": 0.0,
@@ -272987,7 +272422,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926685"
+        "updated_at": "2026-11-11T18:34:53.531900"
       },
       "401856885": {
         "home_adjustment": 0.0,
@@ -272997,7 +272432,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926693"
+        "updated_at": "2026-11-11T18:34:53.531905"
       },
       "401858519": {
         "home_adjustment": 0.0,
@@ -273007,7 +272442,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926702"
+        "updated_at": "2026-11-11T18:34:53.531909"
       },
       "401856882": {
         "home_adjustment": 0.0,
@@ -273017,7 +272452,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926710"
+        "updated_at": "2026-11-11T18:34:53.531914"
       },
       "401856863": {
         "home_adjustment": 0.0,
@@ -273027,7 +272462,7 @@
         "home_pwi_loss": 0.0,
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
-        "updated_at": "2026-11-10T18:37:29.926719"
+        "updated_at": "2026-11-11T18:34:53.531919"
       },
       "401920686": {
         "home_adjustment": 0.0,
@@ -273088,6 +272523,276 @@
         "away_pwi_loss": 0.0,
         "confidence": 0.5,
         "updated_at": "2026-11-10T18:37:29.926769"
+      },
+      "401909960": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:45.947191"
+      },
+      "401909961": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:46.587214"
+      },
+      "401909962": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:47.218947"
+      },
+      "401909963": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:47.856113"
+      },
+      "401909964": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:48.488964"
+      },
+      "401909965": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:49.120705"
+      },
+      "401892683": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:49.711268"
+      },
+      "401892684": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:50.372469"
+      },
+      "401892685": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:50.967594"
+      },
+      "401892688": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:51.621252"
+      },
+      "401892686": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:52.280544"
+      },
+      "401892687": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:52.870282"
+      },
+      "401892689": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531798"
+      },
+      "401909564": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531925"
+      },
+      "401918987": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531930"
+      },
+      "401913527": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531935"
+      },
+      "401920425": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531940"
+      },
+      "401909740": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531945"
+      },
+      "401921740": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531950"
+      },
+      "401909786": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531955"
+      },
+      "401906077": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531960"
+      },
+      "401923182": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531965"
+      },
+      "401929062": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531970"
+      },
+      "401912966": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531976"
+      },
+      "401918910": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531981"
+      },
+      "401921436": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531986"
+      },
+      "401927107": {
+        "home_adjustment": 0.0,
+        "away_adjustment": 0.0,
+        "home_missing_players": [],
+        "away_missing_players": [],
+        "home_pwi_loss": 0.0,
+        "away_pwi_loss": 0.0,
+        "confidence": 0.5,
+        "updated_at": "2026-11-11T18:34:53.531991"
       }
     },
     "official_assignments": {},
@@ -273095,7 +272800,7 @@
     "cache": {},
     "error_log": []
   },
-  "last_saved": "2026-11-10T18:40:04.115109",
+  "last_saved": "2026-11-11T18:38:19.877630",
   "transformer": {
     "trained": true,
     "sports_active": [
@@ -273189,14 +272894,14 @@
     "nba_possession_available": false
   },
   "audit": {
-    "last_run": "2026-11-10T18:40:04.115056",
+    "last_run": "2026-11-11T18:38:19.877532",
     "significant_biases": [],
     "clean_segments": [],
     "total_predictions_analyzed": 0,
     "last_significant_finding": null
   },
   "baseline": {
-    "last_evaluated": "2026-11-10T18:40:04.115073",
+    "last_evaluated": "2026-11-11T18:38:19.877549",
     "system_accuracy": {},
     "baseline_accuracy": {
       "always_home": {},
@@ -273209,7 +272914,7 @@
     "alarm_count": 0
   },
   "portfolio": {
-    "last_updated": "2026-11-10T18:40:04.115104",
+    "last_updated": "2026-11-11T18:38:19.877624",
     "recommended_bets": [],
     "total_at_risk": 0.0,
     "bankroll_units": 100.0
